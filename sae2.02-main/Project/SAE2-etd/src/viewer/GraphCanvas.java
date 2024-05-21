@@ -2,12 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package main.java.info.iut.sae2.viewer;
+package viewer;
 
-import info.iut.sae2.graphs.Coord;
-import info.iut.sae2.graphs.Edge;
-import info.iut.sae2.graphs.IGraph;
-import info.iut.sae2.graphs.Node;
+import graphs.Coord;
+import graphs.Edge;
+import graphs.IGraph;
+import graphs.Node;
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;

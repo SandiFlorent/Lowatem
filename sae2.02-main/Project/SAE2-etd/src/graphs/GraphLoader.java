@@ -1,4 +1,4 @@
-package main.java.info.iut.sae2.graphs;
+package graphs;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -59,5 +59,7 @@ public class GraphLoader {
     }
 
     private static void loadEdgesFromFile(Graph g, HashMap<Integer, Node> nodeMap, String edgeFileName) {
+       
+    }
 	// TODO
 }
