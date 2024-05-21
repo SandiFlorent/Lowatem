@@ -1,10 +1,10 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-package main.java.info.iut.sae2.viewer;
+package viewer;
 
-import info.iut.sae2.graphs.GraphLoader;
-import info.iut.sae2.graphs.IGraph;
+import graphs.GraphLoader;
+import graphs.IGraph;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;

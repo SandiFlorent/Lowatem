@@ -1,5 +1,5 @@
-package main.java.info.iut.sae2.graphs;
-
+package graphs;
+import java.lang.Math;
 public class Coord {
     private double x, y;
     public Coord(){
@@ -10,7 +10,7 @@ public class Coord {
         this.y = y;
     }
     public double dist(Coord c){
-	// TODO
+        return (Math.sqrt(Math.abs(Math.pow(x-y, 2.0)+Math.pow(c.x-c.y, 2.0))));
     }
     public double getX() { return x; }
     public double getY() { return y; }
