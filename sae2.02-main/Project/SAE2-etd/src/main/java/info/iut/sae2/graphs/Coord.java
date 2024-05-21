@@ -1,4 +1,4 @@
-package info.iut.sae2.graphs;
+package main.java.info.iut.sae2.graphs;
 
 public class Coord {
     private double x, y;

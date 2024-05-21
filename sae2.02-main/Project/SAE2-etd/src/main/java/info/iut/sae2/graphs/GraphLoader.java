@@ -1,4 +1,4 @@
-package info.iut.sae2.graphs;
+package main.java.info.iut.sae2.graphs;
 
 import java.io.BufferedReader;
 import java.io.IOException;

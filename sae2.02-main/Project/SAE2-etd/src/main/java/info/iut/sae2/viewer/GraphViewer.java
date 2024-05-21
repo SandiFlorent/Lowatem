@@ -1,7 +1,7 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-package info.iut.sae2.viewer;
+package main.java.info.iut.sae2.viewer;
 
 import info.iut.sae2.graphs.GraphLoader;
 import info.iut.sae2.graphs.IGraph;

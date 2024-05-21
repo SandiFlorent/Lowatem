@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package info.iut.sae2.viewer;
+package main.java.info.iut.sae2.viewer;
 
 import info.iut.sae2.graphs.Coord;
 import java.awt.Color;
