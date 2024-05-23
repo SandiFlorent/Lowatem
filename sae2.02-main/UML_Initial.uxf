@@ -1,6 +1,6 @@
-<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLPackage</id><coordinates><x>380</x><y>90</y><w>290</w><h>160</h></coordinates><panel_attributes>viewer
---</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>700</x><y>80</y><w>310</w><h>170</h></coordinates><panel_attributes>graphs
---</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>460</x><y>280</y><w>250</w><h>230</h></coordinates><panel_attributes>_EdgeView_
+<diagram program="umletino" version="15.1"><zoom_level>4</zoom_level><element><id>UMLPackage</id><coordinates><x>361</x><y>244</y><w>528</w><h>212</h></coordinates><panel_attributes>viewer
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>397</x><y>576</y><w>444</w><h>264</h></coordinates><panel_attributes>graphs
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>373</x><y>284</y><w>100</w><h>92</h></coordinates><panel_attributes>_EdgeView_
 --
 ~polyX : int[ ]
 ~polyY : int[ ]
@@ -15,7 +15,7 @@
 ~draw(Graphics2D) : void
 ~updatePosition(int, int) : void
 ~updateTransparency(int) : void
-~updateSmoothed( boolean) : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>450</x><y>560</y><w>260</w><h>240</h></coordinates><panel_attributes>_GraphCanvas_
+~updateSmoothed( boolean) : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>593</x><y>280</y><w>172</w><h>128</h></coordinates><panel_attributes>_GraphCanvas_
 --
 ~IGraph : graph
 ~nodeMap : Map&lt;Node, NodeView&gt;
@@ -25,7 +25,102 @@
 ~edgeTransparency : int = 60
 __~MARGIN : int = 20__
 __~NODE_COLOR : Color = Color.RED
+__~EDGE_COLOR : Color = new Color(120, 120, 120, 60)__
+--
+~GraphCanvas()
+-initNodeMap() : void
+-initEdgeMap() : void
+-initMaps() : void
++paint(Graphics) : void
+~graphPositionToViewPosition(Coord, ArrayList&lt;Coord&gt;, boolean) : Coord
+~setGraph(IGraph) : void
+~setRadius (int) : void
+~setEdgeTransparency(int) : void
+~setSmooth(boolean) : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>773</x><y>296</y><w>100</w><h>92</h></coordinates><panel_attributes>_GraphViewer_
+--
+~FRAME_WIDTH : int = 800
+~FRAME_HEIGHT : int = 800
+~SLIDER_WIDTH : int = 100
+~BUTTON_HEIGHT : int = 40
+~currentGraph : Igraph
+~graph : Igraph
+~spanningTree: Igraph
+~gc : GraphCanvas
+--
++GraphViewer()
+-buildUI() : void
++bundleGraph : void
++spanningTree : void
++clearGraph() : void
++loadGraph(String) : void
+-updateGraphView() : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>485</x><y>308</y><w>100</w><h>64</h></coordinates><panel_attributes>_NodeView_
+--
+~radius : int
+~color : Color
+~x : int 
+~y : int
+--
+~NodeView(int, int int, color)
+~updateRadius(int) : void
+~draw(Graphics2D) : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>549</x><y>664</y><w>100</w><h>80</h></coordinates><panel_attributes>_Coord_
+--
+~x :double
+~y : double
+--
++ Coord(double, double)
++dist(Coord) : double
++getX() : double
++getY() : double
++setX(double) : double
++setY(double) : double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>681</x><y>692</y><w>148</w><h>36</h></coordinates><panel_attributes>_GraphLoader_
+--
+--
+__+loadFromFile(String, String) : Graph__
+__-loadNodesFromFile(Graph, String) : HashMap&lt;Integer, Node&gt;__
+__-loadEdgesFromFile(Graph, HashMap&lt;Integer, Node&gt;__
 
------------------------------------------------------------
-A CONTINUER
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>417</x><y>600</y><w>100</w><h>208</h></coordinates><panel_attributes>_&lt;&lt;Interface&gt;&gt; Igraph_
+--
+--
++addNode : Node
++addNode(Node) : Node
++ addEdge(Edge) : Edge
++ addEdge(Node, Node) : Edge
++ delNode(Node) : void
++delEdge(Edge) : void
++numberOfNodes() : int
++numberOfEdges() : int
++getNeighbors(Node) : ArrayList&lt;Node&gt;
++getSuccessors(Node) : ArrayList&lt;Node&gt;
++getPredecessors(Node) : ArrayList&lt;Node&gt;
++getInOutEdges(Node)
++getInEdges(Node) : ArrayList&lt;Edge&gt;
++getOutEdges(Node) :
++getNodes() : ArrayList&lt;Node&gt;
++getEdges() : ArrayList&lt;Edge&gt;
++source(Edge) : Node
++target(Edge) : Node
++inDegree(Node) : int
++outDegree(Node) : int
++degree(Node) : int
++existEdge(Node, Node, boolean) : boolean
++getEdge(Node, Node, boolean) : Edge
++getNodePosition(Node) : Coord
++getEdgePosition(Edge) : ArrayList&lt;Coord&gt;
++setNodePosition(Node, Coord) : void
++setEdgePosition(Edge, ArrayList&lt;Coord&gt;) : void
++setAllNodesPositions(Coord) : void
+setAllEdgesPositions(ArrayList&lt;Coord&gt;) : void
++getBoundingBox() : ArrayList&lt;Coord&gt;
++getMinimumSpanningTree() : Graph
++bundle() : void
+
+
+
+
+
+
+
+
+
 </panel_attributes><additional_attributes></additional_attributes></element></diagram>
