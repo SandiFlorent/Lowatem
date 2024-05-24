@@ -9,6 +9,13 @@ package graphs;
  * @author ludevaux
  */
 public class Node {
+    
     public Coord Coordonnées;
     
+    public Node(Coord uneCoordonnées){
+        Coordonnées=uneCoordonnées;
+    }
+    public Node(){
+        Coordonnées=(new Coord());
+    }
 }

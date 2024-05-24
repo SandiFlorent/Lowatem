@@ -14,7 +14,7 @@ import java.util.HashMap;
  */
 public class Edge {
     public HashMap<Integer, ArrayList<Node>> map = new HashMap<>();
-   
+    public int Value;
     
     
 }
