@@ -5,6 +5,7 @@
 package graphs;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 /**
  *
@@ -12,7 +13,8 @@ import java.util.ArrayList;
  */
 public class Graph implements IGraph{
     
-    ArrayList<Node> allNodes = new ArrayList<>();
+    ArrayList<Edge> AllEdges = new ArrayList<>(); 
+    
     @Override
     public Node addNode() {
         Node aNode = new Node();
@@ -26,12 +28,15 @@ public class Graph implements IGraph{
     }
     @Override
     public Edge addEdge(Edge e) {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        AllEdges.add(e);
+        return e;
     }
 
     @Override
     public Edge addEdge(Node src, Node tgt) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        Edge tempNode = new Edge(src, tgt);
+        AllEdges.add(tempNode);
+        return tempNode;
     }
 
     @Override
@@ -41,7 +46,7 @@ public class Graph implements IGraph{
 
     @Override
     public void delEdge(Edge e) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        AllEdges.remove(e);
     }
 
     @Override
@@ -51,7 +56,7 @@ public class Graph implements IGraph{
 
     @Override
     public int numberOfEdges() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return AllEdges.size();
     }
 
     @Override

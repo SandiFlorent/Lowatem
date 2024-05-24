@@ -13,8 +13,12 @@ import java.util.HashMap;
  * @author ludevaux
  */
 public class Edge {
-    public HashMap<Integer, ArrayList<Node>> map = new HashMap<>();
-    public int Value;
+    /**
+     *We associated a number to an edge which indexes the nodes associated to it
+     */
+    public HashMap<Node, Node> Edges = new HashMap<>();
     
-    
+    public Edge (Node src, Node tgt){
+        Edges.put(src, tgt);
+    }
 }
