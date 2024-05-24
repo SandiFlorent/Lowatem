@@ -14,6 +14,7 @@ import java.util.HashSet;
 public class Graph implements IGraph{
     
     ArrayList<Edge> AllEdges = new ArrayList<>(); 
+    ArrayList<Node> allNodes = new ArrayList<>();
     
     @Override
     public Node addNode() {
