@@ -13,17 +13,16 @@ import java.util.HashMap;
  * @author ludevaux
  */
 public class Edge {
-    /**
-     *We associated a number to an edge which indexes the nodes associated to it
-     */
+    
     private Node source;
     private Node target;
     public HashMap<Node, Node> Edges = new HashMap<>();
+    private ArrayList<Coord> positions = new ArrayList<>();
     
     public Edge (Node src, Node tgt){
         Edges.put(src, tgt);
-        source=src;
-        target=tgt;
+        source= src;
+        target = tgt;
     }
     public Node getSource(){
         return source;
@@ -32,8 +31,11 @@ public class Edge {
         return target;
     }
     
-    
-    public Edge (Node src, Node tgt){
-        Edges.put(src, tgt);
+    public ArrayList<Coord> getEdgePositions(){
+        return positions;
+    }
+    public void setEdgePositions(ArrayList<Coord> coord){
+        this.positions = null;
+        positions = coord;
     }
 }
