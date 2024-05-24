@@ -62,22 +62,40 @@ public class Graph implements IGraph{
 
     @Override
     public ArrayList<Node> getNeighbors(Node n) {
-        
+        ArrayList<Node> allNeighbors = new ArrayList<>();
+        for (Edge edge : AllEdges){
+            if(edge.getSource().equals(n))
+                allNeighbors.add(edge.getSource());
+            if(edge.getTarget().equals(n))
+                allNeighbors.add(edge.getTarget());
+        }
+        return allNeighbors;
     }
 
     @Override
     public ArrayList<Node> getSuccesors(Node n) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        ArrayList<Node> allNeighbors = new ArrayList<>();
+        for (Edge edge : AllEdges){
+            if(edge.getSource().equals(n))
+                allNeighbors.add(edge.getTarget());
+        }
+        return allNeighbors;
     }
 
     @Override
     public ArrayList<Node> getPredecessors(Node n) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        ArrayList<Node> allNeighbors = new ArrayList<>();
+        for (Edge edge : AllEdges){
+            if(edge.getTarget().equals(n))
+                allNeighbors.add(edge.getSource());
+        }
+        return allNeighbors;
     }
+    
 
     @Override
     public ArrayList<Edge> getInOutEdges(Node n) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
     }
 
     @Override
@@ -92,47 +110,60 @@ public class Graph implements IGraph{
 
     @Override
     public ArrayList<Node> getNodes() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return allNodes;
     }
 
     @Override
     public ArrayList<Edge> getEdges() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return AllEdges;
     }
 
     @Override
     public Node source(Edge e) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return e.getSource();
     }
 
     @Override
     public Node target(Edge e) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return e.getTarget();
     }
 
     @Override
     public int inDegree(Node n) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return getInEdges(n).size();
     }
 
     @Override
     public int outDegree(Node n) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return getOutEdges(n).size();
     }
 
     @Override
     public int degree(Node n) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return getInEdges(n).size()+getOutEdges(n).size();
     }
 
     @Override
     public boolean existEdge(Node src, Node tgt, boolean oriented) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        if(oriented){
+            return(AllEdges.contains(new Edge(src,tgt)));
+        }
+        else{
+            return(AllEdges.contains(new Edge(src,tgt))||(AllEdges.contains(new Edge(tgt,src))));
+        }
     }
-
     @Override
     public Edge getEdge(Node src, Node tgt, boolean oriented) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        int compteur = 0;
+        Edge x = null;
+        if(existEdge(src, tgt, oriented)){
+            while(x == null){
+                if(new Edge(src, tgt).equals(AllEdges.get(compteur))){
+                    x = AllEdges.get(compteur);
+                }
+            }
+        }
+        return x;
     }
 
     @Override
@@ -167,7 +198,26 @@ public class Graph implements IGraph{
 
     @Override
     public ArrayList<Coord> getBoundingBox() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        double miny=allNodes.get(0).Coordonnées.getY();
+        double maxy=allNodes.get(0).Coordonnées.getY();
+        double maxx=allNodes.get(0).Coordonnées.getX();
+        double minx=allNodes.get(0).Coordonnées.getX();
+        ArrayList<Coord> BoxCoord = new ArrayList<Coord>();
+        for(Node a : allNodes){
+            if(minx>a.Coordonnées.getX()){
+                minx=a.Coordonnées.getX();
+            }
+            if(maxx<a.Coordonnées.getX()){
+                maxx=a.Coordonnées.getX();
+            }
+            if(miny>a.Coordonnées.getY()){
+                miny=a.Coordonnées.getY();
+            }
+            if(maxy<a.Coordonnées.getY()){
+                maxy=a.Coordonnées.getY();
+            }
+            
+        }
     }
 
     @Override

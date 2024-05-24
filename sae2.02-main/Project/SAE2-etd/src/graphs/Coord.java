@@ -16,4 +16,19 @@ public class Coord {
     public double getY() { return y; }
     public void setX(double x) { this.x = x; }
     public void setY(double y) { this.y = y; }
+    
+    @Override 
+    public boolean equals(Object o) {
+                if (this == o) {
+            return true;
+        }
+        if (o == null) {
+            return false;
+        }
+        if (this.getClass() != o.getClass()) {
+            return false;
+        }
+        Coord c = (Coord) o;
+        return x == c.x && y == c.y;
+    }
 }

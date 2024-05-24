@@ -16,9 +16,21 @@ public class Edge {
     /**
      *We associated a number to an edge which indexes the nodes associated to it
      */
+    private Node source;
+    private Node target;
     public HashMap<Node, Node> Edges = new HashMap<>();
     
     public Edge (Node src, Node tgt){
         Edges.put(src, tgt);
+        source=src;
+        target=tgt;
     }
+    public Node getSource(){
+        return source;
+    }
+    public Node getTarget(){
+        return target;
+    }
+    
+    
 }
