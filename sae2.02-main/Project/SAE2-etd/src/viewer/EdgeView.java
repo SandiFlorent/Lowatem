@@ -76,8 +76,8 @@ public class EdgeView {
         double t2 = 1.0;
         Coord bezierPoint = new Coord();
         for (int i = 0; i < this.polyX.length; ++i) {
-            bezierPoint.x += this.polyX[i] * curCoeff * t2 * pow(s, (double) this.polyX.length - 1 - i);
-            bezierPoint.y += this.polyY[i] * curCoeff * t2 * pow(s, (double) this.polyY.length - 1 - i);
+            bezierPoint.setX(this.polyX[i] * curCoeff * t2 * pow(s, (double) this.polyX.length - 1 - i));
+            bezierPoint.setY(this.polyY[i] * curCoeff * t2 * pow(s, (double) this.polyY.length - 1 - i));
             double c = (double) (i + 1);
             curCoeff *= (r - c) / c;
             t2 *= t;
@@ -104,8 +104,8 @@ public class EdgeView {
         this.smoothedY = new int[newBends.size()];
 
         for (int i = 0; i < this.smoothedX.length; ++i) {
-            this.smoothedX[i] = (int) newBends.get(i).x;
-            this.smoothedY[i] = (int) newBends.get(i).y;
+            this.smoothedX[i] = (int) newBends.get(i).getX();
+            this.smoothedY[i] = (int) newBends.get(i).getY();
         }
     }
 
