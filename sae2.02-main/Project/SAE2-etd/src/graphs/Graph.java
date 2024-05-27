@@ -214,7 +214,7 @@ public class Graph implements IGraph{
     @Override
     public void setAllEdgesPositions(ArrayList<Coord> bends) {
     for (Edge edge : AllEdges){
-            setAllEdgesPositions(bends);
+            setEdgePosition(edge,bends);
         }
     }
 
@@ -240,6 +240,11 @@ public class Graph implements IGraph{
             }
             
         }
+        Coord pointA = new Coord(minx,maxx);
+        Coord pointB = new Coord(miny,maxy);
+        BoxCoord.add(pointA);
+        BoxCoord.add(pointB);
+        return BoxCoord;
     }
 
     @Override
