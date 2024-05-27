@@ -16,11 +16,15 @@ public class Edge {
     
     private Node source;
     private Node target;
-    public HashMap<Node, Node> Edges = new HashMap<>();
+    public HashMap<Node, Node> Nodes = new HashMap<>();
     private ArrayList<Coord> positions = new ArrayList<>();
     
+    public Edge(){
+        
+    }
+    
     public Edge (Node src, Node tgt){
-        Edges.put(src, tgt);
+        Nodes.put(src, tgt);
         source= src;
         target = tgt;
     }
@@ -37,5 +41,13 @@ public class Edge {
     public void setEdgePositions(ArrayList<Coord> coord){
         this.positions = null;
         positions = coord;
+    }
+    /**
+     * Cette fonction permet de déterminer si une arrête continent un noeud précis
+     * @param noeud le noeud à chercher
+     * @return true si l'arrête contient le noeud cherché, false sinon 
+     */
+    public boolean contient(Node noeud){
+        return this.Nodes.containsKey(noeud) || this.Nodes.containsValue(noeud);
     }
 }
