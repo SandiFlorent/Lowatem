@@ -224,7 +224,7 @@ public class Graph implements IGraph{
         double maxy=allNodes.get(0).Coordonnées.getY();
         double maxx=allNodes.get(0).Coordonnées.getX();
         double minx=allNodes.get(0).Coordonnées.getX();
-        ArrayList<Coord> BoxCoord = new ArrayList<Coord>();
+        ArrayList<Coord> BoxCoord = new ArrayList<>();
         for(Node a : allNodes){
             if(minx>a.Coordonnées.getX()){
                 minx=a.Coordonnées.getX();

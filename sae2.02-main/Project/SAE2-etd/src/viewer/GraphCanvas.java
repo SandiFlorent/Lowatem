@@ -89,7 +89,7 @@ public class GraphCanvas extends Canvas {
         ArrayList<Coord> bb = graph.getBoundingBox();
         for (Node n : graph.getNodes()) {
             Coord c = graphPositionToViewPosition(graph.getNodePosition(n), bb, true);
-            NodeView nv = new NodeView((int) c.x, (int) c.y, nodeRadius, NODE_COLOR);
+            NodeView nv = new NodeView((int) c.getX(), (int) c.getY(), nodeRadius, NODE_COLOR);
             nodeMap.put(n, nv);
         }
 
@@ -111,18 +111,18 @@ public class GraphCanvas extends Canvas {
             int nbPoints = 0;
 
             Coord src = graphPositionToViewPosition(graph.getNodePosition(graph.source(e)), bb, false);
-            x[0] = (int) src.x;
-            y[0] = (int) src.y;
+            x[0] = (int) src.getX();
+            y[0] = (int) src.getY();
             nbPoints++;
             for (Coord cur : bends) {
                 cur = graphPositionToViewPosition(cur, bb, false);
-                x[nbPoints] = (int) cur.x;
-                y[nbPoints] = (int) cur.y;
+                x[nbPoints] = (int) cur.getX();
+                y[nbPoints] = (int) cur.getY();
                 nbPoints++;
             }
             Coord tgt = graphPositionToViewPosition(graph.getNodePosition(graph.target(e)), bb, false);
-            x[nbPoints] = (int) tgt.x;
-            y[nbPoints] = (int) tgt.y;
+            x[nbPoints] = (int) tgt.getX();
+            y[nbPoints] = (int) tgt.getY();
 
             EdgeView ev = new EdgeView(x, y, EDGE_COLOR, smoothEdge);
             edgeMap.put(e, ev);
@@ -167,8 +167,8 @@ public class GraphCanvas extends Canvas {
     No javadoc is provided, there is no need to understand/modify this part of the code 
      */
     Coord graphPositionToViewPosition(Coord c, ArrayList<Coord> boundingBox, boolean forNode) {
-        double bbWidth = (boundingBox.get(1).x - boundingBox.get(0).x);
-        double bbHeight = (boundingBox.get(1).y - boundingBox.get(0).y);
+        double bbWidth = (boundingBox.get(1).getX() - boundingBox.get(0).getX());
+        double bbHeight = (boundingBox.get(1).getY() - boundingBox.get(0).getY());
 
         int width = getWidth() - 2 * MARGIN;
         int height = getHeight() - 2 * MARGIN;
@@ -177,12 +177,12 @@ public class GraphCanvas extends Canvas {
         double distX, distY;
         double ratio = max(bbWidth / width, bbHeight / height);
         if (bbWidth > 0) {
-            distX = (c.x - boundingBox.get(0).x);
+            distX = (c.getX() - boundingBox.get(0).getX());
         } else {
             distX = 0.5;
         }
         if (bbHeight > 0) {
-            distY = (c.y - boundingBox.get(0).y);
+            distY = (c.getY() - boundingBox.get(0).getY());
         } else {
             distY = 0.5;
         }
