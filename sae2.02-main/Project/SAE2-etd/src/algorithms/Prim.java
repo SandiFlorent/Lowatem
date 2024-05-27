@@ -4,14 +4,13 @@
  */
 package algorithms;
 
-import graphs.Coord;
 import graphs.Edge;
 import graphs.Node;
 import graphs.Graph;
 import java.util.HashSet;
 import java.util.HashMap;
-import java.util.ArrayList;
 import java.util.Random;
+import java.util.Set;
 
 /**
  *
@@ -36,8 +35,30 @@ public class Prim {
         }
     }
     
-    private HashMap<Edge, Node> chooseEdge(Graph g){
-        return null;
+    private HashMap<Edge, Node> chooseEdge(Graph g,HashMap<Edge,Double> f,Set<Node> s){
+        Node u = null;
+        Edge chosenEdge = null;
+        double costmin=1000000000;
+        for (Node v : s){
+            //On doit récupérer les getEdges de v. Il faudrait faire un truc du style( g.getEdge(v))
+            for(Edge e : g.getEdges()){
+                if(s.contains(e.getSource()) && !s.contains(e.getTarget())){
+                    if(f.get(e)<costmin){
+                        costmin=f.get(e);
+                        u=e.getTarget();
+                        chosenEdge=e;
+                    }
+                }
+            }
+        }
+        HashMap<Edge, Node> chosen = new HashMap<>();
+        if (chosenEdge != null && u != null) {
+            chosen.put(chosenEdge, u);
+        }
+
+        return chosen;
+        }
+        
         //A continuer !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     }
     
