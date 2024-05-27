@@ -4,9 +4,9 @@
  */
 package properties;
 
-import info.iut.sae2.graphs.Coord;
-import info.iut.sae2.graphs.Node;
-import info.iut.sae2.graphs.Edge;
+import graphs.Coord;
+import graphs.Node;
+import graphs.Edge;
 
 import java.util.ArrayList;
 import java.util.HashMap;

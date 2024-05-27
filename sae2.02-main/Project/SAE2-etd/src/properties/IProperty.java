@@ -4,8 +4,8 @@
  */
 package properties;
 
-import info.iut.sae2.graphs.Edge;
-import info.iut.sae2.graphs.Node;
+import graphs.Edge;
+import graphs.Node;
 
 /**
  *
