@@ -66,7 +66,7 @@ public class Graph implements IGraph{
         for (Edge edge : AllEdges){
             if(edge.getSource().equals(n))
                 allNeighbors.add(edge.getSource());
-            if(edge.getTarget().equals(n))
+            else if(edge.getTarget().equals(n))
                 allNeighbors.add(edge.getTarget());
         }
         return allNeighbors;
@@ -176,6 +176,7 @@ public class Graph implements IGraph{
                 if(new Edge(src, tgt).equals(AllEdges.get(compteur))){
                     x = AllEdges.get(compteur);
                 }
+                compteur++;
             }
         }
         return x;
@@ -240,8 +241,8 @@ public class Graph implements IGraph{
             }
             
         }
-        Coord pointA = new Coord(minx,maxx);
-        Coord pointB = new Coord(miny,maxy);
+        Coord pointA = new Coord(minx,miny);
+        Coord pointB = new Coord(maxx,maxy);
         BoxCoord.add(pointA);
         BoxCoord.add(pointB);
         return BoxCoord;
