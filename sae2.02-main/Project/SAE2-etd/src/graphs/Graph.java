@@ -17,6 +17,14 @@ public class Graph implements IGraph{
     ArrayList<Edge> AllEdges = new ArrayList<>(); 
     ArrayList<Node> allNodes = new ArrayList<>();
     
+    public ArrayList<Edge> GetAllEdges(){
+        return AllEdges;
+    }
+    
+    public ArrayList<Node> GetAllNodes (){
+        return allNodes;
+    }
+    
     @Override
     public Node addNode() {
         Node aNode = new Node();
