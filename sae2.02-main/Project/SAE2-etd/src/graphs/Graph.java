@@ -4,6 +4,7 @@
  */
 package graphs;
 
+import algorithms.Prim;
 import java.util.ArrayList;
 import java.util.HashSet;
 
@@ -250,7 +251,8 @@ public class Graph implements IGraph{
 
     @Override
     public Graph getMinimumSpanningTree() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        Prim prim = new Prim();
+        return prim.prim(this);
     }
 
     @Override

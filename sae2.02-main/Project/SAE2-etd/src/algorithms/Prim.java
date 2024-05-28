@@ -18,15 +18,10 @@ import java.util.Set;
  */
 public class Prim {
 
-    Graph g;
     Graph tree;
     HashSet<Edge> ACM = new HashSet<>();
 
-    public Prim(Graph g) {
-        this.g = g;
-    }
-
-    void prim() {
+    public Graph prim(Graph g) {
         Edge a = new Edge();
         int numberOfNodes = g.getNodes().size();
         // Le seule et unique but de cette variable est de récupérer les valeurs
@@ -44,6 +39,12 @@ public class Prim {
             ACM.add(a);
             s.add(arreteChoisie.get(a));
         }
+        for (Edge e : ACM){
+            tree.addNode(e.getSource());
+            tree.addNode(e.getTarget());
+            tree.addEdge(e);
+        }
+        return tree;
     }
 
     /**
@@ -65,7 +66,6 @@ public class Prim {
                 //On vérifie pour chaque arrête e si le node v est inclu dans e
                 // sinon ça ne sert à rien de faire les calculs.
                 if (e.contient(v)) {
-                    // On vérifie si le 
                     if (s.contains(e.getSource()) && !s.contains(e.getTarget())
                             || !s.contains(e.getSource()) && s.contains(e.getTarget())) {
                         cost = f(e);
