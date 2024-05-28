@@ -18,7 +18,7 @@ import java.util.Set;
  */
 public class Prim {
 
-    Graph tree;
+    Graph tree = new Graph();
     HashSet<Edge> ACM = new HashSet<>();
 
     public Graph prim(Graph g) {

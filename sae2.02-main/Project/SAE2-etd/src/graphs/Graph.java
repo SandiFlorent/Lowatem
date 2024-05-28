@@ -191,8 +191,8 @@ public class Graph implements IGraph{
     @Override
     public ArrayList<Coord> getEdgePosition(Edge e) {
         ArrayList<Coord> positions = new ArrayList<>();
-        positions.add(e.getSource().Coordonnées);
-        positions.add(e.getTarget().Coordonnées);
+        //positions.add(e.getSource().Coordonnées);
+        //positions.add(e.getTarget().Coordonnées);
         return positions;
     }
 
