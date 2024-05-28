@@ -10,7 +10,6 @@ import graphs.Graph;
 import java.util.HashSet;
 import java.util.HashMap;
 import java.util.Random;
-import java.util.Set;
 
 /**
  *
@@ -21,34 +20,30 @@ public class Prim {
     Graph tree = new Graph();
 
     public Graph prim(Graph g) {
-        HashSet<Edge> ArreteDeLArbre = new HashSet<>();
-        Edge EdgeChoisi = new Edge();
+        Edge EdgeChoisi;
         int numberOfNodes = g.getNodes().size();
         // Le seule et unique but de cette variable est de récupérer les valeurs
         // fournie par la méthode ChoisirArrete
-        HashMap<Edge, Node> arreteChoisie = new HashMap<>();
+        HashMap<Edge, Node> arreteChoisie;
         //Permet de prendre au hasard un noeud dans le graphe
         Node u = g.getNodes().get(new Random().nextInt(numberOfNodes));
         HashSet<Node> NoeudConnus = new HashSet<>();
         NoeudConnus.add(u);
-        HashSet<Node> NoeudInconnus = new HashSet<>();
-        NoeudInconnus.addAll(g.GetAllNodes());
-        NoeudInconnus.remove(u);
 
-        for (int i = 0; i < numberOfNodes-1; i++) {
-            arreteChoisie = ChoisirArrete(g, NoeudConnus, NoeudInconnus);
+        for (int i = 0; i < numberOfNodes - 1; i++) {
+            arreteChoisie = ChoisirArrete(g, NoeudConnus);
+            //Ne fonctionne pas avec les graphes non connexes !!!!!!! Gérer ça avec un set des sommets non explorés.
+            if (arreteChoisie == null) {
+                continue;
+            }
             //Permet de prendre la prochaine clé de la HashMap
             //Sachant qu'il n'y a qu'une seule paire, on aura la bonne
             EdgeChoisi = arreteChoisie.keySet().iterator().next();
-            ArreteDeLArbre.add(EdgeChoisi);
             Node noeudChoisi = arreteChoisie.get(EdgeChoisi);
             NoeudConnus.add(noeudChoisi);
-            NoeudInconnus.remove(noeudChoisi);
-        }
-        for (Edge e : ArreteDeLArbre) {
-            tree.addNode(e.getSource());
-            tree.addNode(e.getTarget());
-            tree.addEdge(e);
+            tree.addNode(EdgeChoisi.getSource());
+            tree.addNode(EdgeChoisi.getTarget());
+            tree.addEdge(EdgeChoisi);
         }
         return tree;
     }
@@ -62,7 +57,7 @@ public class Prim {
      * @return retourne une map contenant l'arrête au moindre coût ainsi que le
      * nouveau atteint
      */
-    private HashMap<Edge, Node> ChoisirArrete(Graph g, HashSet<Node> NoeudConnus, HashSet<Node> NoeudInconnus) {
+    private HashMap<Edge, Node> ChoisirArrete(Graph g, HashSet<Node> NoeudConnus) {
         Node u = null;
         Edge chosenEdge = null;
         double cost;
@@ -75,7 +70,6 @@ public class Prim {
                 if (e.contient(v)) {
                     if ((NoeudConnus.contains(e.getSource()) && !NoeudConnus.contains(e.getTarget()))
                             || (!NoeudConnus.contains(e.getSource()) && NoeudConnus.contains(e.getTarget()))) {
-
                         cost = f(e);
                         if (cost < costmin) {
                             costmin = cost;
@@ -93,8 +87,9 @@ public class Prim {
         HashMap<Edge, Node> chosen = new HashMap<>();
         if (chosenEdge != null && u != null) {
             chosen.put(chosenEdge, u);
+        } else {
+            return null;
         }
-
         return chosen;
     }
 
