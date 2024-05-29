@@ -34,6 +34,9 @@ public class Edge {
     public Node getTarget(){
         return target;
     }
+    public double getWeight(){
+        return source.Coordonnées.dist(target.Coordonnées);
+    }
     
     public ArrayList<Coord> getEdgePositions(){
         return positions;
