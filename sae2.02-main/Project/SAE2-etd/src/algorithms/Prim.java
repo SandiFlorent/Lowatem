@@ -78,6 +78,7 @@ public class Prim {
                 priorityQueue.addAll(g.getInOutEdges(randomNodeFromAnotherPieceOfTheGraph));
             }
         }
+        
         return tree;
     }
 
