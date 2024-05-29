@@ -16,6 +16,7 @@ public class Edge {
     
     private Node source;
     private Node target;
+    private Double weight;
     public HashMap<Node, Node> Nodes = new HashMap<>();
     private ArrayList<Coord> positions = new ArrayList<>();
     
@@ -27,6 +28,7 @@ public class Edge {
         Nodes.put(src, tgt);
         source= src;
         target = tgt;
+        weight = source.Coordonnées.dist(tgt.Coordonnées);
     }
     public Node getSource(){
         return source;
@@ -38,6 +40,11 @@ public class Edge {
     public ArrayList<Coord> getEdgePositions(){
         return positions;
     }
+    
+    public Double getWeight(){
+        return weight;
+    }
+    
     public void setEdgePositions(ArrayList<Coord> coord){
         this.positions = null;
         positions = coord;
