@@ -78,7 +78,7 @@ public class Dijkstra {
 
             processNeighbors(queue, distances, predecessors, visited, current);
         }
-        return null; // Si aucun chemin trouvé
+        return null; 
     }
     
 }

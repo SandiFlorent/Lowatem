@@ -8,6 +8,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class GraphLoader {
 
@@ -63,6 +64,7 @@ public class GraphLoader {
        Path pathToFile = Paths.get(edgeFileName);
         try (BufferedReader br = Files.newBufferedReader(pathToFile,
                 StandardCharsets.US_ASCII)) {
+            HashSet<Edge> a = new HashSet<>();
 
             String line = br.readLine();
             while (line != null) {
@@ -71,13 +73,16 @@ public class GraphLoader {
                     System.err.println("Error while loading edges : " + attributes.length + " column(s)");
                     continue;
                 }
+                
                 int srcInt = Integer.parseInt(attributes[0]);
                 int tgtInt = Integer.parseInt(attributes[1]);
                 Node src = nodeMap.get(srcInt);
                 Node tgt = nodeMap.get(tgtInt);
-                Edge finalEdge=g.addEdge(src,tgt);
-                ArrayList<Coord> bends = new ArrayList<>();
-                g.setEdgePosition(finalEdge, bends);
+                if(!g.existEdge(src, tgt, false)){
+                    Edge finalEdge=g.addEdge(src,tgt);
+                    ArrayList<Coord> bends = new ArrayList<>();
+                    g.setEdgePosition(finalEdge, bends);
+                }
                 line = br.readLine();
             }
         } catch (IOException ioe) {

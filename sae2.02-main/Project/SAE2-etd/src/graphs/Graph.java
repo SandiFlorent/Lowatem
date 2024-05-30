@@ -173,13 +173,22 @@ public class Graph implements IGraph{
 
     @Override
     public boolean existEdge(Node src, Node tgt, boolean oriented) {
-        if(oriented){
-            return(AllEdges.contains(new Edge(src,tgt)));
-        }
-        else{
-            return(AllEdges.contains(new Edge(src,tgt))||(AllEdges.contains(new Edge(tgt,src))));
+    for (Edge edge : this.AllEdges) {
+        if (oriented) {
+            // Pour les graphes orientés, vérifiez simplement si l'arc correspond exactement.
+            if (edge.getSource().equals(src) && edge.getTarget().equals(tgt)) {
+                return true;
+            }
+        } else {
+            // Pour les graphes non orientés, vérifiez les deux directions possibles.
+            if ((edge.getSource().equals(src) && edge.getTarget().equals(tgt)) ||
+                (edge.getSource().equals(tgt) && edge.getTarget().equals(src))) {
+                return true;
+            }
         }
     }
+    return false; // Si aucune correspondance n'est trouvée, renvoyez false.
+}
     @Override
     public Edge getEdge(Node src, Node tgt, boolean oriented) {
         int compteur = 0;
