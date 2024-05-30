@@ -34,7 +34,7 @@ public class Node {
             return false;
         }
         Node tmp = (Node) o;
-        return Coordonnées.equals(tmp);
+        return Objects.equals(Coordonnées, tmp.Coordonnées);
     }
 
     @Override

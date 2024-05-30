@@ -8,6 +8,7 @@ import graphs.Graph;
 import graphs.Node;
 import graphs.Edge;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.PriorityQueue;
@@ -19,9 +20,6 @@ import java.util.PriorityQueue;
 public class Dijkstra {
     Graph graph = new Graph();
     
-    public Dijkstra(Graph graph) {
-        this.graph = graph;
-    }
     /*
     Initialisation de l'algorithm de Dijkstra
     */
@@ -36,8 +34,7 @@ public class Dijkstra {
     
     private void processNeighbors(PriorityQueue<Node> queue, HashMap<Node, Double> distances, HashMap<Node, Node> predecessors, HashSet<Node> visited, Node current) {
         for (Edge edge : graph.getInOutEdges(current)) {
-            ArrayList<Node> neighbors = graph.getNeighbors(current);
-            Node neighbor=neighbors.get(0);
+            Node neighbor = edge.getNeighbor(current);
             if (visited.contains(neighbor)){
                 continue;
             }
@@ -49,6 +46,39 @@ public class Dijkstra {
             }
         }
     }
-    
+    private ArrayList<Node> reconstructPath(HashMap<Node, Node> predecessors, Node goal) {
+        ArrayList<Node> path = new ArrayList<>();
+        for (Node at = goal; at != null; at = predecessors.get(at)) {
+            path.add(0, at);
+        }
+        return path;
+    }
+    public ArrayList<Node> findShortestPath(Node start, Node goal) {
+        HashMap<Node, Double> distances = new HashMap<>();
+        HashMap<Node, Node> predecessors = new HashMap<>();
+        HashSet<Node> visited = new HashSet<>();
+
+        // Création du comparateur
+        Comparator<Node> comparator = Comparator.comparingDouble(node -> distances.get(node));
+
+        // Initialisation de la file de priorité avec le comparateur
+        PriorityQueue<Node> queue = new PriorityQueue<>(comparator);
+
+        Initialisation(distances, start);
+        queue.add(start);
+
+        while (!queue.isEmpty()) {
+            Node current = queue.poll();
+
+            if (!visited.add(current)) continue; 
+
+            if (current.equals(goal)) {
+                return reconstructPath(predecessors, goal);
+            }
+
+            processNeighbors(queue, distances, predecessors, visited, current);
+        }
+        return null; // Si aucun chemin trouvé
+    }
     
 }

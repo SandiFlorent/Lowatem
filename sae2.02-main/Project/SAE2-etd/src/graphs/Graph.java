@@ -7,6 +7,10 @@ package graphs;
 import algorithms.Prim;
 import java.util.ArrayList;
 import java.util.HashSet;
+import algorithms.Dijkstra;
+import java.awt.Color;
+import viewer.EdgeView;
+
 
 /**
  *
@@ -262,10 +266,12 @@ public class Graph implements IGraph{
         Prim prim = new Prim();
         return prim.prim(this);
     }
-
+    
     @Override
     public void bundle() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+            
+            }
+        
+    
     
 }

@@ -10,7 +10,7 @@ public class Coord {
         this.y = y;
     }
     public double dist(Coord c){
-        return (Math.sqrt(Math.abs(Math.pow(x-y, 2.0)+Math.pow(c.x-c.y, 2.0))));
+        return Math.sqrt(Math.pow(this.x - c.x, 2) + Math.pow(this.y - c.y, 2));
     }
     public double getX() { return x; }
     public double getY() { return y; }

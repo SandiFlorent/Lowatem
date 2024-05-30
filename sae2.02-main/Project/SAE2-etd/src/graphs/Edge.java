@@ -57,4 +57,17 @@ public class Edge {
     public boolean contient(Node noeud){
         return this.Nodes.containsKey(noeud) || this.Nodes.containsValue(noeud);
     }
+    /**
+     * Cette fonction renvoie le voisin d'un nœud sur cette arête.
+     * @param noeud le nœud pour lequel nous cherchons le voisin
+     * @return le nœud voisin
+     */
+    public Node getNeighbor(Node noeud) {
+        if (source.equals(noeud)) {
+            return target;
+        } else if (target.equals(noeud)) {
+            return source;
+        } 
+        return null;
+    }
 }
