@@ -214,18 +214,18 @@ public class Graph implements IGraph {
 
     @Override
     public Edge getEdge(Node src, Node tgt, boolean oriented) {
-        int compteur = 0;
-        Edge x = null;
-        if (existEdge(src, tgt, oriented)) {
-            while (x == null) {
-                if (new Edge(src, tgt).equals(allEdges.get(compteur))) {
-                    x = allEdges.get(compteur);
-                }
-                compteur++;
+    if (existEdge(src, tgt, oriented)) {
+        System.out.println("oui");
+        System.out.println(allEdges.size());
+        for (Edge edge : allEdges) {
+            System.out.println(edge);
+            if (edge.equals(new Edge(src, tgt))) {
+                return edge;
             }
         }
-        return x;
     }
+    return null;  
+}
 
     @Override
     public Coord getNodePosition(Node n) {

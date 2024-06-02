@@ -310,7 +310,7 @@ public class GraphTest {
         instance.addNode(n1);
         instance.addNode(n2);
         Edge expectedEdge = instance.addEdge(n1, n2);
-        Edge result = instance.getEdge(n1, n2, false);
+        Edge result = instance.getEdge(n1, n2, true);
         assertEquals(expectedEdge, result);
     }
 
