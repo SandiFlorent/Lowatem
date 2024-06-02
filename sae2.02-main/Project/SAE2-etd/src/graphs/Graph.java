@@ -73,8 +73,6 @@ public class Graph implements IGraph {
     public Edge addEdge(Node src, Node tgt) {
         Edge tempEdge = new Edge(src, tgt);
         allEdges.add(tempEdge);
-        src.addNeighBours(tgt);
-        tgt.addNeighBours(tgt);
 
         return tempEdge;
     }
@@ -109,9 +107,7 @@ public class Graph implements IGraph {
 
     @Override
     public ArrayList<Node> getNeighbors(Node n) {
-        ArrayList<Node> Neighbours = new ArrayList<>();
-        Neighbours.addAll(n.getNeighbours());
-        return Neighbours;
+        return n.getNeighbours();
     }
 
     @Override

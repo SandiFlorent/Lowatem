@@ -22,7 +22,7 @@ public class Node {
     /**
      * The set of a node's neighbours
      */
-    private HashSet<Node> neighbours = new HashSet<>();
+    private ArrayList<Node> neighbours = new ArrayList<>();
 
     /**
      * The constructor of a node that defines it at a certain coordinate
@@ -32,7 +32,7 @@ public class Node {
      */
     public Node(Coord coordinates) {
         this.coordinates = coordinates;
-        this.neighbours = new HashSet<>();
+        this.neighbours = new ArrayList<>();
     }
 
     /**
@@ -61,7 +61,7 @@ public class Node {
      * This function will give access to the list of neighbours of the node
      * @return an HashSet of node containing all the neighbours of the node
      */
-    public HashSet<Node> getNeighbours() {
+    public ArrayList<Node> getNeighbours() {
         return this.neighbours;
     }
 
