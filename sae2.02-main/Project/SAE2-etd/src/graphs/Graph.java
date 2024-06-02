@@ -7,10 +7,6 @@ package graphs;
 import algorithms.BFS;
 import algorithms.Prim;
 import java.util.ArrayList;
-import java.util.HashSet;
-import algorithms.Dijkstra;
-import java.awt.Color;
-import viewer.EdgeView;
 
 /**
  *
@@ -18,13 +14,30 @@ import viewer.EdgeView;
  */
 public class Graph implements IGraph {
 
-    ArrayList<Edge> AllEdges = new ArrayList<>();
-    ArrayList<Node> allNodes = new ArrayList<>();
+    /**
+     * This ArrayList contains all the Edges of the graph
+     */
+    private ArrayList<Edge> allEdges = new ArrayList<>();
 
+    /**
+     * This ArrayList contains all the Nodes of the graph
+     */
+    private ArrayList<Node> allNodes = new ArrayList<>();
+
+    /**
+     * This function give access to all the edges of the graph
+     *
+     * @return allEdges, an ArrayList containing all the edges of the graph
+     */
     public ArrayList<Edge> GetAllEdges() {
-        return AllEdges;
+        return allEdges;
     }
 
+    /**
+     * This function give access to all the Nodes of the graph
+     *
+     * @return allNodes, an ArrayList containing all the nodes of the graph
+     */
     public ArrayList<Node> GetAllNodes() {
         return allNodes;
     }
@@ -38,7 +51,7 @@ public class Graph implements IGraph {
 
     @Override
     public Node addNode(Node n) {
-        if (!allNodes.contains(n)){
+        if (!allNodes.contains(n)) {
             allNodes.add(n);
         }
         return n;
@@ -46,17 +59,17 @@ public class Graph implements IGraph {
 
     @Override
     public Edge addEdge(Edge e) {
-        if (!AllEdges.contains(e)){
-            AllEdges.add(e);
+        if (!allEdges.contains(e)) {
+            allEdges.add(e);
         }
-        
+
         return e;
     }
 
     @Override
     public Edge addEdge(Node src, Node tgt) {
         Edge tempEdge = new Edge(src, tgt);
-        AllEdges.add(tempEdge);
+        allEdges.add(tempEdge);
         return tempEdge;
     }
 
@@ -67,7 +80,7 @@ public class Graph implements IGraph {
 
     @Override
     public void delEdge(Edge e) {
-        AllEdges.remove(e);
+        allEdges.remove(e);
     }
 
     @Override
@@ -77,13 +90,13 @@ public class Graph implements IGraph {
 
     @Override
     public int numberOfEdges() {
-        return AllEdges.size();
+        return allEdges.size();
     }
 
     @Override
     public ArrayList<Node> getNeighbors(Node n) {
         ArrayList<Node> allNeighbors = new ArrayList<>();
-        for (Edge edge : AllEdges) {
+        for (Edge edge : allEdges) {
             if (edge.getSource().equals(n)) {
                 allNeighbors.add(edge.getTarget());
             } else if (edge.getTarget().equals(n)) {
@@ -96,7 +109,7 @@ public class Graph implements IGraph {
     @Override
     public ArrayList<Node> getSuccesors(Node n) {
         ArrayList<Node> allNeighbors = new ArrayList<>();
-        for (Edge edge : AllEdges) {
+        for (Edge edge : allEdges) {
             if (edge.getSource().equals(n)) {
                 allNeighbors.add(edge.getTarget());
             }
@@ -107,7 +120,7 @@ public class Graph implements IGraph {
     @Override
     public ArrayList<Node> getPredecessors(Node n) {
         ArrayList<Node> allNeighbors = new ArrayList<>();
-        for (Edge edge : AllEdges) {
+        for (Edge edge : allEdges) {
             if (edge.getTarget().equals(n)) {
                 allNeighbors.add(edge.getSource());
             }
@@ -126,7 +139,7 @@ public class Graph implements IGraph {
     @Override
     public ArrayList<Edge> getInEdges(Node n) {
         ArrayList<Edge> inEdges = new ArrayList<>();
-        for (Edge edge : AllEdges) {
+        for (Edge edge : allEdges) {
             if (edge.getTarget() == n) {
                 inEdges.add(edge);
             }
@@ -137,7 +150,7 @@ public class Graph implements IGraph {
     @Override
     public ArrayList<Edge> getOutEdges(Node n) {
         ArrayList<Edge> outEdges = new ArrayList<>();
-        for (Edge edge : AllEdges) {
+        for (Edge edge : allEdges) {
             if (edge.getSource() == n) {
                 outEdges.add(edge);
             }
@@ -152,7 +165,7 @@ public class Graph implements IGraph {
 
     @Override
     public ArrayList<Edge> getEdges() {
-        return AllEdges;
+        return allEdges;
     }
 
     @Override
@@ -182,21 +195,21 @@ public class Graph implements IGraph {
 
     @Override
     public boolean existEdge(Node src, Node tgt, boolean oriented) {
-        for (Edge edge : this.AllEdges) {
+        for (Edge edge : this.allEdges) {
             if (oriented) {
-                // Pour les graphes orientés, vérifiez simplement si l'arc correspond exactement.
+                // For the directed graph, we have to check if it has the same source and target
                 if (edge.getSource().equals(src) && edge.getTarget().equals(tgt)) {
                     return true;
                 }
             } else {
-                // Pour les graphes non orientés, vérifiez les deux directions possibles.
+                // For the undirected graph, as long as it has both nodes it's the same edge
                 if ((edge.getSource().equals(src) && edge.getTarget().equals(tgt))
                         || (edge.getSource().equals(tgt) && edge.getTarget().equals(src))) {
                     return true;
                 }
             }
         }
-        return false; // Si aucune correspondance n'est trouvée, renvoyez false.
+        return false; // If it hasn't been found, then we return false
     }
 
     @Override
@@ -205,8 +218,8 @@ public class Graph implements IGraph {
         Edge x = null;
         if (existEdge(src, tgt, oriented)) {
             while (x == null) {
-                if (new Edge(src, tgt).equals(AllEdges.get(compteur))) {
-                    x = AllEdges.get(compteur);
+                if (new Edge(src, tgt).equals(allEdges.get(compteur))) {
+                    x = allEdges.get(compteur);
                 }
                 compteur++;
             }
@@ -216,7 +229,7 @@ public class Graph implements IGraph {
 
     @Override
     public Coord getNodePosition(Node n) {
-        return n.Coordonnées;
+        return n.coordinates;
     }
 
     @Override
@@ -226,7 +239,7 @@ public class Graph implements IGraph {
 
     @Override
     public void setNodePosition(Node n, Coord c) {
-        n.Coordonnées = c;
+        n.coordinates = c;
     }
 
     @Override
@@ -243,30 +256,30 @@ public class Graph implements IGraph {
 
     @Override
     public void setAllEdgesPositions(ArrayList<Coord> bends) {
-        for (Edge edge : AllEdges) {
+        for (Edge edge : allEdges) {
             setEdgePosition(edge, bends);
         }
     }
 
     @Override
     public ArrayList<Coord> getBoundingBox() {
-        double miny = allNodes.get(0).Coordonnées.getY();
-        double maxy = allNodes.get(0).Coordonnées.getY();
-        double maxx = allNodes.get(0).Coordonnées.getX();
-        double minx = allNodes.get(0).Coordonnées.getX();
+        double miny = allNodes.get(0).coordinates.getY();
+        double maxy = allNodes.get(0).coordinates.getY();
+        double maxx = allNodes.get(0).coordinates.getX();
+        double minx = allNodes.get(0).coordinates.getX();
         ArrayList<Coord> BoxCoord = new ArrayList<>();
         for (Node a : allNodes) {
-            if (minx > a.Coordonnées.getX()) {
-                minx = a.Coordonnées.getX();
+            if (minx > a.coordinates.getX()) {
+                minx = a.coordinates.getX();
             }
-            if (maxx < a.Coordonnées.getX()) {
-                maxx = a.Coordonnées.getX();
+            if (maxx < a.coordinates.getX()) {
+                maxx = a.coordinates.getX();
             }
-            if (miny > a.Coordonnées.getY()) {
-                miny = a.Coordonnées.getY();
+            if (miny > a.coordinates.getY()) {
+                miny = a.coordinates.getY();
             }
-            if (maxy < a.Coordonnées.getY()) {
-                maxy = a.Coordonnées.getY();
+            if (maxy < a.coordinates.getY()) {
+                maxy = a.coordinates.getY();
             }
 
         }
@@ -285,16 +298,24 @@ public class Graph implements IGraph {
 
     @Override
     public void bundle() {
+        //We instantiate prim and BFS algorithms
         Prim prim = new Prim();
         BFS bfs = new BFS();
+        //We make a copy of the graph to avoid any issues
         Graph copy = this;
+        //We compute the MST
         Graph mst = prim.prim(this);
-        copy.AllEdges.removeAll(mst.AllEdges);
+        //We remove all the MST's edges from the copy in order to only have 
+        //the longest edges that needs the shortest path to be added as its bends
+        copy.allEdges.removeAll(mst.allEdges);
         ArrayList<Coord> bends;
-        for (Edge edgeA : copy.AllEdges) {
+        //Then for each remaining edge in the copy, we'll define the bends thanks to the BFS 
+        //Taking the MST as a guide
+        for (Edge edgeA : copy.allEdges) {
             bends = bfs.bfsShortestPath(mst, edgeA.getSource(), edgeA.getTarget());
             this.setEdgePosition(edgeA, bends);
         }
-        this.AllEdges.addAll(mst.AllEdges);
+        //Finally we add the MST's edges to make the graph whole again
+        this.allEdges.addAll(mst.allEdges);
     }
 }

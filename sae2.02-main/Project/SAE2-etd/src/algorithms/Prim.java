@@ -65,7 +65,7 @@ public class Prim {
 
             } //If we can't, then we first check if it's just because the edge wasn't 
             // in agreement with our conditions or if it's because it's not a connected graph
-            else if (priorityQueue.size() == 0 && unknownNodes.size() > 0) {
+            else if (priorityQueue.isEmpty() && !unknownNodes.isEmpty()) {
                 // If it's not a connected graph, we'll add random unknown node to the 
                 //knownNodes Set, clear and refill the priorityQueue with this node and
                 //continue with the algorithm.
@@ -78,7 +78,7 @@ public class Prim {
                 priorityQueue.addAll(g.getInOutEdges(randomNodeFromAnotherPieceOfTheGraph));
             }
         }
-        
+
         return tree;
     }
 
