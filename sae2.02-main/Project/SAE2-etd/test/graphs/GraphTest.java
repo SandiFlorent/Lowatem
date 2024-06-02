@@ -142,16 +142,22 @@ public class GraphTest {
         Node n1 = new Node(new Coord(1, 1));
         Node n2 = new Node(new Coord(2, 2));
         Node n3 = new Node(new Coord(3, 3));
+        Node n4 = new Node(new Coord(4, 4));
         Graph instance = new Graph();
         instance.addNode(n1);
         instance.addNode(n2);
         instance.addNode(n3);
         instance.addEdge(n1, n2);
         instance.addEdge(n1, n3);
+        instance.addEdge(n1, n4);
         ArrayList<Node> result = instance.getNeighbors(n1);
+        for(Node a : result){
+            System.out.println(a);
+        }
         assertTrue(result.contains(n2));
         assertTrue(result.contains(n3));
-        assertEquals(2, result.size());
+        assertTrue(result.contains(n4));
+        assertEquals(3, result.size());
     }
 
     @Test

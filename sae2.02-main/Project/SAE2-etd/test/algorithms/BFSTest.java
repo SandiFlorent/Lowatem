@@ -23,24 +23,24 @@ public class BFSTest {
 
     @Before
     public void setUp() {
-        // Créer un nouveau graphe
+        // Create a new graph
         graph = new Graph();
 
-        // Créer des noeuds avec leurs coordonnées
+        // Create nodes with their coordinates
         node1 = new Node(new Coord(0, 0));
         node2 = new Node(new Coord(1, 1));
         node3 = new Node(new Coord(2, 2));
         node4 = new Node(new Coord(3, 3));
         node5 = new Node(new Coord(4, 4));
 
-        // Ajouter les noeuds au graphe
+        // Add nodes to the graph
         graph.addNode(node1);
         graph.addNode(node2);
         graph.addNode(node3);
         graph.addNode(node4);
         graph.addNode(node5);
 
-        // Créer des arêtes avec des poids
+        // Create edges with weights
         Edge edge1 = new Edge(node1, node2);
         Edge edge2 = new Edge(node1, node3);
         Edge edge3 = new Edge(node2, node3);
@@ -49,7 +49,7 @@ public class BFSTest {
         Edge edge6 = new Edge(node3, node5);
         Edge edge7 = new Edge(node4, node5);
 
-        // Ajouter les arêtes au graphe
+        // Add edges to the graph
         graph.addEdge(edge1);
         graph.addEdge(edge2);
         graph.addEdge(edge3);
@@ -65,16 +65,16 @@ public class BFSTest {
         ArrayList<Coord> path = bfsAlgorithm.bfsShortestPath(graph, node1, node5);
         System.out.println(" oui" +path);
 
-        // Vérifier que le chemin trouvé est correct
+        // Check that the path found is correct
         ArrayList<Coord> expectedPath = new ArrayList<>();
-        expectedPath.add(node3.coordinates); // Ajouter le noeud intermédiaire attendu
+        expectedPath.add(node3.coordinates); 
 
         assertEquals(expectedPath, path);
     }
 
     @Test
     public void testBFSNoPath() {
-        // Créer un nouveau graphe déconnecté
+        // Create a new disconnected graph
         Graph disconnectedGraph = new Graph();
 
         Node nodeA = new Node(new Coord(0, 0));
@@ -93,7 +93,7 @@ public class BFSTest {
         BFS bfsAlgorithm = new BFS();
         ArrayList<Coord> path = bfsAlgorithm.bfsShortestPath(disconnectedGraph, nodeA, nodeD);
 
-        // Vérifier qu'il n'y a pas de chemin trouvé
+        // Check that no path has been found
         assertTrue(path.isEmpty());
     }
 }
