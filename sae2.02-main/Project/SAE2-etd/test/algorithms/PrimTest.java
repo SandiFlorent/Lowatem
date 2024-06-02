@@ -72,4 +72,40 @@ public class PrimTest {
         assertTrue(mst.existEdge(node4, node5, false) ||
                    mst.existEdge(node5, node4, false));
     }
+     public void testPrimWithDisconnectedGraph() {
+        // Create a new disconnected graph
+        Graph disconnectedGraph = new Graph();
+
+        // Create nodes with coordinates
+        Node nodeA = new Node(new Coord(0, 0));
+        Node nodeB = new Node(new Coord(1, 1));
+        Node nodeC = new Node(new Coord(10, 10));
+        Node nodeD = new Node(new Coord(11, 11));
+
+        // Adding nodes to the graph
+        disconnectedGraph.addNode(nodeA);
+        disconnectedGraph.addNode(nodeB);
+        disconnectedGraph.addNode(nodeC);
+        disconnectedGraph.addNode(nodeD);
+
+        // Creating edges with weights
+        Edge edgeAB = new Edge(nodeA, nodeB);
+        Edge edgeCD = new Edge(nodeC, nodeD);
+
+        // Adding edges to the graph
+        disconnectedGraph.addEdge(edgeAB);
+        disconnectedGraph.addEdge(edgeCD);
+
+        // Run Prim's algorithm
+        Prim primAlgorithm = new Prim();
+        Graph mst = primAlgorithm.prim(disconnectedGraph);
+
+        // Check the number of nodes and edges in the MST
+        assertEquals(4, mst.numberOfNodes());
+        assertEquals(2, mst.numberOfEdges());
+
+        // Check that the MST contains the correct edges
+        assertTrue(mst.existEdge(nodeA, nodeB, false));
+        assertTrue(mst.existEdge(nodeC, nodeD, false));
+    }
 }

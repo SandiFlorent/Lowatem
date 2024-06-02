@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="vdi-linux-05" name="algorithms.PrimTest" skipped="0" tests="1" time="0.097" timestamp="2024-06-02T17:54:51">
+<testsuite errors="0" failures="0" hostname="vdi-linux-05" name="graphs.GraphTest" skipped="0" tests="27" time="0.151" timestamp="2024-06-02T17:46:14">
   <properties>
     <property name="libs.spring-framework300.classpath" value="/mnt/raddix/opt/netbeans/platform/modules/org-apache-commons-logging.jar:/mnt/raddix/opt/netbeans/java/modules/ext/cglib-2.2.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-aop-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-aspects-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-beans-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-context-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-context-support-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-core-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-expression-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-instrument-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-instrument-tomcat-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-jdbc-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-jms-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-orm-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-oxm-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-struts-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-test-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-tx-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-web-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-webmvc-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-webmvc-portlet-3.2.18.RELEASE.jar" />
     <property name="javac.test.classpath" value="/mnt/raddix/opt/netbeans/platform/modules/ext/hamcrest-core-1.3.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-4.13.2.jar:build/classes:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-4.13.2.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/hamcrest-core-1.3.jar" />
@@ -18,7 +18,7 @@
     <property name="libs.jsp-compilation.src" value="" />
     <property name="libs.JWSAntTasks.javadoc" value="" />
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner algorithms.PrimTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/build/test/results/TEST-algorithms.PrimTest.xml crashfile=/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/build/junitvmwatcher16762203193618384627.properties propsfile=/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/build/junit6173696372678361573.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner graphs.GraphTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/build/test/results/TEST-graphs.GraphTest.xml crashfile=/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/build/junitvmwatcher2205109763115121151.properties propsfile=/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/build/junit16134461803907782669.properties" />
     <property name="jdk.debug" value="release" />
     <property name="libs.spring-framework300.src" value="" />
     <property name="javadoc.use" value="true" />
@@ -63,7 +63,7 @@
     <property name="jlink.additionalparam" value="" />
     <property name="libs.testng.maven-pom" value="" />
     <property name="org.openide.version" value="deprecated" />
-    <property name="test.includes" value="algorithms/PrimTest.java" />
+    <property name="test.includes" value="graphs/GraphTest.java" />
     <property name="run.classpath" value="/mnt/raddix/opt/netbeans/platform/modules/ext/hamcrest-core-1.3.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-4.13.2.jar:build/classes" />
     <property name="libs.jaxb.src" value="" />
     <property name="sun.awt.enableExtraMouseButtons" value="true" />
@@ -208,7 +208,7 @@
     <property name="libs.jsp-compilation-syscp.classpath" value="/mnt/raddix/opt/netbeans/extide/ant/lib/ant.jar:/mnt/raddix/opt/netbeans/enterprise/modules/ext/servlet3.1-jsp2.3-api.jar:/mnt/raddix/opt/netbeans/enterprise/modules/ext/glassfish-jspparser-4.0.jar:/mnt/raddix/opt/netbeans/enterprise/modules/ext/jstl-impl.jar:/mnt/raddix/opt/netbeans/enterprise/modules/ext/jsf-2_2/javax.faces.jar" />
     <property name="libs.jsp-compilation.classpath" value="/mnt/raddix/opt/netbeans/extide/ant/lib/ant.jar:/mnt/raddix/opt/netbeans/enterprise/modules/ext/servlet3.1-jsp2.3-api.jar:/mnt/raddix/opt/netbeans/enterprise/modules/ext/glassfish-jspparser-4.0.jar:/mnt/raddix/opt/netbeans/enterprise/modules/ext/jsf-2_2/javax.faces.jar:/mnt/raddix/opt/netbeans/enterprise/modules/ext/jstl-api.jar:/mnt/raddix/opt/netbeans/extide/ant/lib/ant-launcher.jar" />
     <property name="libs.javaee-api-6.0.classpath" value="/mnt/raddix/opt/netbeans/enterprise/modules/ext/javaee-api-6.0.jar" />
-    <property name="javac.includesfile.binary" value="/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/null1585801253" />
+    <property name="javac.includesfile.binary" value="/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/null1619134916" />
     <property name="libs.javaee-api-7.0.classpath" value="/mnt/raddix/opt/netbeans/enterprise/modules/ext/javaee-api-7.0.jar" />
     <property name="sun.cpu.isalist" value="" />
     <property name="libs.restapi.maven-pom" value="" />
@@ -336,7 +336,7 @@
     <property name="empty.dir" value="/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/build/empty" />
     <property name="platforms.JDK_21.bootclasspath" value="/usr/lib/jvm/java-21-openjdk-amd64/!/modules/java.base/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/java.compiler/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/java.datatransfer/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/java.desktop/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/java.instrument/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/java.logging/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/java.management/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/java.management.rmi/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/java.naming/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/java.net.http/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/java.prefs/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/java.rmi/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/java.scripting/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/java.se/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/java.security.jgss/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/java.security.sasl/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/java.smartcardio/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/java.sql/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/java.sql.rowset/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/java.transaction.xa/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/java.xml/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/java.xml.crypto/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.accessibility/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.attach/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.charsets/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.compiler/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.crypto.cryptoki/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.crypto.ec/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.dynalink/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.editpad/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.hotspot.agent/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.httpserver/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.incubator.vector/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.internal.ed/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.internal.jvmstat/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.internal.le/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.internal.opt/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.internal.vm.ci/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.internal.vm.compiler/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.internal.vm.compiler.management/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.jartool/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.javadoc/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.jcmd/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.jconsole/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.jdeps/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.jdi/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.jdwp.agent/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.jfr/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.jlink/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.jpackage/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.jshell/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.jsobject/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.jstatd/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.localedata/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.management/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.management.agent/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.management.jfr/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.naming.dns/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.naming.rmi/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.net/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.nio.mapmode/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.random/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.sctp/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.security.auth/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.security.jgss/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.unsupported/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.unsupported.desktop/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.xml.dom/:/usr/lib/jvm/java-21-openjdk-amd64/!/modules/jdk.zipfs/" />
     <property name="netbeans.user" value="/mnt/netta/users/ludevaux/.netbeans/16" />
-    <property name="javac.includes.binary" value="/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/build/test/classes/algorithms/PrimTest.class" />
+    <property name="javac.includes.binary" value="/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/build/test/classes/graphs/GraphTest.class" />
     <property name="file.separator" value="/" />
     <property name="line.separator" value="&#xa;" />
     <property name="javadoc.additionalparam" value="" />
@@ -373,7 +373,7 @@
     <property name="libs.spring-framework500.src" value="" />
     <property name="libs.javaee-api-6.0.src" value="" />
     <property name="user.properties.file" value="/mnt/netta/users/ludevaux/.netbeans/16/build.properties" />
-    <property name="javac.includes" value="algorithms/PrimTest.java" />
+    <property name="javac.includes" value="graphs/GraphTest.java" />
     <property name="netbeans.autoupdate.country" value="FR" />
     <property name="java.class.path" value="/mnt/raddix/opt/netbeans/platform/modules/ext/hamcrest-core-1.3.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-4.13.2.jar:/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/build/classes:/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/build/test/classes:/mnt/raddix/opt/netbeans/extide/ant/lib/ant-launcher.jar:/mnt/raddix/opt/netbeans/extide/ant/lib/ant.jar:/mnt/raddix/opt/netbeans/extide/ant/lib/ant-junit.jar:/mnt/raddix/opt/netbeans/extide/ant/lib/ant-junit4.jar" />
     <property name="libs.javaee-web-api-6.0.maven-pom" value="" />
@@ -427,7 +427,7 @@
     <property name="libs.metro.javadoc" value="/mnt/raddix/opt/netbeans/enterprise/docs/webservices-api-javadoc.jar:/mnt/raddix/opt/netbeans/enterprise/docs/webservices-extra-javadoc.jar:/mnt/raddix/opt/netbeans/enterprise/docs/webservices-extra-api-javadoc.jar:/mnt/raddix/opt/netbeans/enterprise/docs/webservices-rt-javadoc.jar:/mnt/raddix/opt/netbeans/enterprise/docs/webservices-tools-javadoc.jar" />
     <property name="libs.jakartaee-web-api-9.0.src" value="" />
     <property name="sun.awt.datatransfer.timeout" value="1000" />
-    <property name="test.class" value="algorithms.PrimTest" />
+    <property name="test.class" value="graphs.GraphTest" />
     <property name="junit.forkmode" value="perTest" />
     <property name="libs.jsp-compiler.classpath" value="/mnt/raddix/opt/netbeans/enterprise/ant/extra/jspcompile.jar" />
     <property name="annotation.processing.run.all.processors" value="true" />
@@ -435,7 +435,66 @@
     <property name="libs.javaee-web-api-7.0.src" value="" />
     <property name="libs.javaee-endorsed-api-6.0.classpath" value="/mnt/raddix/opt/netbeans/enterprise/modules/ext/javaee6-endorsed/javax.annotation.jar:/mnt/raddix/opt/netbeans/enterprise/modules/ext/javaee6-endorsed/jaxb-api-osgi.jar:/mnt/raddix/opt/netbeans/enterprise/modules/ext/javaee6-endorsed/webservices-api-osgi.jar" />
   </properties>
-  <testcase classname="algorithms.PrimTest" name="testPrim" time="0.007" />
-  <system-out><![CDATA[]]></system-out>
+  <testcase classname="graphs.GraphTest" name="testGetInEdges" time="0.006" />
+  <testcase classname="graphs.GraphTest" name="testSetNodePosition" time="0.001" />
+  <testcase classname="graphs.GraphTest" name="testGetAllEdges" time="0.0" />
+  <testcase classname="graphs.GraphTest" name="testGetAllNodes" time="0.0" />
+  <testcase classname="graphs.GraphTest" name="testGetMinimumSpanningTree" time="0.001" />
+  <testcase classname="graphs.GraphTest" name="testAddNode_0args" time="0.0" />
+  <testcase classname="graphs.GraphTest" name="testExistEdge" time="0.0" />
+  <testcase classname="graphs.GraphTest" name="testGetEdge" time="0.001" />
+  <testcase classname="graphs.GraphTest" name="testInDegree" time="0.0" />
+  <testcase classname="graphs.GraphTest" name="testNumberOfEdges" time="0.0" />
+  <testcase classname="graphs.GraphTest" name="testNumberOfNodes" time="0.0" />
+  <testcase classname="graphs.GraphTest" name="testAddEdge_Edge" time="0.0" />
+  <testcase classname="graphs.GraphTest" name="testGetBoundingBox" time="0.0" />
+  <testcase classname="graphs.GraphTest" name="testDelEdge" time="0.0" />
+  <testcase classname="graphs.GraphTest" name="testDelNode" time="0.001" />
+  <testcase classname="graphs.GraphTest" name="testDegree" time="0.0" />
+  <testcase classname="graphs.GraphTest" name="testGetInOutEdges" time="0.001" />
+  <testcase classname="graphs.GraphTest" name="testGetNodePosition" time="0.001" />
+  <testcase classname="graphs.GraphTest" name="testAddNode_Node" time="0.0" />
+  <testcase classname="graphs.GraphTest" name="testGetNeighbors" time="0.0" />
+  <testcase classname="graphs.GraphTest" name="testGetOutEdges" time="0.001" />
+  <testcase classname="graphs.GraphTest" name="testAddEdge_Node_Node" time="0.0" />
+  <testcase classname="graphs.GraphTest" name="testOutDegree" time="0.0" />
+  <testcase classname="graphs.GraphTest" name="testSource" time="0.001" />
+  <testcase classname="graphs.GraphTest" name="testTarget" time="0.0" />
+  <testcase classname="graphs.GraphTest" name="testGetPredecessors" time="0.0" />
+  <testcase classname="graphs.GraphTest" name="testGetSuccesors" time="0.0" />
+  <system-out><![CDATA[getInEdges
+setNodePosition
+GetAllEdges
+GetAllNodes
+getMinimumSpanningTree
+addNode
+existEdge
+getEdge
+oui
+1
+graphs.Edge@f7c8f3e5
+inDegree
+numberOfEdges
+numberOfNodes
+addEdge
+getBoundingBox
+delEdge
+delNode
+degree
+getInOutEdges
+getNodePosition
+addNode
+getNeighbors
+graphs.Node@8000d984
+graphs.Node@82d0d984
+graphs.Node@85a0d984
+getOutEdges
+addEdge
+outDegree
+source
+target
+getPredecessors
+getSuccesors
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
