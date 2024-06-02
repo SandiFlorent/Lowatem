@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="vdi-linux-05" name="algorithms.PrimTest" skipped="0" tests="1" time="0.105" timestamp="2024-06-02T14:46:34">
+<testsuite errors="0" failures="0" hostname="vdi-linux-05" name="algorithms.PrimTest" skipped="0" tests="1" time="0.106" timestamp="2024-06-02T15:30:07">
   <properties>
     <property name="libs.spring-framework300.classpath" value="/mnt/raddix/opt/netbeans/platform/modules/org-apache-commons-logging.jar:/mnt/raddix/opt/netbeans/java/modules/ext/cglib-2.2.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-aop-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-aspects-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-beans-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-context-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-context-support-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-core-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-expression-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-instrument-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-instrument-tomcat-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-jdbc-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-jms-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-orm-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-oxm-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-struts-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-test-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-tx-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-web-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-webmvc-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-webmvc-portlet-3.2.18.RELEASE.jar" />
     <property name="javac.test.classpath" value=":build/classes:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-4.13.2.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/hamcrest-core-1.3.jar" />
@@ -17,7 +17,7 @@
     <property name="libs.jsp-compilation.src" value="" />
     <property name="libs.JWSAntTasks.javadoc" value="" />
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner algorithms.PrimTest methods=testPrim skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/build/test/results/TEST-algorithms.PrimTest.xml crashfile=/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/build/junitvmwatcher11456160992765631358.properties propsfile=/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/build/junit245759609506190561.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner algorithms.PrimTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/build/test/results/TEST-algorithms.PrimTest.xml crashfile=/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/build/junitvmwatcher1254614281672970187.properties propsfile=/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/build/junit7856655720205959585.properties" />
     <property name="jdk.debug" value="release" />
     <property name="libs.spring-framework300.src" value="" />
     <property name="javadoc.use" value="true" />
@@ -61,6 +61,7 @@
     <property name="libs.testng.maven-pom" value="" />
     <property name="jlink.additionalparam" value="" />
     <property name="org.openide.version" value="deprecated" />
+    <property name="test.includes" value="algorithms/PrimTest.java" />
     <property name="run.classpath" value=":build/classes" />
     <property name="libs.jaxb.src" value="" />
     <property name="test.src.dir" value="test" />
@@ -202,7 +203,7 @@
     <property name="libs.jsp-compilation-syscp.classpath" value="/mnt/raddix/opt/netbeans/extide/ant/lib/ant.jar:/mnt/raddix/opt/netbeans/enterprise/modules/ext/servlet3.1-jsp2.3-api.jar:/mnt/raddix/opt/netbeans/enterprise/modules/ext/glassfish-jspparser-4.0.jar:/mnt/raddix/opt/netbeans/enterprise/modules/ext/jstl-impl.jar:/mnt/raddix/opt/netbeans/enterprise/modules/ext/jsf-2_2/javax.faces.jar" />
     <property name="libs.jsp-compilation.classpath" value="/mnt/raddix/opt/netbeans/extide/ant/lib/ant.jar:/mnt/raddix/opt/netbeans/enterprise/modules/ext/servlet3.1-jsp2.3-api.jar:/mnt/raddix/opt/netbeans/enterprise/modules/ext/glassfish-jspparser-4.0.jar:/mnt/raddix/opt/netbeans/enterprise/modules/ext/jsf-2_2/javax.faces.jar:/mnt/raddix/opt/netbeans/enterprise/modules/ext/jstl-api.jar:/mnt/raddix/opt/netbeans/extide/ant/lib/ant-launcher.jar" />
     <property name="libs.javaee-api-6.0.classpath" value="/mnt/raddix/opt/netbeans/enterprise/modules/ext/javaee-api-6.0.jar" />
-    <property name="javac.includesfile.binary" value="/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/null1120710727" />
+    <property name="javac.includesfile.binary" value="/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/null1357956486" />
     <property name="libs.javaee-api-7.0.classpath" value="/mnt/raddix/opt/netbeans/enterprise/modules/ext/javaee-api-7.0.jar" />
     <property name="sun.cpu.isalist" value="" />
     <property name="libs.restapi.maven-pom" value="" />
@@ -333,16 +334,15 @@
     <property name="line.separator" value="&#xa;" />
     <property name="javadoc.additionalparam" value="" />
     <property name="libs.spring-webmvc5.0.classpath" value="/mnt/raddix/opt/netbeans/java/modules/ext/spring-5/spring-webmvc-5.2.9.RELEASE.jar" />
-    <property name="test.method" value="testPrim" />
     <property name="javac.debug" value="true" />
     <property name="libs.restlib.maven-pom" value="" />
     <property name="libs.testng.classpath" value="/mnt/raddix/opt/netbeans/platform/modules/ext/testng-6.14.3.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/jcommander-1.78.jar" />
     <property name="libs.jsp-compiler.src" value="" />
     <property name="user.name" value="ludevaux" />
     <property name="build.classes.dir" value="build/classes" />
-    <property name="nb.junit.single" value="true" />
+    <property name="nb.junit.single" value="false" />
     <property name="javadoc.windowtitle" value="" />
-    <property name="nb.internal.action.name" value="run.single.method" />
+    <property name="nb.internal.action.name" value="run.single" />
     <property name="libs.javaee-api-8.0.maven-pom" value="" />
     <property name="libs.jaxws21.src" value="" />
     <property name="libs.jakartaee-web-api-9.0.javadoc" value="/mnt/raddix/opt/netbeans/enterprise/docs/jakartaee9-doc-api.jar" />
@@ -399,10 +399,10 @@
     <property name="javac.classpath" value="" />
     <property name="libs.jakartaee-web-api-8.0.classpath" value="/mnt/raddix/opt/netbeans/enterprise/modules/ext/jakarta.jakartaee-web-api-8.0.0.jar" />
     <property name="dist.jlink.dir" value="dist/jlink" />
-    <property name="nb.junit.batch" value="false" />
+    <property name="nb.junit.batch" value="true" />
     <property name="build.test.classes.dir" value="build/test/classes" />
     <property name="libs.spring-framework300.maven-pom" value="" />
-    <property name="ant.project.invoked-targets" value="test-single-method" />
+    <property name="ant.project.invoked-targets" value="test-single" />
     <property name="libs.jstl.classpath" value="/mnt/raddix/opt/netbeans/enterprise/modules/ext/jstl-impl.jar:/mnt/raddix/opt/netbeans/enterprise/modules/ext/jstl-api.jar" />
     <property name="ap.cmd.line.internal" value="" />
     <property name="jna.platform.library.path" value="/usr/lib/x86_64-linux-gnu:/lib/x86_64-linux-gnu:/usr/lib64:/lib64:/usr/lib:/lib:/lib32:/usr/lib/x86_64-linux-gnu/libfakeroot" />
@@ -428,7 +428,7 @@
     <property name="libs.jsp-compiler.classpath" value="/mnt/raddix/opt/netbeans/enterprise/ant/extra/jspcompile.jar" />
     <property name="libs.javaee-endorsed-api-6.0.classpath" value="/mnt/raddix/opt/netbeans/enterprise/modules/ext/javaee6-endorsed/javax.annotation.jar:/mnt/raddix/opt/netbeans/enterprise/modules/ext/javaee6-endorsed/jaxb-api-osgi.jar:/mnt/raddix/opt/netbeans/enterprise/modules/ext/javaee6-endorsed/webservices-api-osgi.jar" />
   </properties>
-  <testcase classname="algorithms.PrimTest" name="testPrim" time="0.007" />
+  <testcase classname="algorithms.PrimTest" name="testPrim" time="0.008" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
