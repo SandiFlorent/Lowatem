@@ -4,6 +4,8 @@
  */
 package graphs;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Objects;
 
 /**
@@ -16,6 +18,11 @@ public class Node {
      * The coordinates of a Node
      */
     public Coord coordinates;
+    
+    /**
+     * The set of a node's neighbours
+     */
+    private HashSet<Node> neighbours = new HashSet<>();
 
     /**
      * The constructor of a node that defines it at a certain coordinate
@@ -25,6 +32,7 @@ public class Node {
      */
     public Node(Coord coordinates) {
         this.coordinates = coordinates;
+        this.neighbours = new HashSet<>();
     }
 
     /**
@@ -32,6 +40,37 @@ public class Node {
      */
     public Node() {
         coordinates = (new Coord());
+    }
+
+    /**
+     * This function will clear the list of neighbours of the node
+     */
+    public void reinitializeNeighbours() {
+        this.neighbours.clear();
+    }
+
+    /**
+     * Add a node to the list of neighbours
+     * @param node the node added to the list of neighbours
+     */
+    public void addNeighBours(Node node) {
+        this.neighbours.add(node);
+    }
+
+    /**
+     * This function will give access to the list of neighbours of the node
+     * @return an HashSet of node containing all the neighbours of the node
+     */
+    public HashSet<Node> getNeighbours() {
+        return this.neighbours;
+    }
+
+    /**
+     * This function remove a node from the list of neighbours
+     * @param node the one to be removed from the list
+     */
+    public void removeNeighbours(Node node) {
+        this.neighbours.remove(node);
     }
 
     @Override
