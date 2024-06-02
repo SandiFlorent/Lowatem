@@ -62,6 +62,9 @@ public class Graph implements IGraph {
         if (!allEdges.contains(e)) {
             allEdges.add(e);
         }
+        //When we add an edge, its nodes are naturally neighbours
+        e.getSource().addNeighBours(e.getTarget());
+        e.getTarget().addNeighBours(e.getSource());
 
         return e;
     }
@@ -70,17 +73,28 @@ public class Graph implements IGraph {
     public Edge addEdge(Node src, Node tgt) {
         Edge tempEdge = new Edge(src, tgt);
         allEdges.add(tempEdge);
+        src.addNeighBours(tgt);
+        tgt.addNeighBours(tgt);
+
         return tempEdge;
     }
 
     @Override
     public void delNode(Node n) {
         allNodes.remove(n);
+        //When we remove a node, its neighbours are no longer neighbours to it.
+        for (Node node : n.getNeighbours()) {
+            node.removeNeighbours(n);
+        }
     }
 
     @Override
     public void delEdge(Edge e) {
         allEdges.remove(e);
+        //When we delete an edge, its nodes are no longer neighbours
+        //Obviously, we consider there's no duplicates edges
+        e.getSource().removeNeighbours(e.getTarget());
+        e.getTarget().removeNeighbours(e.getSource());
     }
 
     @Override
@@ -95,15 +109,9 @@ public class Graph implements IGraph {
 
     @Override
     public ArrayList<Node> getNeighbors(Node n) {
-        ArrayList<Node> allNeighbors = new ArrayList<>();
-        for (Edge edge : allEdges) {
-            if (edge.getSource().equals(n)) {
-                allNeighbors.add(edge.getTarget());
-            } else if (edge.getTarget().equals(n)) {
-                allNeighbors.add(edge.getSource());
-            }
-        }
-        return allNeighbors;
+        ArrayList<Node> Neighbours = new ArrayList<>();
+        Neighbours.addAll(n.getNeighbours());
+        return Neighbours;
     }
 
     @Override
@@ -214,18 +222,18 @@ public class Graph implements IGraph {
 
     @Override
     public Edge getEdge(Node src, Node tgt, boolean oriented) {
-    if (existEdge(src, tgt, oriented)) {
-        System.out.println("oui");
-        System.out.println(allEdges.size());
-        for (Edge edge : allEdges) {
-            System.out.println(edge);
-            if (edge.equals(new Edge(src, tgt))) {
-                return edge;
+        if (existEdge(src, tgt, oriented)) {
+            System.out.println("oui");
+            System.out.println(allEdges.size());
+            for (Edge edge : allEdges) {
+                System.out.println(edge);
+                if (edge.equals(new Edge(src, tgt))) {
+                    return edge;
+                }
             }
         }
+        return null;
     }
-    return null;  
-}
 
     @Override
     public Coord getNodePosition(Node n) {
@@ -311,6 +319,10 @@ public class Graph implements IGraph {
         ArrayList<Coord> bends;
         //Then for each remaining edge in the copy, we'll define the bends thanks to the BFS 
         //Taking the MST as a guide
+        for (Edge edgeA : copy.allEdges) {
+            edgeA.getSource().removeNeighbours(edgeA.getTarget());
+            edgeA.getTarget().removeNeighbours(edgeA.getSource());
+        }
         for (Edge edgeA : copy.allEdges) {
             bends = bfs.bfsShortestPath(mst, edgeA.getSource(), edgeA.getTarget());
             this.setEdgePosition(edgeA, bends);
