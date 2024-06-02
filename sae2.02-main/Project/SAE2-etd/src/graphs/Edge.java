@@ -7,67 +7,107 @@ package graphs;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-
 /**
  *
  * @author ludevaux
  */
 public class Edge {
-    
+
     private Node source;
     private Node target;
     private Double weight;
     public HashMap<Node, Node> Nodes = new HashMap<>();
     private ArrayList<Coord> positions = new ArrayList<>();
-    
-    public Edge(){
-        
+
+    public Edge() {
+
     }
-    
-    public Edge (Node src, Node tgt){
+
+    /**
+     * The constructor that'll create a new edge from two nodes
+     *
+     * @param src the node designed as the edge's source
+     * @param tgt the node designed as the edge's target
+     */
+    public Edge(Node src, Node tgt) {
         Nodes.put(src, tgt);
-        source= src;
+        source = src;
         target = tgt;
-        weight = source.Coordonnées.dist(tgt.Coordonnées);
+        weight = source.coordinates.dist(tgt.coordinates);
     }
-    public Node getSource(){
+
+    /**
+     * This function give us access to the edge's source
+     *
+     * @return the edge's source node
+     */
+    public Node getSource() {
         return source;
     }
-    public Node getTarget(){
+
+    /**
+     * This function give us access to the edge's target
+     *
+     * @return the edge's target node
+     */
+    public Node getTarget() {
         return target;
     }
-    
-    public ArrayList<Coord> getEdgePositions(){
+
+    /**
+     * This function give us access to the edge's positions
+     *
+     * @return a list of coordinates of all the intermediate points between the
+     * source and target nodes of the edge
+     */
+    public ArrayList<Coord> getEdgePositions() {
         return positions;
     }
-    
-    public Double getWeight(){
+
+    /**
+     * This function give us access to the edge's weight
+     *
+     * @return a double describing the weight
+     */
+    public Double getWeight() {
         return weight;
     }
-    
-    public void setEdgePositions(ArrayList<Coord> coord){
+
+    /**
+     * This function will change the coordinates of the positions(the
+     * intermediate coordinates known as bends) of an edge
+     *
+     * @param coord the ArrayList containing the new coordinates for the edge's
+     * positions
+     */
+    public void setEdgePositions(ArrayList<Coord> coord) {
         this.positions = null;
         positions = coord;
     }
+
     /**
-     * Cette fonction permet de déterminer si une arrête continent un noeud précis
-     * @param noeud le noeud à chercher
-     * @return true si l'arrête contient le noeud cherché, false sinon 
+     * This function determines if an edge contains a certain node
+     *
+     * @param node to node to find
+     * @return true if the edge contains the searched node, false otherwise
      */
-    public boolean contient(Node noeud){
-        return this.Nodes.containsKey(noeud) || this.Nodes.containsValue(noeud);
+    public boolean containsTheNode(Node node) {
+        return this.Nodes.containsKey(node) || this.Nodes.containsValue(node);
     }
+
     /**
-     * Cette fonction renvoie le voisin d'un nœud sur cette arête.
-     * @param noeud le nœud pour lequel nous cherchons le voisin
-     * @return le nœud voisin
+     * For a given node in an edge, this function gives the target if the given
+     * node a source, and a target otherwise
+     *
+     * @param node the node used in the function
+     * @return the target or the source of an edge
      */
-    public Node getNeighbor(Node noeud) {
-        if (source.equals(noeud)) {
+    public Node getNeighbour(Node node) {
+        if (source.equals(node)) {
             return target;
-        } else if (target.equals(noeud)) {
+        } else if (target.equals(node)) {
             return source;
-        } 
+        }
         return null;
     }
 }

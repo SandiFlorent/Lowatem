@@ -12,14 +12,26 @@ import java.util.Objects;
  */
 public class Node {
 
-    public Coord Coordonnées;
+    /**
+     * The coordinates of a Node
+     */
+    public Coord coordinates;
 
-    public Node(Coord uneCoordonnées) {
-        Coordonnées = uneCoordonnées;
+    /**
+     * The constructor of a node that defines it at a certain coordinate
+     *
+     * @param coordinates the coordinates in which the node will be instanciate
+     * with
+     */
+    public Node(Coord coordinates) {
+        this.coordinates = coordinates;
     }
 
+    /**
+     * A constructor that'll instanciate a node with default coordinates
+     */
     public Node() {
-        Coordonnées = (new Coord());
+        coordinates = (new Coord());
     }
 
     @Override
@@ -34,13 +46,13 @@ public class Node {
             return false;
         }
         Node tmp = (Node) o;
-        return Objects.equals(Coordonnées, tmp.Coordonnées);
+        return Objects.equals(coordinates, tmp.coordinates);
     }
 
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 79 * hash + Objects.hashCode(this.Coordonnées);
+        hash = 79 * hash + Objects.hashCode(this.coordinates);
         return hash;
     }
 }

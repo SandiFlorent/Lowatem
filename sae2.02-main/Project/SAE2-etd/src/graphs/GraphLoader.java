@@ -25,6 +25,14 @@ public class GraphLoader {
         return g;
     }
 
+    /**
+     * This function will load all the nodes of a graph from files and add it to
+     * a graph
+     *
+     * @param g the graph to which we add the edges
+     * @param nodeFileName the name of the file containing the nodes
+     * @return a Map of all the nodes indexed by their id's
+     */
     private static HashMap<Integer, Node> loadNodesFromFile(Graph g, String nodeFileName) {
         Path pathToFile = Paths.get(nodeFileName);
         HashMap<Integer, Node> nodeMap = new HashMap<>();
@@ -60,8 +68,16 @@ public class GraphLoader {
         return nodeMap;
     }
 
+    /**
+     * This function will load the edges of a graph from files and add it to a
+     * graph
+     *
+     * @param g the graph to which we add the edges
+     * @param nodeMap the nodeMap computed elsewhere
+     * @param edgeFileName the name of the file containing the edges
+     */
     private static void loadEdgesFromFile(Graph g, HashMap<Integer, Node> nodeMap, String edgeFileName) {
-       Path pathToFile = Paths.get(edgeFileName);
+        Path pathToFile = Paths.get(edgeFileName);
         try (BufferedReader br = Files.newBufferedReader(pathToFile,
                 StandardCharsets.US_ASCII)) {
             HashSet<Edge> a = new HashSet<>();
@@ -73,13 +89,13 @@ public class GraphLoader {
                     System.err.println("Error while loading edges : " + attributes.length + " column(s)");
                     continue;
                 }
-                
+
                 int srcInt = Integer.parseInt(attributes[0]);
                 int tgtInt = Integer.parseInt(attributes[1]);
                 Node src = nodeMap.get(srcInt);
                 Node tgt = nodeMap.get(tgtInt);
-                if(!g.existEdge(src, tgt, false)){
-                    Edge finalEdge=g.addEdge(src,tgt);
+                if (!g.existEdge(src, tgt, false)) {
+                    Edge finalEdge = g.addEdge(src, tgt);
                     ArrayList<Coord> bends = new ArrayList<>();
                     g.setEdgePosition(finalEdge, bends);
                 }
@@ -89,5 +105,5 @@ public class GraphLoader {
             ioe.printStackTrace();
         }
     }
-	// TODO
+    // TODO
 }
