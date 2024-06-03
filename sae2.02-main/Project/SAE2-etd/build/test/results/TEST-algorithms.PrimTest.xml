@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <testsuite errors="0" failures="0" hostname="PoorJy" name="algorithms.PrimTest" skipped="0" tests="1" time="0.145" timestamp="2024-06-02T17:33:58">
   <properties>
     <property name="libs.spring-framework300.classpath" value="C:\Program Files\NetBeans-19\netbeans\platform\modules\org-apache-commons-logging.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\cglib-2.2.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-aop-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-aspects-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-beans-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-context-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-context-support-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-core-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-expression-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-instrument-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-instrument-tomcat-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-jdbc-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-jms-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-orm-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-oxm-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-struts-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-test-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-tx-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-web-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-webmvc-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-webmvc-portlet-3.2.18.RELEASE.jar" />
@@ -7,6 +8,8 @@
     <property name="java.specification.version" value="20" />
     <property name="libs.spring-framework500.classpath" value="C:\Program Files\NetBeans-19\netbeans\platform\modules\org-apache-commons-logging.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\cglib-2.2.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-5\spring-aop-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-5\spring-aspects-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-5\spring-beans-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-5\spring-context-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-5\spring-context-indexer-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-5\spring-context-support-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-5\spring-core-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-5\spring-expression-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-5\spring-instrument-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-5\spring-jcl-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-5\spring-jdbc-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-5\spring-jms-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-5\spring-messaging-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-5\spring-orm-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-5\spring-oxm-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-5\spring-test-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-5\spring-tx-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-5\spring-web-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-5\spring-webflux-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-5\spring-webmvc-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-5\spring-websocket-5.2.9.RELEASE.jar" />
 =======
+=======
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
 <testsuite errors="0" failures="0" hostname="vdi-linux-05" name="algorithms.PrimTest" skipped="0" tests="1" time="0.097" timestamp="2024-06-02T17:54:51">
   <properties>
     <property name="libs.spring-framework300.classpath" value="/mnt/raddix/opt/netbeans/platform/modules/org-apache-commons-logging.jar:/mnt/raddix/opt/netbeans/java/modules/ext/cglib-2.2.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-aop-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-aspects-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-beans-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-context-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-context-support-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-core-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-expression-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-instrument-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-instrument-tomcat-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-jdbc-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-jms-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-orm-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-oxm-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-struts-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-test-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-tx-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-web-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-webmvc-3.2.18.RELEASE.jar:/mnt/raddix/opt/netbeans/java/modules/ext/spring-3.0/spring-webmvc-portlet-3.2.18.RELEASE.jar" />
@@ -20,11 +23,14 @@
     <property name="test.binaryincludes" value="&lt;nothing&gt;" />
     <property name="do.jlink" value="false" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="debug-transport" value="dt_shmem" />
     <property name="libs.javaee-web-api-8.0.src" value="" />
     <property name="java.vendor.url" value="https://java.oracle.com/" />
     <property name="debug.modulepath" value="C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\junit-jupiter-api-5.6.0.jar;C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\junit-jupiter-params-5.6.0.jar;C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\junit-jupiter-engine-5.6.0.jar" />
 =======
+=======
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="debug-transport" value="dt_socket" />
     <property name="libs.javaee-web-api-8.0.src" value="" />
     <property name="java.vendor.url" value="https://ubuntu.com/" />
@@ -40,7 +46,10 @@
 =======
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib" />
     <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner algorithms.PrimTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/build/test/results/TEST-algorithms.PrimTest.xml crashfile=/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/build/junitvmwatcher16762203193618384627.properties propsfile=/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/build/junit6173696372678361573.properties" />
+<<<<<<< HEAD
 >>>>>>> 8915564 (Ajout de test prim avec graphe pas connexe)
+=======
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="jdk.debug" value="release" />
     <property name="libs.spring-framework300.src" value="" />
     <property name="javadoc.use" value="true" />
@@ -49,7 +58,10 @@
     <property name="basedir" value="C:\Users\sandi\3D Objects\Projets U\S2.02\SAE_S2.02_Visualisation_de_graphe\sae2.02-main\Project\SAE2-etd" />
 =======
     <property name="basedir" value="/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd" />
+<<<<<<< HEAD
 >>>>>>> 8915564 (Ajout de test prim avec graphe pas connexe)
+=======
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="application.vendor" value="sandi" />
     <property name="java.specification.name" value="Java Platform API Specification" />
     <property name="java.vm.specification.vendor" value="Oracle Corporation" />
@@ -68,6 +80,7 @@
     <property name="guice.disable.misplaced.annotation.check" value="true" />
     <property name="sun.zip.disableMemoryMapping" value="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="libs.jsf12.src" value="" />
     <property name="libs.jsp-compilation.javadoc" value="" />
     <property name="libs.primefaces.javadoc" value="" />
@@ -76,6 +89,11 @@
     <property name="libs.primefaces.javadoc" value="" />
     <property name="libs.jsf12.src" value="" />
 >>>>>>> 8915564 (Ajout de test prim avec graphe pas connexe)
+=======
+    <property name="libs.jsp-compilation.javadoc" value="" />
+    <property name="libs.primefaces.javadoc" value="" />
+    <property name="libs.jsf12.src" value="" />
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="libs.groovy-all.maven-pom" value="" />
     <property name="libs.restapi.src" value="" />
     <property name="libs.junit_5.javadoc" value="C:\Program Files\NetBeans-19\netbeans\platform\docs\junit-jupiter-api-5.6.0-javadoc.jar;C:\Program Files\NetBeans-19\netbeans\platform\docs\junit-jupiter-params-5.6.0-javadoc.jar;C:\Program Files\NetBeans-19\netbeans\platform\docs\junit-jupiter-engine-5.6.0-javadoc.jar" />
@@ -109,16 +127,23 @@
     <property name="meta.inf.dir" value="src/META-INF" />
     <property name="run.upgrademodulepath" value="" />
     <property name="compile.on.save" value="false" />
+<<<<<<< HEAD
 >>>>>>> 8915564 (Ajout de test prim avec graphe pas connexe)
+=======
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="jlink.additionalparam" value="" />
     <property name="libs.testng.maven-pom" value="" />
     <property name="org.openide.version" value="deprecated" />
     <property name="test.includes" value="algorithms/PrimTest.java" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="run.classpath" value="C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\hamcrest-core-1.3.jar:C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\junit-4.13.2.jar:build/classes" />
 =======
     <property name="run.classpath" value="/mnt/raddix/opt/netbeans/platform/modules/ext/hamcrest-core-1.3.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-4.13.2.jar:build/classes" />
 >>>>>>> 8915564 (Ajout de test prim avec graphe pas connexe)
+=======
+    <property name="run.classpath" value="/mnt/raddix/opt/netbeans/platform/modules/ext/hamcrest-core-1.3.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-4.13.2.jar:build/classes" />
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="libs.jaxb.src" value="" />
     <property name="sun.awt.enableExtraMouseButtons" value="true" />
     <property name="test.src.dir" value="test" />
@@ -138,7 +163,10 @@
     <property name="libs.junit_5.classpath" value="/mnt/raddix/opt/netbeans/platform/modules/ext/junit-jupiter-api-5.6.0.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-jupiter-params-5.6.0.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-jupiter-engine-5.6.0.jar" />
     <property name="libs.eclipselinkmodelgen.javadoc" value="" />
     <property name="java.vm.specification.version" value="11" />
+<<<<<<< HEAD
 >>>>>>> 8915564 (Ajout de test prim avec graphe pas connexe)
+=======
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="javadoc.noindex" value="false" />
     <property name="javadoc.private" value="false" />
     <property name="libs.spring-webmvc4.0.maven-pom" value="" />
@@ -160,6 +188,7 @@
     <property name="libs.spring-webmvc4.0.classpath" value="C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-4\spring-webmvc-4.3.29.RELEASE.jar" />
     <property name="modules.supported.internal" value="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="libs.javaee-endorsed-api-7.0.javadoc" value="C:\Program Files\NetBeans-19\netbeans\enterprise\docs\javaee-doc-api.jar" />
     <property name="jna.nosys" value="false" />
     <property name="os.version" value="10.0" />
@@ -167,6 +196,10 @@
 =======
     <property name="libs.javaee-endorsed-api-7.0.javadoc" value="/mnt/raddix/opt/netbeans/enterprise/docs/javaee-doc-api.jar" />
     <property name="jna.nosys" value="false" />
+=======
+    <property name="libs.javaee-endorsed-api-7.0.javadoc" value="/mnt/raddix/opt/netbeans/enterprise/docs/javaee-doc-api.jar" />
+    <property name="jna.nosys" value="false" />
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="os.version" value="5.19.0-35-generic" />
     <property name="netbeans.home" value="/mnt/raddix/opt/netbeans/platform" />
 >>>>>>> 8915564 (Ajout de test prim avec graphe pas connexe)
@@ -210,7 +243,10 @@
     <property name="libs.groovy-all.classpath" value="C:\Program Files\NetBeans-19\netbeans\groovy\modules\ext\groovy-3.0.8.jar;C:\Program Files\NetBeans-19\netbeans\groovy\modules\ext\groovy-ant-3.0.8.jar" />
 =======
     <property name="libs.javaee-web-api-6.0.javadoc" value="/mnt/raddix/opt/netbeans/enterprise/docs/javaee-doc-api.jar" />
+<<<<<<< HEAD
 >>>>>>> 8915564 (Ajout de test prim avec graphe pas connexe)
+=======
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="libs.javaee-api-7.0.maven-pom" value="" />
     <property name="libs.groovy-all.classpath" value="/mnt/raddix/opt/netbeans/groovy/modules/ext/groovy-3.0.8.jar:/mnt/raddix/opt/netbeans/groovy/modules/ext/groovy-ant-3.0.8.jar" />
     <property name="libs.absolutelayout.javadoc" value="" />
@@ -224,6 +260,7 @@
     <property name="netbeans.autoupdate.variant" value="" />
     <property name="javadoc.version" value="false" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="libs.metro.classpath" value="C:\Program Files\NetBeans-19\netbeans\ide\modules\ext\jaxb\activation.jar;C:\Program Files\NetBeans-19\netbeans\enterprise\modules\ext\metro\webservices-api.jar;C:\Program Files\NetBeans-19\netbeans\enterprise\modules\ext\metro\webservices-extra-api.jar;C:\Program Files\NetBeans-19\netbeans\enterprise\modules\ext\metro\webservices-extra.jar;C:\Program Files\NetBeans-19\netbeans\enterprise\modules\ext\metro\webservices-rt.jar;C:\Program Files\NetBeans-19\netbeans\enterprise\modules\ext\metro\webservices-tools.jar" />
     <property name="libs.metro.src" value="" />
     <property name="libs.CopyLibs.classpath" value="C:\Program Files\NetBeans-19\netbeans\java\ant\extra\org-netbeans-modules-java-j2seproject-copylibstask.jar" />
@@ -231,27 +268,38 @@
     <property name="javadoc.html5" value="false" />
     <property name="javac.test.processorpath" value="C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\hamcrest-core-1.3.jar:C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\junit-4.13.2.jar:build/classes:C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\junit-4.13.2.jar:C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\hamcrest-core-1.3.jar" />
 =======
+=======
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="libs.metro.classpath" value="/mnt/raddix/opt/netbeans/ide/modules/ext/jaxb/activation.jar:/mnt/raddix/opt/netbeans/enterprise/modules/ext/metro/webservices-api.jar:/mnt/raddix/opt/netbeans/enterprise/modules/ext/metro/webservices-extra-api.jar:/mnt/raddix/opt/netbeans/enterprise/modules/ext/metro/webservices-extra.jar:/mnt/raddix/opt/netbeans/enterprise/modules/ext/metro/webservices-rt.jar:/mnt/raddix/opt/netbeans/enterprise/modules/ext/metro/webservices-tools.jar" />
     <property name="libs.metro.src" value="" />
     <property name="libs.CopyLibs.classpath" value="/mnt/raddix/opt/netbeans/java/ant/extra/org-netbeans-modules-java-j2seproject-copylibstask.jar" />
     <property name="sun.os.patch.level" value="unknown" />
     <property name="javadoc.html5" value="false" />
     <property name="javac.test.processorpath" value="/mnt/raddix/opt/netbeans/platform/modules/ext/hamcrest-core-1.3.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-4.13.2.jar:build/classes:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-4.13.2.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/hamcrest-core-1.3.jar" />
+<<<<<<< HEAD
 >>>>>>> 8915564 (Ajout de test prim avec graphe pas connexe)
+=======
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="libs.javaee-web-api-7.0.maven-pom" value="" />
     <property name="libs.javaee-web-api-8.0.maven-pom" value="" />
     <property name="netbeans.dirs" value="C:\Program Files\NetBeans-19\netbeans\nb;C:\Program Files\NetBeans-19\netbeans\ergonomics;C:\Program Files\NetBeans-19\netbeans\ide;C:\Program Files\NetBeans-19\netbeans\extide;C:\Program Files\NetBeans-19\netbeans\java;C:\Program Files\NetBeans-19\netbeans\apisupport;C:\Program Files\NetBeans-19\netbeans\webcommon;C:\Program Files\NetBeans-19\netbeans\websvccommon;C:\Program Files\NetBeans-19\netbeans\enterprise;C:\Program Files\NetBeans-19\netbeans\mobility;C:\Program Files\NetBeans-19\netbeans\profiler;C:\Program Files\NetBeans-19\netbeans\python;C:\Program Files\NetBeans-19\netbeans\php;C:\Program Files\NetBeans-19\netbeans\identity;C:\Program Files\NetBeans-19\netbeans\harness;C:\Program Files\NetBeans-19\netbeans\cnd;C:\Program Files\NetBeans-19\netbeans\cndext;C:\Program Files\NetBeans-19\netbeans\cpplite;C:\Program Files\NetBeans-19\netbeans\dlight;C:\Program Files\NetBeans-19\netbeans\groovy;C:\Program Files\NetBeans-19\netbeans\extra;C:\Program Files\NetBeans-19\netbeans\javacard;C:\Program Files\NetBeans-19\netbeans\javafx;C:\Program Files\NetBeans-19\netbeans\rust" />
     <property name="libs.hamcrest.maven-pom" value="" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="javac.processorpath" value="C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\hamcrest-core-1.3.jar:C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\junit-4.13.2.jar" />
     <property name="libs.javaee-api-6.0.javadoc" value="C:\Program Files\NetBeans-19\netbeans\enterprise\docs\javaee-doc-api.jar" />
     <property name="libs.JWSAntTasks.maven-pom" value="" />
 =======
+=======
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="javac.processorpath" value="/mnt/raddix/opt/netbeans/platform/modules/ext/hamcrest-core-1.3.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-4.13.2.jar" />
     <property name="libs.javaee-api-6.0.javadoc" value="/mnt/raddix/opt/netbeans/enterprise/docs/javaee-doc-api.jar" />
     <property name="libs.JWSAntTasks.maven-pom" value="" />
     <property name="run.modulepath" value="/mnt/raddix/opt/netbeans/platform/modules/ext/junit-jupiter-api-5.6.0.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-jupiter-params-5.6.0.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-jupiter-engine-5.6.0.jar" />
+<<<<<<< HEAD
 >>>>>>> 8915564 (Ajout de test prim avec graphe pas connexe)
+=======
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="javac.upgrademodulepath" value="" />
     <property name="run.modulepath" value="C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\junit-jupiter-api-5.6.0.jar;C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\junit-jupiter-params-5.6.0.jar;C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\junit-jupiter-engine-5.6.0.jar" />
     <property name="do.archive+manifest.available" value="true" />
@@ -259,6 +307,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD" />
     <property name="user.country" value="FR" />
     <property name="libs.jakartaee-api-9.0.maven-pom" value="" />
+<<<<<<< HEAD
 <<<<<<< HEAD
     <property name="ant.file.SAE2-etd" value="C:\Users\sandi\3D Objects\Projets U\S2.02\SAE_S2.02_Visualisation_de_graphe\sae2.02-main\Project\SAE2-etd\build.xml" />
     <property name="libs.jpa20-persistence.src" value="" />
@@ -270,6 +319,12 @@
     <property name="libs.jpa20-persistence.src" value="" />
     <property name="libs.restapi.javadoc" value="" />
     <property name="endorsed.classpath" value="" />
+=======
+    <property name="ant.file.SAE2-etd" value="/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/build.xml" />
+    <property name="libs.jpa20-persistence.src" value="" />
+    <property name="libs.restapi.javadoc" value="" />
+    <property name="endorsed.classpath" value="" />
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="javac.test.sourcepath" value="/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/build/empty" />
 >>>>>>> 8915564 (Ajout de test prim avec graphe pas connexe)
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
@@ -297,7 +352,10 @@
     <property name="netbeans.running.environment" value="gnome" />
     <property name="java.runtime.name" value="OpenJDK Runtime Environment" />
     <property name="libs.jaxb.javadoc" value="/mnt/raddix/opt/netbeans/ide/docs/jaxb-api-doc.jar" />
+<<<<<<< HEAD
 >>>>>>> 8915564 (Ajout de test prim avec graphe pas connexe)
+=======
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="manifest.available" value="true" />
     <property name="libs.spring-framework500.maven-pom" value="" />
     <property name="run.jvmargs.ide" value="" />
@@ -307,6 +365,7 @@
     <property name="libs.jakartaee-api-9.0.classpath" value="C:\Program Files\NetBeans-19\netbeans\enterprise\modules\ext\jakarta.jakartaee-api-9.0.0.jar" />
     <property name="application.title" value="SAE2-etd" />
     <property name="do.archive+main.class.available" value="true" />
+<<<<<<< HEAD
 <<<<<<< HEAD
     <property name="libs.jakartaee-api-10.0.src" value="" />
     <property name="javac.test.modulepath" value="C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\junit-jupiter-api-5.6.0.jar;C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\junit-jupiter-params-5.6.0.jar;C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\junit-jupiter-engine-5.6.0.jar" />
@@ -318,6 +377,8 @@
     <property name="libs.javaee-api-7.0.classpath" value="C:\Program Files\NetBeans-19\netbeans\enterprise\modules\ext\javaee-api-7.0.jar" />
     <property name="sun.cpu.isalist" value="amd64" />
 =======
+=======
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="application.title" value="SAE2-etd" />
     <property name="javac.test.modulepath" value="/mnt/raddix/opt/netbeans/platform/modules/ext/junit-jupiter-api-5.6.0.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-jupiter-params-5.6.0.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-jupiter-engine-5.6.0.jar" />
     <property name="libs.PostgreSQLDriver.javadoc" value="" />
@@ -335,9 +396,13 @@
     <property name="sun.arch.data.model" value="64" />
     <property name="libs.jakartaee-web-api-9.0.maven-pom" value="" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <property name="sun.font.fontmanager" value="sun.awt.X11FontManager" />
 >>>>>>> 8915564 (Ajout de test prim avec graphe pas connexe)
+=======
+    <property name="sun.font.fontmanager" value="sun.awt.X11FontManager" />
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="libs.javaee-endorsed-api-7.0.src" value="" />
     <property name="annotation.processing.enabled" value="true" />
     <property name="libs.junit_5.src" value="C:\Program Files\NetBeans-19\netbeans\platform\docs\junit-jupiter-api-5.6.0-sources.jar;C:\Program Files\NetBeans-19\netbeans\platform\docs\junit-jupiter-params-5.6.0-sources.jar;C:\Program Files\NetBeans-19\netbeans\platform\docs\junit-jupiter-engine-5.6.0-sources.jar" />
@@ -347,6 +412,7 @@
     <property name="java.specification.vendor" value="Oracle Corporation" />
     <property name="javac.source" value="11" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="jdk.module.path" value="C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\junit-jupiter-api-5.6.0.jar;C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\junit-jupiter-params-5.6.0.jar;C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\junit-jupiter-engine-5.6.0.jar" />
     <property name="java.version.date" value="2023-07-18" />
     <property name="java.home" value="C:\Program Files\Java\jdk-20" />
@@ -355,6 +421,8 @@
     <property name="jna.boot.library.name" value="jnidispatch-nb" />
     <property name="libs.PostgreSQLDriver.classpath" value="C:\Program Files\NetBeans-19\netbeans\ide\modules\ext\postgresql-42.5.4.jar" />
 =======
+=======
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="jdk.module.path" value="/mnt/raddix/opt/netbeans/platform/modules/ext/junit-jupiter-api-5.6.0.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-jupiter-params-5.6.0.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-jupiter-engine-5.6.0.jar" />
     <property name="java.version.date" value="2024-01-16" />
     <property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64" />
@@ -368,6 +436,7 @@
     <property name="libs.JAXB-ENDORSED.src" value="" />
     <property name="manifest.encoding" value="UTF-8" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="user.script" value="" />
     <property name="libs.spring-framework400.src" value="" />
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
@@ -380,6 +449,10 @@
 =======
     <property name="libs.spring-framework400.src" value="" />
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+=======
+    <property name="libs.spring-framework400.src" value="" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="run.test.modulepath" value="/mnt/raddix/opt/netbeans/platform/modules/ext/junit-jupiter-api-5.6.0.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-jupiter-params-5.6.0.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-jupiter-engine-5.6.0.jar" />
     <property name="libs.javaee-web-api-6.0.classpath" value="/mnt/raddix/opt/netbeans/enterprise/modules/ext/javaee-web-api-6.0.jar" />
     <property name="libs.graaljs.classpath" value="/mnt/raddix/opt/netbeans/webcommon/modules/ext/js-20.3.0.jar:/mnt/raddix/opt/netbeans/webcommon/modules/ext/js-launcher-20.3.0.jar:/mnt/raddix/opt/netbeans/webcommon/modules/ext/regex-20.3.0.jar:/mnt/raddix/opt/netbeans/webcommon/modules/ext/icu4j-67.1.jar:/mnt/raddix/opt/netbeans/ide/modules/ext/graal-sdk-20.3.0.jar:/mnt/raddix/opt/netbeans/ide/modules/ext/launcher-common-20.3.0.jar:/mnt/raddix/opt/netbeans/ide/modules/ext/truffle-api-20.3.0.jar" />
@@ -397,10 +470,14 @@
     <property name="nb.native.filechooser" value="false" />
     <property name="libs.testng.src" value="" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="libs.javaee-web-api-8.0.classpath" value="C:\Program Files\NetBeans-19\netbeans\enterprise\modules\ext\javaee-web-api-8.0.jar" />
 =======
     <property name="libs.javaee-web-api-8.0.classpath" value="/mnt/raddix/opt/netbeans/enterprise/modules/ext/javaee-web-api-8.0.jar" />
 >>>>>>> 8915564 (Ajout de test prim avec graphe pas connexe)
+=======
+    <property name="libs.javaee-web-api-8.0.classpath" value="/mnt/raddix/opt/netbeans/enterprise/modules/ext/javaee-web-api-8.0.jar" />
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="platform.active" value="default_platform" />
     <property name="manifest.file" value="manifest.mf" />
     <property name="stderr.encoding" value="Cp1252" />
@@ -416,13 +493,17 @@
     <property name="sun.desktop" value="gnome" />
     <property name="libs.javaee-web-api-8.0.javadoc" value="/mnt/raddix/opt/netbeans/enterprise/docs/javaee-doc-api.jar" />
     <property name="netbeans.dynamic.classpath" value="/mnt/raddix/opt/netbeans/platform/core/org-netbeans-libs-asm.jar:/mnt/raddix/opt/netbeans/platform/core/core-base.jar:/mnt/raddix/opt/netbeans/platform/core/asm-commons-9.3.jar:/mnt/raddix/opt/netbeans/platform/core/org-openide-filesystems.jar:/mnt/raddix/opt/netbeans/platform/core/asm-9.3.jar:/mnt/raddix/opt/netbeans/platform/core/asm-tree-9.3.jar:/mnt/raddix/opt/netbeans/platform/core/core.jar:/mnt/raddix/opt/netbeans/platform/core/org-openide-filesystems-compat8.jar:/mnt/raddix/opt/netbeans/nb/core/org-netbeans-upgrader.jar:/mnt/raddix/opt/netbeans/nb/core/locale/core_nb.jar" />
+<<<<<<< HEAD
 >>>>>>> 8915564 (Ajout de test prim avec graphe pas connexe)
+=======
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="flatlaf.nativeLibraryPath" value="system" />
     <property name="libs.eclipselinkmodelgen.classpath" value="C:\Program Files\NetBeans-19\netbeans\java\modules\ext\eclipselink\org.eclipse.persistence.jpa.modelgen.processor-2.7.12.jar" />
     <property name="javac.systemmodulepath.cmd.line.arg" value="" />
     <property name="netbeans.buildnumber" value="19-ba85468772292fd64f188f4022f9d49f77f00b89" />
     <property name="endorsed.classpath.cmd.line.arg" value="" />
     <property name="libs.jpa20-persistence.maven-pom" value="" />
+<<<<<<< HEAD
 <<<<<<< HEAD
     <property name="libs.CopyLibs.maven-pom" value="" />
     <property name="build.sysclasspath" value="ignore" />
@@ -431,12 +512,18 @@
     <property name="jdkBug6558476" value="false" />
 =======
     <property name="build.sysclasspath" value="ignore" />
+=======
+    <property name="build.sysclasspath" value="ignore" />
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="libs.CopyLibs.maven-pom" value="" />
     <property name="os.name" value="Linux" />
     <property name="libs.jakartaee-api-8.0.maven-pom" value="" />
     <property name="jdkBug6558476" value="false" />
     <property name="http.nonProxyHosts" value="localhost|127.0.0.1|vdi-linux-05" />
+<<<<<<< HEAD
 >>>>>>> 8915564 (Ajout de test prim avec graphe pas connexe)
+=======
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="javadoc.author" value="false" />
     <property name="main.class" value="main.Main" />
     <property name="libs.jsp-compilation-syscp.javadoc" value="" />
@@ -460,6 +547,7 @@
     <property name="libs.restlib.src" value="" />
     <property name="build.test.results.dir" value="build/test/results" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="ant.file.SAE2-etd-impl" value="C:\Users\sandi\3D Objects\Projets U\S2.02\SAE_S2.02_Visualisation_de_graphe\sae2.02-main\Project\SAE2-etd\nbproject\build-impl.xml" />
     <property name="libs.jaxws21.javadoc" value="C:\Program Files\NetBeans-19\netbeans\java\docs\jaxws-api-doc.zip" />
     <property name="libs.javaee-endorsed-api-6.0.javadoc" value="C:\Program Files\NetBeans-19\netbeans\enterprise\docs\javaee-doc-api.jar" />
@@ -467,25 +555,36 @@
     <property name="ant.file.SAE2-etd-impl" value="/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/nbproject/build-impl.xml" />
     <property name="libs.jaxws21.javadoc" value="/mnt/raddix/opt/netbeans/java/docs/jaxws-api-doc.zip" />
 >>>>>>> 8915564 (Ajout de test prim avec graphe pas connexe)
+=======
+    <property name="ant.file.SAE2-etd-impl" value="/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/nbproject/build-impl.xml" />
+    <property name="libs.jaxws21.javadoc" value="/mnt/raddix/opt/netbeans/java/docs/jaxws-api-doc.zip" />
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="libs.spring-framework400.maven-pom" value="" />
     <property name="libs.javaee-endorsed-api-6.0.javadoc" value="/mnt/raddix/opt/netbeans/enterprise/docs/javaee-doc-api.jar" />
     <property name="ap.processors.internal" value="" />
     <property name="module.name" value="" />
+<<<<<<< HEAD
 <<<<<<< HEAD
     <property name="libs.jsf12.classpath" value="C:\Program Files\NetBeans-19\netbeans\enterprise\modules\ext\jsf-1_2\jsf-api.jar;C:\Program Files\NetBeans-19\netbeans\enterprise\modules\ext\jsf-1_2\jsf-impl.jar" />
     <property name="libs.spring-webmvc5.0.javadoc" value="" />
     <property name="libs.hamcrest.javadoc" value="" />
     <property name="libs.spring-framework400.javadoc" value="" />
 =======
+=======
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="libs.jsf12.classpath" value="/mnt/raddix/opt/netbeans/enterprise/modules/ext/jsf-1_2/jsf-api.jar:/mnt/raddix/opt/netbeans/enterprise/modules/ext/jsf-1_2/jsf-impl.jar" />
     <property name="libs.spring-webmvc5.0.javadoc" value="" />
     <property name="libs.spring-framework400.javadoc" value="" />
     <property name="libs.hamcrest.javadoc" value="" />
+<<<<<<< HEAD
 >>>>>>> 8915564 (Ajout de test prim avec graphe pas connexe)
+=======
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="do.jar" value="true" />
     <property name="java.vm.info" value="mixed mode, sharing" />
     <property name="libs.primefaces.classpath" value="C:\Program Files\NetBeans-19\netbeans\enterprise\modules\ext\primefaces\primefaces-5.0.jar" />
     <property name="libs.jaxws21.maven-pom" value="" />
+<<<<<<< HEAD
 <<<<<<< HEAD
     <property name="run.test.classpath" value="C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\hamcrest-core-1.3.jar:C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\junit-4.13.2.jar:build/classes:C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\junit-4.13.2.jar:C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\hamcrest-core-1.3.jar:build/test/classes" />
     <property name="dist.jlink.output" value="dist/jlink/SAE2-etd" />
@@ -501,6 +600,14 @@
 =======
     <property name="debug.classpath" value="/mnt/raddix/opt/netbeans/platform/modules/ext/hamcrest-core-1.3.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-4.13.2.jar:build/classes" />
 >>>>>>> 8915564 (Ajout de test prim avec graphe pas connexe)
+=======
+    <property name="run.test.classpath" value="/mnt/raddix/opt/netbeans/platform/modules/ext/hamcrest-core-1.3.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-4.13.2.jar:build/classes:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-4.13.2.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/hamcrest-core-1.3.jar:build/test/classes" />
+    <property name="dist.jlink.output" value="dist/jlink/SAE2-etd" />
+    <property name="javadoc.encoding.used" value="UTF-8" />
+    <property name="java.class.version" value="55.0" />
+    <property name="src.dir" value="src" />
+    <property name="debug.classpath" value="/mnt/raddix/opt/netbeans/platform/modules/ext/hamcrest-core-1.3.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-4.13.2.jar:build/classes" />
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="ant.project.default-target" value="default" />
     <property name="debug.classpath" value="C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\hamcrest-core-1.3.jar:C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\junit-4.13.2.jar:build/classes" />
     <property name="excludes" value="" />
@@ -543,8 +650,13 @@
     <property name="libs.jsp-compiler.src" value="" />
     <property name="user.name" value="sandi" />
     <property name="build.classes.dir" value="build/classes" />
+<<<<<<< HEAD
     <property name="javadoc.windowtitle" value="" />
     <property name="nb.junit.single" value="false" />
+=======
+    <property name="nb.junit.single" value="false" />
+    <property name="javadoc.windowtitle" value="" />
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="nb.internal.action.name" value="run.single" />
     <property name="libs.javaee-api-8.0.maven-pom" value="" />
     <property name="libs.jaxws21.src" value="" />
@@ -556,6 +668,7 @@
     <property name="ant.junit.enabletestlistenerevents" value="true" />
     <property name="libs.JWSAntTasks.src" value="" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="ant.home" value="C:\Program Files\NetBeans-19\netbeans\extide\ant" />
     <property name="libs.spring-webmvc3.0.src" value="" />
     <property name="debug.test.classpath" value="C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\hamcrest-core-1.3.jar:C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\junit-4.13.2.jar:build/classes:C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\junit-4.13.2.jar:C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\hamcrest-core-1.3.jar:build/test/classes" />
@@ -563,31 +676,45 @@
     <property name="javac.external.vm" value="true" />
 =======
     <property name="libs.spring-webmvc3.0.src" value="" />
+=======
+    <property name="libs.spring-webmvc3.0.src" value="" />
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="ant.home" value="/mnt/raddix/opt/netbeans/extide/ant" />
     <property name="javac.external.vm" value="true" />
     <property name="have.tests" value="true" />
     <property name="debug.test.classpath" value="/mnt/raddix/opt/netbeans/platform/modules/ext/hamcrest-core-1.3.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-4.13.2.jar:build/classes:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-4.13.2.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/hamcrest-core-1.3.jar:build/test/classes" />
+<<<<<<< HEAD
 >>>>>>> 8915564 (Ajout de test prim avec graphe pas connexe)
+=======
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="testng.debug.mode" value="" />
     <property name="javac.target" value="11" />
     <property name="ant.version" value="Apache Ant(TM) version 1.10.8 compiled on May 10 2020" />
     <property name="libs.absolutelayout.maven-pom" value="" />
     <property name="java.failonerror" value="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="javac.modulepath" value="C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\junit-jupiter-api-5.6.0.jar;C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\junit-jupiter-params-5.6.0.jar;C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\junit-jupiter-engine-5.6.0.jar" />
 =======
     <property name="javac.modulepath" value="/mnt/raddix/opt/netbeans/platform/modules/ext/junit-jupiter-api-5.6.0.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-jupiter-params-5.6.0.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-jupiter-engine-5.6.0.jar" />
 >>>>>>> 8915564 (Ajout de test prim avec graphe pas connexe)
+=======
+    <property name="javac.modulepath" value="/mnt/raddix/opt/netbeans/platform/modules/ext/junit-jupiter-api-5.6.0.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-jupiter-params-5.6.0.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-jupiter-engine-5.6.0.jar" />
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="libs.spring-framework500.src" value="" />
     <property name="libs.javaee-api-6.0.src" value="" />
     <property name="user.properties.file" value="C:\Users\sandi\AppData\Roaming\NetBeans\19\build.properties" />
     <property name="javac.includes" value="algorithms/PrimTest.java" />
     <property name="netbeans.autoupdate.country" value="FR" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="java.class.path" value="C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\hamcrest-core-1.3.jar;C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\junit-4.13.2.jar;C:\Users\sandi\3D Objects\Projets U\S2.02\SAE_S2.02_Visualisation_de_graphe\sae2.02-main\Project\SAE2-etd\build\classes;C:\Users\sandi\3D Objects\Projets U\S2.02\SAE_S2.02_Visualisation_de_graphe\sae2.02-main\Project\SAE2-etd\build\test\classes;C:\Program Files\NetBeans-19\netbeans\extide\ant\lib\ant-launcher.jar;C:\Program Files\NetBeans-19\netbeans\extide\ant\lib\ant.jar;C:\Program Files\NetBeans-19\netbeans\extide\ant\lib\ant-junit.jar;C:\Program Files\NetBeans-19\netbeans\extide\ant\lib\ant-junit4.jar" />
 =======
     <property name="java.class.path" value="/mnt/raddix/opt/netbeans/platform/modules/ext/hamcrest-core-1.3.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-4.13.2.jar:/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/build/classes:/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/build/test/classes:/mnt/raddix/opt/netbeans/extide/ant/lib/ant-launcher.jar:/mnt/raddix/opt/netbeans/extide/ant/lib/ant.jar:/mnt/raddix/opt/netbeans/extide/ant/lib/ant-junit.jar:/mnt/raddix/opt/netbeans/extide/ant/lib/ant-junit4.jar" />
 >>>>>>> 8915564 (Ajout de test prim avec graphe pas connexe)
+=======
+    <property name="java.class.path" value="/mnt/raddix/opt/netbeans/platform/modules/ext/hamcrest-core-1.3.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-4.13.2.jar:/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/build/classes:/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd/build/test/classes:/mnt/raddix/opt/netbeans/extide/ant/lib/ant-launcher.jar:/mnt/raddix/opt/netbeans/extide/ant/lib/ant.jar:/mnt/raddix/opt/netbeans/extide/ant/lib/ant-junit.jar:/mnt/raddix/opt/netbeans/extide/ant/lib/ant-junit4.jar" />
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="libs.javaee-web-api-6.0.maven-pom" value="" />
     <property name="java.vm.vendor" value="Oracle Corporation" />
     <property name="ap.supported.internal" value="true" />
@@ -619,6 +746,7 @@
     <property name="runtime.encoding" value="UTF-8" />
     <property name="jlink.additionalmodules" value="" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="libs.jakartaee-web-api-10.0.javadoc" value="C:\Program Files\NetBeans-19\netbeans\enterprise\docs\jakartaee10-doc-api.jar" />
     <property name="javac.classpath" value="C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\hamcrest-core-1.3.jar:C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\junit-4.13.2.jar" />
     <property name="libs.jakartaee-web-api-8.0.classpath" value="C:\Program Files\NetBeans-19\netbeans\enterprise\modules\ext\jakarta.jakartaee-web-api-8.0.0.jar" />
@@ -638,15 +766,29 @@
     <property name="libs.jstl.classpath" value="/mnt/raddix/opt/netbeans/enterprise/modules/ext/jstl-impl.jar:/mnt/raddix/opt/netbeans/enterprise/modules/ext/jstl-api.jar" />
     <property name="jna.platform.library.path" value="/usr/lib/x86_64-linux-gnu:/lib/x86_64-linux-gnu:/usr/lib64:/lib64:/usr/lib:/lib:/lib32:/usr/lib/x86_64-linux-gnu/libfakeroot" />
 >>>>>>> 8915564 (Ajout de test prim avec graphe pas connexe)
+=======
+    <property name="libs.jakartaee-web-api-8.0.classpath" value="/mnt/raddix/opt/netbeans/enterprise/modules/ext/jakarta.jakartaee-web-api-8.0.0.jar" />
+    <property name="javac.classpath" value="/mnt/raddix/opt/netbeans/platform/modules/ext/hamcrest-core-1.3.jar:/mnt/raddix/opt/netbeans/platform/modules/ext/junit-4.13.2.jar" />
+    <property name="dist.jlink.dir" value="dist/jlink" />
+    <property name="nb.junit.batch" value="true" />
+    <property name="build.test.classes.dir" value="build/test/classes" />
+    <property name="libs.spring-framework300.maven-pom" value="" />
+    <property name="ant.project.invoked-targets" value="test-single" />
+    <property name="libs.jstl.classpath" value="/mnt/raddix/opt/netbeans/enterprise/modules/ext/jstl-impl.jar:/mnt/raddix/opt/netbeans/enterprise/modules/ext/jstl-api.jar" />
+    <property name="jna.platform.library.path" value="/usr/lib/x86_64-linux-gnu:/lib/x86_64-linux-gnu:/usr/lib64:/lib64:/usr/lib:/lib:/lib32:/usr/lib/x86_64-linux-gnu/libfakeroot" />
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="ap.cmd.line.internal" value="" />
     <property name="libs.PostgreSQLDriver.src" value="" />
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/" />
     <property name="annotation.processing.source.output" value="build/generated-sources/ap-source-output" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="libs.javaee-endorsed-api-6.0.maven-pom" value="" />
     <property name="user.dir" value="C:\Users\sandi\3D Objects\Projets U\S2.02\SAE_S2.02_Visualisation_de_graphe\sae2.02-main\Project\SAE2-etd" />
     <property name="platform.java" value="C:\Program Files\Java\jdk-20/bin/java" />
 =======
+=======
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="user.dir" value="/mnt/netta/users/ludevaux/Documents/s2/R2.01/SAE/SAE_S2.02_Visualisation_de_graphe/sae2.02-main/Project/SAE2-etd" />
     <property name="libs.javaee-endorsed-api-6.0.maven-pom" value="" />
     <property name="platform.java" value="/usr/lib/jvm/java-11-openjdk-amd64/bin/java" />
@@ -658,6 +800,7 @@
     <property name="java.vm.version" value="20.0.2+9-78" />
     <property name="libs.metro.javadoc" value="C:\Program Files\NetBeans-19\netbeans\enterprise\docs\webservices-api-javadoc.jar;C:\Program Files\NetBeans-19\netbeans\enterprise\docs\webservices-extra-javadoc.jar;C:\Program Files\NetBeans-19\netbeans\enterprise\docs\webservices-extra-api-javadoc.jar;C:\Program Files\NetBeans-19\netbeans\enterprise\docs\webservices-rt-javadoc.jar;C:\Program Files\NetBeans-19\netbeans\enterprise\docs\webservices-tools-javadoc.jar" />
     <property name="libs.jakartaee-web-api-9.0.src" value="" />
+<<<<<<< HEAD
 <<<<<<< HEAD
     <property name="libs.jakartaee-web-api-10.0.classpath" value="C:\Program Files\NetBeans-19\netbeans\enterprise\modules\ext\jakarta.jakartaee-web-api-10.0.0.jar" />
     <property name="sun.awt.datatransfer.timeout" value="1000" />
@@ -678,6 +821,15 @@
   </properties>
   <testcase classname="algorithms.PrimTest" name="testPrim" time="0.014" />
 =======
+=======
+    <property name="sun.awt.datatransfer.timeout" value="1000" />
+    <property name="test.class" value="algorithms.PrimTest" />
+    <property name="junit.forkmode" value="perTest" />
+    <property name="libs.jsp-compiler.classpath" value="/mnt/raddix/opt/netbeans/enterprise/ant/extra/jspcompile.jar" />
+    <property name="annotation.processing.run.all.processors" value="true" />
+    <property name="libs.jakartaee-api-8.0.src" value="" />
+    <property name="libs.javaee-web-api-7.0.src" value="" />
+>>>>>>> 891556493c2e3d3f4e8c49e202acfe62191c5efd
     <property name="libs.javaee-endorsed-api-6.0.classpath" value="/mnt/raddix/opt/netbeans/enterprise/modules/ext/javaee6-endorsed/javax.annotation.jar:/mnt/raddix/opt/netbeans/enterprise/modules/ext/javaee6-endorsed/jaxb-api-osgi.jar:/mnt/raddix/opt/netbeans/enterprise/modules/ext/javaee6-endorsed/webservices-api-osgi.jar" />
   </properties>
   <testcase classname="algorithms.PrimTest" name="testPrim" time="0.007" />
