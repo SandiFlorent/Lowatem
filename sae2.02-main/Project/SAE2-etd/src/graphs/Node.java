@@ -5,7 +5,6 @@
 package graphs;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Objects;
 
 /**
@@ -43,17 +42,10 @@ public class Node {
     }
 
     /**
-     * This function will clear the list of neighbours of the node
-     */
-    public void reinitializeNeighbours() {
-        this.neighbours.clear();
-    }
-
-    /**
      * Add a node to the list of neighbours
      * @param node the node added to the list of neighbours
      */
-    public void addNeighBours(Node node) {
+    public void addNeighbours(Node node) {
         this.neighbours.add(node);
     }
 

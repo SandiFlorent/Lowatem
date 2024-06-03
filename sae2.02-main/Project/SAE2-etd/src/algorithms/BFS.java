@@ -12,7 +12,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
-import java.util.Map;
 import java.util.Queue;
 import java.util.Set;
 
@@ -41,7 +40,7 @@ public class BFS {
         }
 
         // This map will be used to define the nextNode as the successor and the actual node as a predecessor
-        Map<Node, Node> cameFrom = new HashMap<>();
+        HashMap<Node, Node> cameFrom = new HashMap<>();
         Queue<Node> queue = new LinkedList<>();
         Set<Node> visited = new HashSet<>();
 
@@ -76,7 +75,7 @@ public class BFS {
      * @param end the end node to reach at the end of the path
      * @return the shortest path founded
      */
-    private static ArrayList<Coord> reconstructPath(Map<Node, Node> cameFrom, Node start, Node end) {
+    private static ArrayList<Coord> reconstructPath(HashMap<Node, Node> cameFrom, Node start, Node end) {
         ArrayList<Coord> path = new ArrayList<>();
         //There's only one predecessor per node, so starting by the end node will inevitably lead us to the start node
         for (Node at = end; at != null; at = cameFrom.get(at)) {

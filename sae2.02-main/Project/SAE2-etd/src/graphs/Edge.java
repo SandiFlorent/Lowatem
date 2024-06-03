@@ -60,8 +60,8 @@ public class Edge {
         Nodes.put(src, tgt);
         source = src;
         target = tgt;
-        source.addNeighBours(target);
-        target.addNeighBours(source);
+        source.addNeighbours(target);
+        target.addNeighbours(source);
         weight = source.coordinates.dist(tgt.coordinates);
     }
 

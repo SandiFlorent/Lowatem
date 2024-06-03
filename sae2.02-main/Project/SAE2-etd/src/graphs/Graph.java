@@ -63,8 +63,8 @@ public class Graph implements IGraph {
             allEdges.add(e);
         }
         //When we add an edge, its nodes are naturally neighbours
-        e.getSource().addNeighBours(e.getTarget());
-        e.getTarget().addNeighBours(e.getSource());
+        e.getSource().addNeighbours(e.getTarget());
+        e.getTarget().addNeighbours(e.getSource());
 
         return e;
     }

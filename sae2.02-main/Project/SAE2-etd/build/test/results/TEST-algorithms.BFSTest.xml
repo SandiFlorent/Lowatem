@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="PoorJy" name="algorithms.BFSTest" skipped="0" tests="1" time="0.14" timestamp="2024-06-02T16:00:36">
+<testsuite errors="0" failures="0" hostname="PoorJy" name="algorithms.BFSTest" skipped="0" tests="2" time="0.153" timestamp="2024-06-02T17:33:54">
   <properties>
     <property name="libs.spring-framework300.classpath" value="C:\Program Files\NetBeans-19\netbeans\platform\modules\org-apache-commons-logging.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\cglib-2.2.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-aop-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-aspects-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-beans-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-context-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-context-support-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-core-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-expression-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-instrument-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-instrument-tomcat-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-jdbc-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-jms-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-orm-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-oxm-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-struts-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-test-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-tx-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-web-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-webmvc-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-3.0\spring-webmvc-portlet-3.2.18.RELEASE.jar" />
     <property name="javac.test.classpath" value="C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\hamcrest-core-1.3.jar:C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\junit-4.13.2.jar:build/classes:C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\junit-4.13.2.jar:C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\hamcrest-core-1.3.jar" />
@@ -18,7 +18,7 @@
     <property name="libs.eclipselink.javadoc" value="C:\Program Files\NetBeans-19\netbeans\java\modules\ext\docs\jakarta.persistence-2.2.3-doc.zip" />
     <property name="libs.JWSAntTasks.javadoc" value="" />
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-20\bin" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner algorithms.BFSTest methods=testBFSShortestPath skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\sandi\3D Objects\Projets U\S2.02\SAE_S2.02_Visualisation_de_graphe\sae2.02-main\Project\SAE2-etd\build\test\results\TEST-algorithms.BFSTest.xml crashfile=C:\Users\sandi\3D Objects\Projets U\S2.02\SAE_S2.02_Visualisation_de_graphe\sae2.02-main\Project\SAE2-etd\build\junitvmwatcher13738283385593667692.properties propsfile=C:\Users\sandi\3D Objects\Projets U\S2.02\SAE_S2.02_Visualisation_de_graphe\sae2.02-main\Project\SAE2-etd\build\junit8608924673191286019.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner algorithms.BFSTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\sandi\3D Objects\Projets U\S2.02\SAE_S2.02_Visualisation_de_graphe\sae2.02-main\Project\SAE2-etd\build\test\results\TEST-algorithms.BFSTest.xml crashfile=C:\Users\sandi\3D Objects\Projets U\S2.02\SAE_S2.02_Visualisation_de_graphe\sae2.02-main\Project\SAE2-etd\build\junitvmwatcher17447209299962892390.properties propsfile=C:\Users\sandi\3D Objects\Projets U\S2.02\SAE_S2.02_Visualisation_de_graphe\sae2.02-main\Project\SAE2-etd\build\junit10771697176357136443.properties" />
     <property name="jdk.debug" value="release" />
     <property name="libs.spring-framework300.src" value="" />
     <property name="javadoc.use" value="true" />
@@ -38,7 +38,9 @@
     <property name="libs.eclipselink.maven-pom" value="" />
     <property name="libs.metro.maven-pom" value="" />
     <property name="libs.JAXB-ENDORSED.javadoc" value="" />
+    <property name="org.openide.awt.SwingBrowserImpl.do-not-block-awt" value="false" />
     <property name="sun.java2d.noddraw" value="true" />
+    <property name="guice.disable.misplaced.annotation.check" value="true" />
     <property name="sun.zip.disableMemoryMapping" value="true" />
     <property name="libs.jsf12.src" value="" />
     <property name="libs.jsp-compilation.javadoc" value="" />
@@ -63,6 +65,7 @@
     <property name="libs.testng.maven-pom" value="" />
     <property name="jlink.additionalparam" value="" />
     <property name="org.openide.version" value="deprecated" />
+    <property name="test.includes" value="algorithms/BFSTest.java" />
     <property name="run.classpath" value="C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\hamcrest-core-1.3.jar:C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\junit-4.13.2.jar:build/classes" />
     <property name="libs.jaxb.src" value="" />
     <property name="sun.awt.enableExtraMouseButtons" value="true" />
@@ -205,7 +208,7 @@
     <property name="libs.jsp-compilation-syscp.classpath" value="C:\Program Files\NetBeans-19\netbeans\extide\ant\lib\ant.jar;C:\Program Files\NetBeans-19\netbeans\enterprise\modules\ext\servlet4.0-jsp2.3-api.jar;C:\Program Files\NetBeans-19\netbeans\enterprise\modules\ext\glassfish-jspparser-5.1.0.jar;C:\Program Files\NetBeans-19\netbeans\enterprise\modules\ext\jstl-impl.jar;C:\Program Files\NetBeans-19\netbeans\enterprise\modules\ext\jsf-2_2\javax.faces.jar" />
     <property name="libs.jsp-compilation.classpath" value="C:\Program Files\NetBeans-19\netbeans\extide\ant\lib\ant.jar;C:\Program Files\NetBeans-19\netbeans\enterprise\modules\ext\servlet4.0-jsp2.3-api.jar;C:\Program Files\NetBeans-19\netbeans\enterprise\modules\ext\glassfish-jspparser-5.1.0.jar;C:\Program Files\NetBeans-19\netbeans\enterprise\modules\ext\jsf-2_2\javax.faces.jar;C:\Program Files\NetBeans-19\netbeans\enterprise\modules\ext\jstl-api.jar;C:\Program Files\NetBeans-19\netbeans\extide\ant\lib\ant-launcher.jar" />
     <property name="libs.javaee-api-6.0.classpath" value="C:\Program Files\NetBeans-19\netbeans\enterprise\modules\ext\javaee-api-6.0.jar" />
-    <property name="javac.includesfile.binary" value="C:\Users\sandi\3D Objects\Projets U\S2.02\SAE_S2.02_Visualisation_de_graphe\sae2.02-main\Project\SAE2-etd\null1935822684" />
+    <property name="javac.includesfile.binary" value="C:\Users\sandi\3D Objects\Projets U\S2.02\SAE_S2.02_Visualisation_de_graphe\sae2.02-main\Project\SAE2-etd\null593652982" />
     <property name="libs.javaee-api-7.0.classpath" value="C:\Program Files\NetBeans-19\netbeans\enterprise\modules\ext\javaee-api-7.0.jar" />
     <property name="sun.cpu.isalist" value="amd64" />
     <property name="libs.restapi.maven-pom" value="" />
@@ -334,7 +337,6 @@
     <property name="line.separator" value="&#xd;&#xa;" />
     <property name="javadoc.additionalparam" value="" />
     <property name="libs.spring-webmvc5.0.classpath" value="C:\Program Files\NetBeans-19\netbeans\java\modules\ext\spring-5\spring-webmvc-5.2.9.RELEASE.jar" />
-    <property name="test.method" value="testBFSShortestPath" />
     <property name="javac.debug" value="true" />
     <property name="libs.restlib.maven-pom" value="" />
     <property name="libs.testng.classpath" value="C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\testng-6.14.3.jar;C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\jcommander-1.78.jar" />
@@ -342,8 +344,8 @@
     <property name="user.name" value="sandi" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="javadoc.windowtitle" value="" />
-    <property name="nb.junit.single" value="true" />
-    <property name="nb.internal.action.name" value="run.single.method" />
+    <property name="nb.junit.single" value="false" />
+    <property name="nb.internal.action.name" value="run.single" />
     <property name="libs.javaee-api-8.0.maven-pom" value="" />
     <property name="libs.jaxws21.src" value="" />
     <property name="apple.awt.application.appearance" value="system" />
@@ -404,11 +406,11 @@
     <property name="javac.classpath" value="C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\hamcrest-core-1.3.jar:C:\Program Files\NetBeans-19\netbeans\platform\modules\ext\junit-4.13.2.jar" />
     <property name="libs.jakartaee-web-api-8.0.classpath" value="C:\Program Files\NetBeans-19\netbeans\enterprise\modules\ext\jakarta.jakartaee-web-api-8.0.0.jar" />
     <property name="dist.jlink.dir" value="dist/jlink" />
-    <property name="nb.junit.batch" value="false" />
+    <property name="nb.junit.batch" value="true" />
     <property name="libs.jakartaee-web-api-10.0.maven-pom" value="" />
     <property name="build.test.classes.dir" value="build/test/classes" />
     <property name="libs.spring-framework300.maven-pom" value="" />
-    <property name="ant.project.invoked-targets" value="test-single-method" />
+    <property name="ant.project.invoked-targets" value="test-single" />
     <property name="libs.jstl.classpath" value="C:\Program Files\NetBeans-19\netbeans\enterprise\modules\ext\jstl-impl.jar;C:\Program Files\NetBeans-19\netbeans\enterprise\modules\ext\jstl-api.jar" />
     <property name="ap.cmd.line.internal" value="" />
     <property name="libs.PostgreSQLDriver.src" value="" />
@@ -434,7 +436,8 @@
     <property name="libs.jsp-compiler.classpath" value="C:\Program Files\NetBeans-19\netbeans\enterprise\ant\extra\jspcompile.jar" />
     <property name="libs.javaee-endorsed-api-6.0.classpath" value="C:\Program Files\NetBeans-19\netbeans\enterprise\modules\ext\javaee6-endorsed\javax.annotation.jar;C:\Program Files\NetBeans-19\netbeans\enterprise\modules\ext\javaee6-endorsed\jaxb-api-osgi.jar;C:\Program Files\NetBeans-19\netbeans\enterprise\modules\ext\javaee6-endorsed\webservices-api-osgi.jar" />
   </properties>
-  <testcase classname="algorithms.BFSTest" name="testBFSShortestPath" time="0.012" />
+  <testcase classname="algorithms.BFSTest" name="testBFSNoPath" time="0.012" />
+  <testcase classname="algorithms.BFSTest" name="testBFSShortestPath" time="0.001" />
   <system-out><![CDATA[ oui[graphs.Coord@8000d897]
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
