@@ -72,6 +72,7 @@ public class PrimTest {
         assertTrue(mst.existEdge(node4, node5, false) ||
                    mst.existEdge(node5, node4, false));
     }
+    @Test
      public void testPrimWithDisconnectedGraph() {
         // Create a new disconnected graph
         Graph disconnectedGraph = new Graph();
