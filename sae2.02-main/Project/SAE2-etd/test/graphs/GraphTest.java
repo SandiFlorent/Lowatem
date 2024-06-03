@@ -43,16 +43,7 @@ public class GraphTest {
     }
 
     @Test
-    public void testAddNode_0args() {
-        System.out.println("addNode");
-        Graph instance = new Graph();
-        Node result = instance.addNode();
-        assertNotNull(result);
-        assertTrue(instance.GetAllNodes().contains(result));
-    }
-
-    @Test
-    public void testAddNode_Node() {
+    public void testAddNode() {
         System.out.println("addNode");
         Node n = new Node(new Coord(1, 1));
         Graph instance = new Graph();
@@ -61,7 +52,7 @@ public class GraphTest {
     }
 
     @Test
-    public void testAddEdge_Edge() {
+    public void testAddEdge() {
         System.out.println("addEdge");
         Node n1 = new Node(new Coord(1, 1));
         Node n2 = new Node(new Coord(2, 2));
@@ -74,7 +65,7 @@ public class GraphTest {
     }
 
     @Test
-    public void testAddEdge_Node_Node() {
+    public void testAddEdge2() {
         System.out.println("addEdge");
         Node src = new Node(new Coord(1, 1));
         Node tgt = new Node(new Coord(2, 2));
