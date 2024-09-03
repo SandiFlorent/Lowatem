@@ -39,7 +39,31 @@ public class Etage extends ArrayList<ISalle> implements IEtage {
         // salles
         for (String ligne : lignes){
             mots = ligne.split(" ");
-            
+            int x = Integer.parseInt(mots[0]);
+            int y = Integer.parseInt(mots[1]);
+            ESalle type;
+            switch (mots[2]){
+                case "N":
+                    type = ESalle.NORMALE;
+                    break;
+                case "M":
+                    type = ESalle.ESCALIER_MONTANT;
+                    break;
+                case "D":
+                    type = ESalle.ESCALIER_DESCENDANT;
+                    break;
+                case "E":
+                    type = ESalle.ENTREE;
+                    break;
+                case "S":
+                    type = ESalle.SORTIE;
+                    break;
+                //In case there's an issue we set the type to null.    
+                default :
+                    type = null;
+                    break;
+            }
+            this.add(new Salle(x, y, type, this));
         }
     }
     
