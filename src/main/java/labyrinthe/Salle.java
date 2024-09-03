@@ -10,29 +10,29 @@ import java.util.Objects;
  *
  * @author mflorent
  */
-public class Salle implements ISalle{
-    
+public class Salle implements ISalle {
+
     /**
      * The x coord
      */
     public int X;
-    
+
     /**
      * The y coord
      */
     public int Y;
-    
+
     /**
      * The room's type
      */
     public ESalle Type;
-    
+
     /**
      * The room's level
      */
     public Etage Etage;
-    
-    public Salle(int x, int y, ESalle type, Etage etage){
+
+    public Salle(int x, int y, ESalle type, Etage etage) {
         X = x;
         Y = y;
         Type = type;
@@ -91,7 +91,52 @@ public class Salle implements ISalle{
 
     @Override
     public boolean estAdjacente(ISalle autre) {
-        return false;
+        switch (this.getType()) {
+            case ESCALIER_MONTANT:
+                checkStairsAdjency(autre);
+            case ESCALIER_DESCENDANT:
+                checkStairsAdjency(autre);
+            default:
+                if (autre.getEtage().getNum() != this.getEtage().getNum()){
+                    return false;
+                }
+                if ((this.getX() == autre.getX()+1) && (this.getY() == autre.getY())){
+                    return true;
+                }
+                if ((this.getY() == autre.getY()+1) && (this.getX() == autre.getX())){
+                    return true;
+                }
+                return false;
+        }
     }
-    
+
+    /**
+     * Computes the distance between two coordinates
+     *
+     * @param coord1 the first coord
+     * @param coord2 the second coord
+     * @return the absolute value between both, hence the distance
+     */
+    private int distanceCoord(int coord1, int coord2) {
+        return Math.abs(coord1 - coord2);
+    }
+
+    private boolean isOnSameCoords(ISalle other) {
+        return this.getX() == other.getX() && this.getY() == other.getY();
+    }
+
+    private boolean checkStairsAdjency(ISalle autre){
+        ESalle otherStairType;
+        otherStairType = ESalle.ESCALIER_MONTANT;
+        if (this.getType() == ESalle.ESCALIER_MONTANT){
+            otherStairType = ESalle.ESCALIER_DESCENDANT;
+        }
+        if (autre.getType() != otherStairType) {
+                    return false;
+                }
+                if (autre.getEtage().getNum() != (this.getEtage().getNum() + 1)) {
+                    return false;
+                }
+                return isOnSameCoords(autre);
+    }
 }
