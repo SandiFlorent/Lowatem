@@ -39,7 +39,7 @@ public class Etage extends ArrayList<ISalle> implements IEtage {
         // salles
         for (String ligne : lignes){
             mots = ligne.split(" ");
-            // ...
+            
         }
     }
     
