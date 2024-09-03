@@ -12,9 +12,24 @@ import java.util.Objects;
  */
 public class Salle implements ISalle{
     
+    /**
+     * The x coord
+     */
     public int X;
+    
+    /**
+     * The y coord
+     */
     public int Y;
+    
+    /**
+     * The room's type
+     */
     public ESalle Type;
+    
+    /**
+     * The room's level
+     */
     public Etage Etage;
     
     public Salle(int x, int y, ESalle type, Etage etage){
