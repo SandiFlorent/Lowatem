@@ -93,9 +93,9 @@ public class Salle implements ISalle {
     public boolean estAdjacente(ISalle autre) {
         switch (this.getType()) {
             case ESCALIER_MONTANT:
-                checkStairsAdjency(autre);
+                return checkStairsAdjency(autre);
             case ESCALIER_DESCENDANT:
-                checkStairsAdjency(autre);
+                return checkStairsAdjency(autre);
             default:
                 if (autre.getEtage().getNum() != this.getEtage().getNum()) {
                     return false;
@@ -121,22 +121,41 @@ public class Salle implements ISalle {
         return Math.abs(coord1 - coord2);
     }
 
+    /**
+     * This function will determine if this object and another one are one the
+     * same coords
+     *
+     * @param other the object to be compared with this
+     * @return true if both objects are on the same coords, false otherwise
+     */
     private boolean isOnSameCoords(ISalle other) {
         return this.getX() == other.getX() && this.getY() == other.getY();
     }
 
+    /**
+     * This method checks according to the stair type if there's an adjency
+     * @param autre the other stair to be compared with this object
+     * @return true if there's an adjency, false otherwise
+     */
     private boolean checkStairsAdjency(ISalle autre) {
         ESalle otherStairType;
         otherStairType = ESalle.ESCALIER_MONTANT;
+
+        // We check whether we have an ascendent or a descendent stair
         if (this.getType() == ESalle.ESCALIER_MONTANT) {
             otherStairType = ESalle.ESCALIER_DESCENDANT;
         }
+        
+        // Return false if it's not the complementary stair type
         if (autre.getType() != otherStairType) {
             return false;
         }
-        if (autre.getEtage().getNum() != (this.getEtage().getNum() + 1)) {
+        
+        // False if not the direct superior or inferior floor
+        if (distanceCoord(this.getEtage().getNum(), autre.getEtage().getNum()) != 1) {
             return false;
         }
+        //True otherwise
         return isOnSameCoords(autre);
     }
 }
