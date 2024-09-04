@@ -97,13 +97,13 @@ public class Salle implements ISalle {
             case ESCALIER_DESCENDANT:
                 checkStairsAdjency(autre);
             default:
-                if (autre.getEtage().getNum() != this.getEtage().getNum()){
+                if (autre.getEtage().getNum() != this.getEtage().getNum()) {
                     return false;
                 }
-                if ((this.getX() == autre.getX()+1) && (this.getY() == autre.getY())){
+                if ((distanceCoord(this.getX(), autre.getX()) == 1) && (this.getY() == autre.getY())) {
                     return true;
                 }
-                if ((this.getY() == autre.getY()+1) && (this.getX() == autre.getX())){
+                if ((distanceCoord(this.getY(), autre.getY()) == 1) && (this.getX() == autre.getX())) {
                     return true;
                 }
                 return false;
@@ -125,18 +125,18 @@ public class Salle implements ISalle {
         return this.getX() == other.getX() && this.getY() == other.getY();
     }
 
-    private boolean checkStairsAdjency(ISalle autre){
+    private boolean checkStairsAdjency(ISalle autre) {
         ESalle otherStairType;
         otherStairType = ESalle.ESCALIER_MONTANT;
-        if (this.getType() == ESalle.ESCALIER_MONTANT){
+        if (this.getType() == ESalle.ESCALIER_MONTANT) {
             otherStairType = ESalle.ESCALIER_DESCENDANT;
         }
         if (autre.getType() != otherStairType) {
-                    return false;
-                }
-                if (autre.getEtage().getNum() != (this.getEtage().getNum() + 1)) {
-                    return false;
-                }
-                return isOnSameCoords(autre);
+            return false;
+        }
+        if (autre.getEtage().getNum() != (this.getEtage().getNum() + 1)) {
+            return false;
+        }
+        return isOnSameCoords(autre);
     }
 }
