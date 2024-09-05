@@ -73,6 +73,11 @@ public class Etage extends ArrayList<ISalle> implements IEtage {
     }
 
     @Override
+    public boolean add(ISalle Salle){
+        if(this.c)
+    }
+    
+    @Override
     public int getHauteur() {
         return hauteur;
     }  

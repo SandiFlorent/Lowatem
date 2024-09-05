@@ -46,3 +46,9 @@
 ### Seventh session
 
     - I finally drew the floors and finished the first objective. I also personalized a little bit just for fun.
+
+### Eighth session
+
+    - I drew white squares instead of the images I used, but personalisation is still easily accessible
+    - Salle methods were already tested so I directly passed the 8th question
+    - I added tests for the Etage class

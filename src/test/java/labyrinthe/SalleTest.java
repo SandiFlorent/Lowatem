@@ -36,6 +36,8 @@ public class SalleTest {
     public void tearDown() {
     }
 
+    
+    // estAdjacente method tests
     @Test
     public void testAreRoomsAdjacentOnTheSameFloor() {
         Etage etage = new Etage(1); // Creating a first floor
@@ -76,5 +78,5 @@ public class SalleTest {
         assertFalse(salle1.estAdjacente(salle4)); // Not a stair type
         assertFalse(salle1.estAdjacente(salle5)); // Not the same coords
     }
-    
+     
 }
