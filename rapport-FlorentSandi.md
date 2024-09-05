@@ -39,6 +39,10 @@
 
     - Started to work on the labyrinthe code : added the constructor and searched a way to make determine the entrance and exit
 
-### Sixth session(now)
+### Sixth session
 
     - I finished the constructor, and for the entrance and exit I determined that searching for them in the labyrinthe class with a while loop would be easier than trying to fetch it from the floor class. But perhaps in the floor class I could create an entrance and exit variables that'll be null unless it has found either one of both. Still need to figure out which is better.
+
+### Seventh session
+
+    - I finally drew the floors and finished the first objective. I also personalized a little bit just for fun.

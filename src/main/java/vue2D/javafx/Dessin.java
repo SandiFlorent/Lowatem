@@ -32,6 +32,8 @@ public class Dessin extends Canvas {
     private Image solImage;
     private Image escalierM;
     private Image escalierD;
+    private Image salle;
+    private Image entreeImage;
     private int tailleLinkH = 6;
     private int tailleLinkL = 2;
 
@@ -48,6 +50,7 @@ public class Dessin extends Canvas {
         tampon = this.getGraphicsContext2D();
         chargementImages();
         dessinFond();
+        dessinSalles(this.labyrinthe.getEtageCourant());
     }
 
     public void chargementImages() {
@@ -55,6 +58,8 @@ public class Dessin extends Canvas {
         solImage = new Image("file:icons/pyramide.png");
         escalierM = new Image("file:icons/up.gif");
         escalierD = new Image("file:icons/down.gif");
+        salle = new Image("file:icons/bluerock.gif");
+        entreeImage = new Image("file:icons/sortie.gif");
     }
 
     public void dessinFond() {
@@ -66,11 +71,32 @@ public class Dessin extends Canvas {
         for (ISalle s : etage) {
             Color c = Color.rgb(200, 200, 200);
             dessinSalle(s, c);
+            
         }
     }
 
     public void dessinSalle(ISalle s, Color c) {
-        // ...
+        switch (s.getType()){
+            case ESCALIER_MONTANT : 
+                tampon.drawImage(escalierM, s.getX() * unite, s.getY() * unite, unite,
+                unite);
+                break;
+            case ESCALIER_DESCENDANT : 
+                tampon.drawImage(escalierD, s.getX() * unite, s.getY() * unite, unite,
+                unite);
+                break;
+            case SORTIE :
+                tampon.drawImage(entreeImage, s.getX() * unite, s.getY() * unite, unite,
+                unite);
+                break;
+            case ENTREE : 
+                tampon.drawImage(entreeImage, s.getX() * unite, s.getY() * unite, unite,
+                unite);
+                break;
+            default : 
+                tampon.drawImage(salle, s.getX() * unite, s.getY() * unite, unite,
+                unite);
+            }
     }
 
     public void dessinPlusCourtChemin(ISprite p) {

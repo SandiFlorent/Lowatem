@@ -12,7 +12,7 @@ import personnages.IPersonnage;
  */
 public class Labyrinthe extends ArrayList<ISalle> implements ILabyrinthe {
 
-    private IEtage etageCourant = new Etage();
+    private IEtage etageCourant;
     private ISalle entree;
     private ISalle sortie;
 
@@ -28,6 +28,8 @@ public class Labyrinthe extends ArrayList<ISalle> implements ILabyrinthe {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        
+        etageCourant = etage1;
 
         //Then we define the entrance and exit
         int i = 0;
