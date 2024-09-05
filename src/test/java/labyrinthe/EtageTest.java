@@ -78,28 +78,10 @@ public class EtageTest {
         testAFloor(etage2);
 
         // Tests for a not valid floor
-        //testAFloor(etage3);
+        testAFloor(etage3);
         // Tests for a second not valid floor
-        //testAFloor(etage4);
-        /**
-         *
-         *
-         * for( ISalle salle : etage2){ for ( ISalle salle2 : etage){
-         * assertFalse(salle.equals(salle2)); } assertFalse(salle.getY() <
-         * etage.getHauteur()); assertFalse(salle.getX() < etage.getLargeur());
-         * }
-         *
-         * // Tests for a not valid floor for( ISalle salle : etage3){ for (
-         * ISalle salle2 : etage){ assertFalse(salle.equals(salle2)); }
-         * assertFalse(salle.getY() < etage.getHauteur());
-         * assertFalse(salle.getX() < etage.getLargeur()); }
-         *
-         * // Tests for a second not valid floor for( ISalle salle : etage4){
-         * for ( ISalle salle2 : etage){ assertFalse(salle.equals(salle2)); }
-         * assertFalse(salle.getY() < etage.getHauteur());
-         * assertFalse(salle.getX() < etage.getLargeur()); }
-         *
-         */
+        testAFloor(etage4);
+
     }
 
 }

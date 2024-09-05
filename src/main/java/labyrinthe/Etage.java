@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -74,7 +75,21 @@ public class Etage extends ArrayList<ISalle> implements IEtage {
 
     @Override
     public boolean add(ISalle Salle){
-        if(this.c)
+        if(!validCoordinates(Salle)){
+            return false;
+        }
+        // the contains method is using the equals method precedently defined
+        if (this.contains(Salle)){
+            return false;
+        }
+        
+        super.add(Salle);
+        return true;
+    }
+    
+    private boolean validCoordinates(ISalle salle){
+        return !(salle.getY() > this.getHauteur() || salle.getX() > this.getLargeur() ||
+                salle.getY() < 0 || salle.getX() < 0);
     }
     
     @Override

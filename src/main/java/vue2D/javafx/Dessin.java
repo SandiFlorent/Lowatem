@@ -90,7 +90,7 @@ public class Dessin extends Canvas {
                 unite);
                 break;
             case ENTREE : 
-                Color r = Color.rgb(200, 0, 0);
+                Color r = Color.rgb(0, 200, 0);
                 tampon.setFill(r);
                 tampon.fillRect(s.getX() * unite, s.getY() * unite, unite,
                 unite);

@@ -52,3 +52,7 @@
     - I drew white squares instead of the images I used, but personalisation is still easily accessible
     - Salle methods were already tested so I directly passed the 8th question
     - I added tests for the Etage class
+
+### Ninth session
+
+    - I finished the 3rd objective by overriding the add method of the Etage class. To do so I simply had to first check if the coordinates were valid, then using the contains method to check if a room was already added to the floor. I had forgotten that the contains method uses equals method so I tried a lot of things and lost too much time before realising it. 
