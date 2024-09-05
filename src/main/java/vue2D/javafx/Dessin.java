@@ -90,12 +90,17 @@ public class Dessin extends Canvas {
                 unite);
                 break;
             case ENTREE : 
-                tampon.drawImage(entreeImage, s.getX() * unite, s.getY() * unite, unite,
+                Color r = Color.rgb(200, 0, 0);
+                tampon.setFill(r);
+                tampon.fillRect(s.getX() * unite, s.getY() * unite, unite,
                 unite);
                 break;
             default : 
-                tampon.drawImage(salle, s.getX() * unite, s.getY() * unite, unite,
+                tampon.setFill(c);
+                tampon.fillRect(s.getX() * unite, s.getY() * unite, unite,
                 unite);
+                // The following code draws the room with a certain type of image
+                //tampon.drawImage(salle, s.getX() * unite, s.getY() * unite, unite, unite);
             }
     }
 
