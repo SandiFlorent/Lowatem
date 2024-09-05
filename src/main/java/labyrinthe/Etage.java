@@ -42,30 +42,30 @@ public class Etage extends ArrayList<ISalle> implements IEtage {
             mots = ligne.split(" ");
             int x = Integer.parseInt(mots[0]);
             int y = Integer.parseInt(mots[1]);
-            ESalle type;
-            switch (mots[2]){
+            //add a new Salle with the right parameters
+            this.add(new Salle(x, y, determineType(mots[2]), this));
+        }
+    }
+    
+    /**
+     * This method will determine a type according to the last letter written in the file
+     */
+    private ESalle determineType(String type){
+        switch (type){
                 case "N":
-                    type = ESalle.NORMALE;
-                    break;
+                    return ESalle.NORMALE;
                 case "M":
-                    type = ESalle.ESCALIER_MONTANT;
-                    break;
+                    return ESalle.ESCALIER_MONTANT;
                 case "D":
-                    type = ESalle.ESCALIER_DESCENDANT;
-                    break;
+                    return ESalle.ESCALIER_DESCENDANT;
                 case "E":
-                    type = ESalle.ENTREE;
-                    break;
+                    return ESalle.ENTREE;
                 case "S":
-                    type = ESalle.SORTIE;
-                    break;
+                    return ESalle.SORTIE;
                 //In case there's an issue we set the type to null.    
                 default :
-                    type = null;
-                    break;
+                    return null;
             }
-            this.add(new Salle(x, y, type, this));
-        }
     }
     
     @Override
@@ -87,6 +87,11 @@ public class Etage extends ArrayList<ISalle> implements IEtage {
         return true;
     }
     
+    /**
+     * This function will determine if the room's coordinates are corrects
+     * @param salle the room to verify
+     * @return if both x and y coordinates are corrects
+     */
     private boolean validCoordinates(ISalle salle){
         return !(salle.getY() > this.getHauteur() || salle.getX() > this.getLargeur() ||
                 salle.getY() < 0 || salle.getX() < 0);

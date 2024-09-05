@@ -25,6 +25,8 @@ public class Labyrinthe extends ArrayList<ISalle> implements ILabyrinthe {
             etage2.charger("etages/etage2N.txt");
             this.addAll(etage1);
             this.addAll(etage2);
+            
+            
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -52,7 +54,14 @@ public class Labyrinthe extends ArrayList<ISalle> implements ILabyrinthe {
 
     @Override
     public Collection<ISalle> sallesAccessibles(IPersonnage heros) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        ArrayList<ISalle> salleAccessible = new ArrayList<>();
+        ISalle salleCourante = heros.getPosition();
+        for (ISalle s : etageCourant){
+            if(salleCourante.estAdjacente(s)){
+                salleAccessible.add(s);
+            }
+        }
+        return salleAccessible;
     }
 
     @Override
