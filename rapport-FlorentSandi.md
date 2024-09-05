@@ -58,3 +58,8 @@
     - I finished the 3rd objective by overriding the add method of the Etage class. To do so I simply had to first check if the coordinates were valid, then using the contains method to check if a room was already added to the floor. I had forgotten that the contains method uses equals method so I tried a lot of things and lost too much time before realising it. 
     - Added the code to determine all the adjacent rooms
     - Optimized and added some comments here and there
+
+### In-between sessions :
+
+    - I created and implemented the classes relatives to the Hero : APersonnage, IPeresonnage, Heros, ASprite and HerosSprite.
+    - I started to write the code to handle the movements but couldn't figure out how to change the current room, a better understanding of the actual software architecture might help
