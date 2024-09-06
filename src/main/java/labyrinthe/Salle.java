@@ -97,16 +97,7 @@ public class Salle implements ISalle {
             case ESCALIER_DESCENDANT:
                 return checkStairsAdjency(autre);
             default:
-                if (autre.getEtage().getNum() != this.getEtage().getNum()) {
-                    return false;
-                }
-                if ((distanceCoord(this.getX(), autre.getX()) == 1) && (this.getY() == autre.getY())) {
-                    return true;
-                }
-                if ((distanceCoord(this.getY(), autre.getY()) == 1) && (this.getX() == autre.getX())) {
-                    return true;
-                }
-                return false;
+                return normalAdjacency(autre);
         }
     }
     
@@ -131,6 +122,16 @@ public class Salle implements ISalle {
             }
         }
         return true;
+    }
+    
+    private boolean normalAdjacency(ISalle autre){
+        if (autre.getEtage().getNum() != this.getEtage().getNum()) {
+                    return false;
+                }
+                if ((distanceCoord(this.getX(), autre.getX()) == 1) && (this.getY() == autre.getY())) {
+                    return true;
+                }
+            return (distanceCoord(this.getY(), autre.getY()) == 1) && (this.getX() == autre.getX());
     }
 
     /**
@@ -167,8 +168,6 @@ public class Salle implements ISalle {
         if (!stairsDistanceCoords(autre)) {
             return false;
         }
-        
-        
         //True otherwise
         return isOnSameCoords(autre);
     }

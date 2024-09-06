@@ -37,10 +37,9 @@ public abstract class ASprite implements ISprite {
         X = xpix;
         Y = ypix;
     }
-
     @Override
     public ISalle faitSonChoix(Collection<ISalle> sallesAccessibles) {
-        return null;
+        return personnage.faitSonChoix(sallesAccessibles);
     }
 
     @Override
@@ -52,5 +51,6 @@ public abstract class ASprite implements ISprite {
     public void setPosition(ISalle s) {
         personnage.setPosition(s);
     }
+    
 
 }

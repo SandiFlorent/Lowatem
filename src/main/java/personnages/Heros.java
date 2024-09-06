@@ -4,6 +4,7 @@
  */
 package personnages;
 
+import java.util.Collection;
 import labyrinthe.ISalle;
 
 /**
@@ -11,5 +12,17 @@ import labyrinthe.ISalle;
  * @author sandi
  */
 public class Heros extends APersonnage {
-     protected ISalle salleChoisie;
+     public ISalle salleChoisie;
+     
+     public Heros(ISalle salleChoisie){
+         this.salleChoisie = salleChoisie;
+     }
+     
+     @Override
+    public ISalle faitSonChoix(Collection<ISalle> sallesAccessibles) {
+        if (sallesAccessibles.contains(salleChoisie)){
+            return salleChoisie;
+        }
+        return this.getPosition();
+    }
 }

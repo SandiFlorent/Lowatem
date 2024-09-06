@@ -1,9 +1,12 @@
 package application;
 
 import java.util.Collection;
+import javafx.scene.image.Image;
 import labyrinthe.ILabyrinthe;
 import labyrinthe.ISalle;
+import personnages.Heros;
 import vue2D.IVue;
+import vue2D.sprites.HerosSprite;
 import vue2D.sprites.ISprite;
 
 /**
@@ -21,8 +24,9 @@ public class Core {
 
     protected void initSprites(IVue vue) {
         // creation du heros 
-        //Heros h = new personnages.Heros(labyrinthe.getEntree());
-        //this.heros = new HerosSprite(h, labyrinthe);
+        Image image = new Image ( " file : icons / link / LinkRunShieldL1 . gif " ) ;
+        Heros h = new personnages.Heros(labyrinthe.getEntree());
+        this.heros = new HerosSprite(h, image, labyrinthe);
         //vue.add(this.heros);
     }
 
