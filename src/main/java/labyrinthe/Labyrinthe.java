@@ -54,7 +54,7 @@ public class Labyrinthe extends ArrayList<ISalle> implements ILabyrinthe {
 
     @Override
     public Collection<ISalle> sallesAccessibles(IPersonnage heros) {
-        ArrayList<ISalle> salleAccessible = new ArrayList<>();
+        Collection<ISalle> salleAccessible = new ArrayList<>();
         ISalle salleCourante = heros.getPosition();
         for (ISalle s : etageCourant){
             if(salleCourante.estAdjacente(s)){

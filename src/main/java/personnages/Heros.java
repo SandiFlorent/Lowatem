@@ -11,5 +11,5 @@ import labyrinthe.ISalle;
  * @author sandi
  */
 public class Heros extends APersonnage {
-     ISalle salleChoisie;
+     protected ISalle salleChoisie;
 }
