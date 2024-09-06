@@ -109,8 +109,8 @@ public class Salle implements ISalle {
                 return false;
         }
     }
-
-    /**
+    
+        /**
      * Computes the distance between two coordinates
      *
      * @param coord1 the first coord
@@ -119,6 +119,18 @@ public class Salle implements ISalle {
      */
     private int distanceCoord(int coord1, int coord2) {
         return Math.abs(coord1 - coord2);
+    }
+    private boolean stairsDistanceCoords(ISalle autre) {
+        if (this.getType() == ESalle.ESCALIER_MONTANT){
+            if (autre.getEtage().getNum() != this.getEtage().getNum() +1){
+                return false;
+            }
+        } else {
+            if (autre.getEtage().getNum() != this.getEtage().getNum() - 1){
+                return false;
+            }
+        }
+        return true;
     }
 
     /**
@@ -152,9 +164,11 @@ public class Salle implements ISalle {
         }
         
         // False if not the direct superior or inferior floor
-        if (distanceCoord(this.getEtage().getNum(), autre.getEtage().getNum()) != 1) {
+        if (!stairsDistanceCoords(autre)) {
             return false;
         }
+        
+        
         //True otherwise
         return isOnSameCoords(autre);
     }
