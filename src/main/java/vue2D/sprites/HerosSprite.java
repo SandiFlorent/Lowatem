@@ -20,10 +20,8 @@ import personnages.IPersonnage;
 public class HerosSprite extends ASprite implements EventHandler<KeyEvent> {
 
     Labyrinthe labyrinthe;
-    
-
-    public HerosSprite(IPersonnage personnage, Image image, ILabyrinthe labyrinthe) {
-        super(personnage, image);
+    public HerosSprite(IPersonnage personnage, ILabyrinthe labyrinthe) {
+        super(personnage, new Image (" file : icons / link / LinkRunShieldL1 .gif") );
         personnage.setPosition(labyrinthe.getEntree());
     }
 

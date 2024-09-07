@@ -103,9 +103,21 @@ public class Dessin extends Canvas {
                 //tampon.drawImage(salle, s.getX() * unite, s.getY() * unite, unite, unite);
             }
     }
+    
+    public void dessinSprites(){
+        for(ISprite sprite : sprites){
+            if (spriteOnTheCurrentFloor(sprite)){
+                sprite.dessiner(tampon);
+            }
+        }
+    }
 
     public void dessinPlusCourtChemin(ISprite p) {
         // ...
+    }
+    
+    private boolean spriteOnTheCurrentFloor(ISprite spriteA){
+        return spriteA.getPosition().getEtage() == labyrinthe.getEtageCourant();
     }
 
 }

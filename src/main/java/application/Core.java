@@ -24,10 +24,9 @@ public class Core {
 
     protected void initSprites(IVue vue) {
         // creation du heros 
-        Image image = new Image ( " file : icons / link / LinkRunShieldL1 . gif " ) ;
         Heros h = new personnages.Heros(labyrinthe.getEntree());
-        this.heros = new HerosSprite(h, image, labyrinthe);
-        //vue.add(this.heros);
+        this.heros = new HerosSprite(h, labyrinthe);
+        vue.add(this.heros);
     }
 
     protected void jeu(IVue vue) {

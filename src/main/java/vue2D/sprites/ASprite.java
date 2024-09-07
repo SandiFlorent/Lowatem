@@ -19,7 +19,7 @@ public abstract class ASprite implements ISprite {
     public IPersonnage personnage;
     public int X;
     public int Y;
-    private Image image;
+    public Image image;
 
 
     public ASprite(IPersonnage personnage, Image image) {
