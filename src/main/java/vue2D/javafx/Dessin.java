@@ -71,42 +71,43 @@ public class Dessin extends Canvas {
         for (ISalle s : etage) {
             Color c = Color.rgb(200, 200, 200);
             dessinSalle(s, c);
-            
+
         }
     }
 
     public void dessinSalle(ISalle s, Color c) {
-        switch (s.getType()){
-            case ESCALIER_MONTANT : 
+        switch (s.getType()) {
+            case ESCALIER_MONTANT:
                 tampon.drawImage(escalierM, s.getX() * unite, s.getY() * unite, unite,
-                unite);
+                        unite);
                 break;
-            case ESCALIER_DESCENDANT : 
+            case ESCALIER_DESCENDANT:
                 tampon.drawImage(escalierD, s.getX() * unite, s.getY() * unite, unite,
-                unite);
+                        unite);
                 break;
-            case SORTIE :
+            case SORTIE:
                 tampon.drawImage(entreeImage, s.getX() * unite, s.getY() * unite, unite,
-                unite);
+                        unite);
                 break;
-            case ENTREE : 
+            case ENTREE:
                 Color r = Color.rgb(0, 200, 0);
                 tampon.setFill(r);
                 tampon.fillRect(s.getX() * unite, s.getY() * unite, unite,
-                unite);
+                        unite);
                 break;
-            default : 
+            default:
                 tampon.setFill(c);
                 tampon.fillRect(s.getX() * unite, s.getY() * unite, unite,
-                unite);
-                // The following code draws the room with a certain type of image
-                //tampon.drawImage(salle, s.getX() * unite, s.getY() * unite, unite, unite);
+                        unite);
+            // The following code draws the room with a certain type of image
+            //tampon.drawImage(salle, s.getX() * unite, s.getY() * unite, unite, unite);
             }
     }
-    
-    public void dessinSprites(){
-        for(ISprite sprite : sprites){
-            if (spriteOnTheCurrentFloor(sprite)){
+
+    public void dessinSprites() {
+        for (ISprite sprite : sprites) {
+            if (spriteOnTheCurrentFloor(sprite)) {
+                sprite.setCoordonnees(unite * sprite.getPosition().getX(), unite * sprite.getPosition().getY());
                 sprite.dessiner(tampon);
             }
         }
@@ -115,8 +116,8 @@ public class Dessin extends Canvas {
     public void dessinPlusCourtChemin(ISprite p) {
         // ...
     }
-    
-    private boolean spriteOnTheCurrentFloor(ISprite spriteA){
+
+    private boolean spriteOnTheCurrentFloor(ISprite spriteA) {
         return spriteA.getPosition().getEtage() == labyrinthe.getEtageCourant();
     }
 

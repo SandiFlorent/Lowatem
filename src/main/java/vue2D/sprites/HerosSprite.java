@@ -21,24 +21,26 @@ public class HerosSprite extends ASprite implements EventHandler<KeyEvent> {
 
     Labyrinthe labyrinthe;
     public HerosSprite(IPersonnage personnage, ILabyrinthe labyrinthe) {
-        super(personnage, new Image (" file : icons / link / LinkRunShieldL1 .gif") );
+        super(personnage, new Image ("file:icons/link/LinkRunShieldL1.gif") );
         personnage.setPosition(labyrinthe.getEntree());
+        this.labyrinthe = (Labyrinthe)labyrinthe;
     }
 
     @Override
     public void handle(KeyEvent t) {
+        
         switch (t.getCode()) {
             case M:
                 ((Heros) personnage).salleChoisie = getNewPositionStairs(1);
                 break;
             case D:
-                ((Heros) personnage).salleChoisie = getNewPositionStairs(1);
+                ((Heros) personnage).salleChoisie = getNewPositionStairs(-1);
                 break;
             case UP:
-                ((Heros) personnage).salleChoisie = getNewPosition(0, 1);
+                ((Heros) personnage).salleChoisie = getNewPosition(0, -1);
                 break;
             case DOWN:
-                ((Heros) personnage).salleChoisie = getNewPosition(0, -1);
+                ((Heros) personnage).salleChoisie = getNewPosition(0, 1);
                 break;
             case LEFT:
                 ((Heros) personnage).salleChoisie = getNewPosition(-1, 0);
@@ -46,8 +48,8 @@ public class HerosSprite extends ASprite implements EventHandler<KeyEvent> {
             case RIGHT:
                 ((Heros) personnage).salleChoisie = getNewPosition(1, 0);
                 break;
-
         }
+        
     }
 
     /**
@@ -80,12 +82,21 @@ public class HerosSprite extends ASprite implements EventHandler<KeyEvent> {
      */
     private ISalle getNewPosition(int numberX, int numberY) {
         ISalle salleChoisie = personnage.getPosition();
+        System.out.println("Les salles accessibles sont :"+labyrinthe.sallesAccessibles(personnage));
+        System.out.println("");
+        System.out.println("");
         for (ISalle salle : labyrinthe.sallesAccessibles(personnage)) {
             if (salle.getX() == personnage.getPosition().getX() + numberX
                     && salle.getY() == personnage.getPosition().getY() + numberY) {
                 salleChoisie = salle;
             }
         }
+        System.out.println("La salle choisie est " + salleChoisie);
+        System.out.println("La salle actuelle est " + personnage.getPosition());
+        if (salleChoisie == null){
+            return personnage.getPosition();
+        }
+        ((Heros)personnage).setPosition(salleChoisie);
         return salleChoisie;
     }
 

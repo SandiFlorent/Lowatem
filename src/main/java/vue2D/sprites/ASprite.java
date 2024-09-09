@@ -9,6 +9,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import labyrinthe.ISalle;
 import personnages.IPersonnage;
+import static vue2D.AVue.UNITE;
 
 /**
  *
@@ -39,7 +40,9 @@ public abstract class ASprite implements ISprite {
     }
     @Override
     public ISalle faitSonChoix(Collection<ISalle> sallesAccessibles) {
-        return personnage.faitSonChoix(sallesAccessibles);
+        ISalle dest = personnage.faitSonChoix(sallesAccessibles);
+        setCoordonnees((dest.getX()*UNITE), dest.getY()*UNITE);
+        return dest;
     }
 
     @Override
@@ -49,7 +52,10 @@ public abstract class ASprite implements ISprite {
 
     @Override
     public void setPosition(ISalle s) {
+        this.X = s.getX()*UNITE;
+        this.Y = s.getX()*UNITE;
         personnage.setPosition(s);
+        setCoordonnees(X, Y);
     }
     
 

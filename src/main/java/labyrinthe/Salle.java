@@ -44,7 +44,7 @@ public class Salle implements ISalle {
         int hash = 5;
         hash = 59 * hash + this.X;
         hash = 59 * hash + this.Y;
-        hash = 59 * hash + Objects.hashCode(this.Etage);
+        hash += this.Etage.getNum();
         return hash;
     }
 
@@ -100,8 +100,8 @@ public class Salle implements ISalle {
                 return normalAdjacency(autre);
         }
     }
-    
-        /**
+
+    /**
      * Computes the distance between two coordinates
      *
      * @param coord1 the first coord
@@ -111,27 +111,28 @@ public class Salle implements ISalle {
     private int distanceCoord(int coord1, int coord2) {
         return Math.abs(coord1 - coord2);
     }
+
     private boolean stairsDistanceCoords(ISalle autre) {
-        if (this.getType() == ESalle.ESCALIER_MONTANT){
-            if (autre.getEtage().getNum() != this.getEtage().getNum() +1){
+        if (this.getType() == ESalle.ESCALIER_MONTANT) {
+            if (autre.getEtage().getNum() != this.getEtage().getNum() + 1) {
                 return false;
             }
         } else {
-            if (autre.getEtage().getNum() != this.getEtage().getNum() - 1){
+            if (autre.getEtage().getNum() != this.getEtage().getNum() - 1) {
                 return false;
             }
         }
         return true;
     }
-    
-    private boolean normalAdjacency(ISalle autre){
+
+    private boolean normalAdjacency(ISalle autre) {
         if (autre.getEtage().getNum() != this.getEtage().getNum()) {
-                    return false;
-                }
-                if ((distanceCoord(this.getX(), autre.getX()) == 1) && (this.getY() == autre.getY())) {
-                    return true;
-                }
-            return (distanceCoord(this.getY(), autre.getY()) == 1) && (this.getX() == autre.getX());
+            return false;
+        }
+        if ((distanceCoord(this.getX(), autre.getX()) == 1) && (this.getY() == autre.getY())) {
+            return true;
+        }
+        return (distanceCoord(this.getY(), autre.getY()) == 1) && (this.getX() == autre.getX());
     }
 
     /**
@@ -147,6 +148,7 @@ public class Salle implements ISalle {
 
     /**
      * This method checks according to the stair type if there's an adjency
+     *
      * @param autre the other stair to be compared with this object
      * @return true if there's an adjency, false otherwise
      */
@@ -158,12 +160,12 @@ public class Salle implements ISalle {
         if (this.getType() == ESalle.ESCALIER_MONTANT) {
             otherStairType = ESalle.ESCALIER_DESCENDANT;
         }
-        
+
         // Return false if it's not the complementary stair type
         if (autre.getType() != otherStairType) {
             return false;
         }
-        
+
         // False if not the direct superior or inferior floor
         if (!stairsDistanceCoords(autre)) {
             return false;
@@ -171,4 +173,10 @@ public class Salle implements ISalle {
         //True otherwise
         return isOnSameCoords(autre);
     }
+
+    @Override
+    public String toString() {
+        return "Salle{" + "X=" + X + ", Y=" + Y + ", Type=" + Type + ", Etage=" + Etage.getNum() + '}';
+    }
+
 }
