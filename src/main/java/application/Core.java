@@ -1,7 +1,6 @@
 package application;
 
 import java.util.Collection;
-import javafx.scene.image.Image;
 import labyrinthe.ILabyrinthe;
 import labyrinthe.ISalle;
 import personnages.Heros;

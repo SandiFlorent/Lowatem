@@ -114,15 +114,9 @@ public class Salle implements ISalle {
 
     private boolean stairsDistanceCoords(ISalle autre) {
         if (this.getType() == ESalle.ESCALIER_MONTANT) {
-            if (autre.getEtage().getNum() != this.getEtage().getNum() + 1) {
-                return false;
-            }
-        } else {
-            if (autre.getEtage().getNum() != this.getEtage().getNum() - 1) {
-                return false;
-            }
+            return (autre.getEtage().getNum() == this.getEtage().getNum() + 1);
         }
-        return true;
+        return autre.getEtage().getNum() == this.getEtage().getNum() - 1;
     }
 
     private boolean normalAdjacency(ISalle autre) {
@@ -161,9 +155,9 @@ public class Salle implements ISalle {
             otherStairType = ESalle.ESCALIER_DESCENDANT;
         }
 
-        // Return false if it's not the complementary stair type
+        // If it's not the complementary stair type, it still might be an adjacent room
         if (autre.getType() != otherStairType) {
-            return false;
+            return normalAdjacency(autre);
         }
 
         // False if not the direct superior or inferior floor

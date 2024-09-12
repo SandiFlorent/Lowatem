@@ -50,16 +50,36 @@
 ### Eighth session
 
     - I drew white squares instead of the images I used, but personalisation is still easily accessible
+    
     - Salle methods were already tested so I directly passed the 8th question
+    
     - I added tests for the Etage class
 
 ### Ninth session
 
     - I finished the 3rd objective by overriding the add method of the Etage class. To do so I simply had to first check if the coordinates were valid, then using the contains method to check if a room was already added to the floor. I had forgotten that the contains method uses equals method so I tried a lot of things and lost too much time before realising it. 
+    
     - Added the code to determine all the adjacent rooms
+    
     - Optimized and added some comments here and there
 
-### In-between sessions :
+### In-between sessions
 
     - I created and implemented the classes relatives to the Hero : APersonnage, IPeresonnage, Heros, ASprite and HerosSprite.
+    
     - I started to write the code to handle the movements but couldn't figure out how to change the current room, a better understanding of the actual software architecture might help
+
+### Tenth session
+
+    - Thanks to the professor I fixed some bugs about the display, but the character was still not moving. For some obscures reasons, the character's position wasn't updated even though there was a function to do so, so I called directly modified the value and everything was fixed.
+   
+    - I had some issues with the adjacency for stairs for I've forgotten to consider that they were also adjacent to the other type of rooms. But it had more issues, why were all the tests passing ?
+    
+    - Handling movements is now done, the character can even change his floor level, hence I finished the 3rd objective.
+
+### In-between sessions
+    
+    - I fixed the find exit and entrance method. A && was written instead of a ||
+    
+    - I optimized and refactord my handle method --> I refactored my find getNewPosition and getNewPositionStairs method into one unique method that is more modular.
+  

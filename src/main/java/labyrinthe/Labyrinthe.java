@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
+import static labyrinthe.ESalle.ENTREE;
+import static labyrinthe.ESalle.SORTIE;
 import personnages.IPersonnage;
 
 /**
@@ -25,39 +27,39 @@ public class Labyrinthe extends ArrayList<ISalle> implements ILabyrinthe {
             etage2.charger("etages/etage2N.txt");
             this.addAll(etage1);
             this.addAll(etage2);
-            
-            
+
+            etageCourant = etage1;
+
+            //Then we define the entrance and exit
+            // While We don't have both, we don't stop for we can't play without them.
+            int i = 0;
+            while (entree == null || sortie == null && i < this.size()) {
+
+                ISalle salle = this.get(i);
+                switch (salle.getType()) {
+                    case ENTREE:
+                        entree = salle;
+                        break;
+                    case SORTIE:
+                        sortie = salle;
+                        break;
+                    default:
+                        break;
+                }
+                i++;
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
-        
-        etageCourant = etage1;
 
-        //Then we define the entrance and exit
-        int i = 0;
-        while (entree == null && sortie == null && i < this.size()){
-            
-            ISalle salle = this.get(i);
-            switch (salle.getType()) {
-                case ENTREE:
-                    entree = salle;
-                    break;
-                case SORTIE:
-                    sortie = salle;
-                    break;
-                default:
-                    break;
-            }
-            i++;
-        }
     }
 
     @Override
     public Collection<ISalle> sallesAccessibles(IPersonnage heros) {
         Collection<ISalle> salleAccessible = new ArrayList<>();
         ISalle salleCourante = heros.getPosition();
-        for (ISalle s : etageCourant){
-            if(salleCourante.estAdjacente(s)){
+        for (ISalle s : this) {
+            if (salleCourante.estAdjacente(s)) {
                 salleAccessible.add(s);
             }
         }
