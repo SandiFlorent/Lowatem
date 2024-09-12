@@ -67,6 +67,10 @@ public class Dessin extends Canvas {
                 unite * hauteur);
     }
 
+    /**
+     * Draws all the rooms of the labyrinthe's current floor
+     * @param etage the current floor
+     */
     public void dessinSalles(IEtage etage) {
         for (ISalle s : etage) {
             Color c = Color.rgb(200, 200, 200);
@@ -75,6 +79,11 @@ public class Dessin extends Canvas {
         }
     }
 
+    /**
+     * This method will draw ONE room
+     * @param s the room to be drawed
+     * @param c the desired color of the rectangle
+     */
     public void dessinSalle(ISalle s, Color c) {
         switch (s.getType()) {
             case ESCALIER_MONTANT:
@@ -104,6 +113,9 @@ public class Dessin extends Canvas {
             }
     }
 
+    /**
+     * This method will draw every that is on the current floor
+     */
     public void dessinSprites() {
         for (ISprite sprite : sprites) {
             if (spriteOnTheCurrentFloor(sprite)) {
@@ -117,6 +129,11 @@ public class Dessin extends Canvas {
         // ...
     }
 
+    /**
+     * This method determines wheter or not a sprite is on the current floor
+     * @param spriteA the sprite to be verified
+     * @return true if it's on the current floor, false otherwise
+     */
     private boolean spriteOnTheCurrentFloor(ISprite spriteA) {
         return spriteA.getPosition().getEtage() == labyrinthe.getEtageCourant();
     }

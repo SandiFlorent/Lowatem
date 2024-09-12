@@ -89,11 +89,16 @@ public class Salle implements ISalle {
         return Etage;
     }
 
+    /**
+     * Determines whether or not a room is adjacent to another one
+     *
+     * @param autre the other room to be compared with this
+     * @return true if they are adjacent, false otherwise
+     */
     @Override
     public boolean estAdjacente(ISalle autre) {
         switch (this.getType()) {
             case ESCALIER_MONTANT:
-                return checkStairsAdjency(autre);
             case ESCALIER_DESCENDANT:
                 return checkStairsAdjency(autre);
             default:
@@ -112,6 +117,13 @@ public class Salle implements ISalle {
         return Math.abs(coord1 - coord2);
     }
 
+    /**
+     * Determines if two rooms of type ESACALIER_something are directly next to
+     * each other in terms of floor levels. 
+     *
+     * @param autre the other stair to be compared with
+     * @return
+     */
     private boolean stairsDistanceCoords(ISalle autre) {
         if (this.getType() == ESalle.ESCALIER_MONTANT) {
             return (autre.getEtage().getNum() == this.getEtage().getNum() + 1);
@@ -119,6 +131,11 @@ public class Salle implements ISalle {
         return autre.getEtage().getNum() == this.getEtage().getNum() - 1;
     }
 
+    /**
+     * This method determines if two rooms of the same level are on the same level
+     * @param autre
+     * @return 
+     */
     private boolean normalAdjacency(ISalle autre) {
         if (autre.getEtage().getNum() != this.getEtage().getNum()) {
             return false;

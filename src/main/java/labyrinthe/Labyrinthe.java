@@ -31,27 +31,34 @@ public class Labyrinthe extends ArrayList<ISalle> implements ILabyrinthe {
             etageCourant = etage1;
 
             //Then we define the entrance and exit
-            // While We don't have both, we don't stop for we can't play without them.
-            int i = 0;
-            while (entree == null || sortie == null && i < this.size()) {
+            findEntranceAndExit();
 
-                ISalle salle = this.get(i);
-                switch (salle.getType()) {
-                    case ENTREE:
-                        entree = salle;
-                        break;
-                    case SORTIE:
-                        sortie = salle;
-                        break;
-                    default:
-                        break;
-                }
-                i++;
-            }
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
 
+    /**
+     * This method will determine the entrance and the exit of the labyrinthe
+     */
+    private void findEntranceAndExit() {
+        int i = 0;
+        ISalle salle;
+        // While We don't have both, we don't stop for we can't play without them.
+        while (entree == null || sortie == null && i < this.size()) {
+            salle = this.get(i);
+            switch (salle.getType()) {
+                case ENTREE:
+                    entree = salle;
+                    break;
+                case SORTIE:
+                    sortie = salle;
+                    break;
+                default:
+                    break;
+            }
+            i++;
+        }
     }
 
     @Override

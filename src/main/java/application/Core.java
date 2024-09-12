@@ -32,12 +32,14 @@ public class Core {
         this.heros = new HerosSprite(h, labyrinthe);
         vue.add(this.heros);
 
-        // création des monstres
+        // Creating a random number of monsters
         Monstre monstre;
         ISprite monstreSprite;
         Random random = new Random();
-        int randomNumberOfMonsters = random.nextInt(8, 15);
-        for (int i = 0; i< randomNumberOfMonsters; i++){
+        
+        // There'll be between 8 and 12 monsters
+        int randomNumberOfMonsters = random.nextInt(5) + 8;
+        for (int i = 0; i < randomNumberOfMonsters; i++) {
             monstre = new Monstre((Labyrinthe) labyrinthe);
             monstreSprite = new MonstreSprite(monstre, labyrinthe);
             vue.add(monstreSprite);

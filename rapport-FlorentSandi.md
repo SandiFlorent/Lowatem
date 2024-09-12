@@ -86,3 +86,7 @@
     - I added Monstre and MonstreSprite classes. Monstre returns a random position choice, MonstreSprite is... existing ?
 
     - I implemented them to the core class, now they exists, the only thing left is drawing them
+    
+    - Monsters weren't being drawn cause I wrote the wrong source for the image, now there's some monsters running around like crazy fast, needs to slow them a bit
+
+    - I commented, cleaned and refactor the code to have something more readable.
