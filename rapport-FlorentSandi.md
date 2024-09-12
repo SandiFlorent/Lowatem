@@ -83,3 +83,6 @@
     
     - I optimized and refactord my handle method --> I refactored my find getNewPosition and getNewPositionStairs method into one unique method that is more modular.
   
+    - I added Monstre and MonstreSprite classes. Monstre returns a random position choice, MonstreSprite is... existing ?
+
+    - I implemented them to the core class, now they exists, the only thing left is drawing them

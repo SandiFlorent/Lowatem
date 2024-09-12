@@ -1,18 +1,23 @@
 package application;
 
 import java.util.Collection;
+import java.util.Random;
 import labyrinthe.ILabyrinthe;
 import labyrinthe.ISalle;
+import labyrinthe.Labyrinthe;
 import personnages.Heros;
+import personnages.Monstre;
 import vue2D.IVue;
 import vue2D.sprites.HerosSprite;
 import vue2D.sprites.ISprite;
+import vue2D.sprites.MonstreSprite;
 
 /**
  *
  * @author arpecher
  */
 public class Core {
+
     ISprite heros;
     ILabyrinthe labyrinthe;
 
@@ -26,6 +31,17 @@ public class Core {
         Heros h = new personnages.Heros(labyrinthe.getEntree());
         this.heros = new HerosSprite(h, labyrinthe);
         vue.add(this.heros);
+
+        // création des monstres
+        Monstre monstre;
+        ISprite monstreSprite;
+        Random random = new Random();
+        int randomNumberOfMonsters = random.nextInt(8, 15);
+        for (int i = 0; i< randomNumberOfMonsters; i++){
+            monstre = new Monstre((Labyrinthe) labyrinthe);
+            monstreSprite = new MonstreSprite(monstre, labyrinthe);
+            vue.add(monstreSprite);
+        }
     }
 
     protected void jeu(IVue vue) {
@@ -39,7 +55,7 @@ public class Core {
                 Collection<ISalle> sallesAccessibles = labyrinthe.sallesAccessibles(s);
                 destination = s.faitSonChoix(sallesAccessibles); // on demande au personnage de faire son choix de salle
                 s.setPosition(destination); // deplacement
-                
+
             }
             // detection des collisions
             boolean collision = false;
