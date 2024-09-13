@@ -36,12 +36,12 @@ public class Core {
         Monstre monstre;
         ISprite monstreSprite;
         Random random = new Random();
-        
+
         // There'll be between 8 and 12 monsters
         int randomNumberOfMonsters = random.nextInt(5) + 8;
         for (int i = 0; i < randomNumberOfMonsters; i++) {
             monstre = new Monstre((Labyrinthe) labyrinthe);
-            monstreSprite = new MonstreSprite(monstre, labyrinthe);
+            monstreSprite = new MonstreSprite(monstre);
             vue.add(monstreSprite);
         }
     }

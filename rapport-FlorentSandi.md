@@ -90,3 +90,7 @@
     - Monsters weren't being drawn cause I wrote the wrong source for the image, now there's some monsters running around like crazy fast, needs to slow them a bit
 
     - I commented, cleaned and refactor the code to have something more readable.
+
+### Eleventh session
+
+    - I made some research to make the player move pixel by pixel, didn't implemented it so I only made minor changes.
