@@ -42,7 +42,9 @@ public class Etage extends ArrayList<ISalle> implements IEtage {
             int x = Integer.parseInt(mots[0]);
             int y = Integer.parseInt(mots[1]);
             //add a new Salle with the right parameters
-            this.add(new Salle(x, y, determineType(mots[2]), this));
+            if (!this.add(new Salle(x, y, determineType(mots[2]), this))){
+                throw new ExceptionInvalidFile("Invalid file have been charged");
+            }
         }
     }
     
@@ -73,7 +75,7 @@ public class Etage extends ArrayList<ISalle> implements IEtage {
     }
 
     @Override
-    public boolean add(ISalle Salle){
+    public boolean add(ISalle Salle) {
         if(!validCoordinates(Salle)){
             return false;
         }
@@ -84,8 +86,7 @@ public class Etage extends ArrayList<ISalle> implements IEtage {
         
         super.add(Salle);
         return true;
-    }
-    
+    } 
     /**
      * This function will determine if the room's coordinates are corrects
      * @param salle the room to verify

@@ -37,7 +37,7 @@ public class HerosSprite extends ASprite implements EventHandler<KeyEvent> {
     public void handle(KeyEvent t) {
         //GetNewPosition will find the new room, 
         //all we need to do is to provide the direct higher of lesser value of the coords
-        
+
         int x = personnage.getPosition().getX();
         int y = personnage.getPosition().getY();
         int floorNum = personnage.getPosition().getEtage().getNum();

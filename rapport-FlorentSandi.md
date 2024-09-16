@@ -94,3 +94,7 @@
 ### Eleventh session
 
     - I made some research to make the player move pixel by pixel, didn't implemented it so I only made minor changes.
+
+### Twelveth session
+
+    - I added an exception whenever an invalid file is charged. It's charging the 2 default floor instead when that happens.

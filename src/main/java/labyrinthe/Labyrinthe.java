@@ -22,6 +22,7 @@ public class Labyrinthe extends ArrayList<ISalle> implements ILabyrinthe {
         //First we charge the floors
         Etage etage1 = new Etage(1);
         Etage etage2 = new Etage(2);
+        
         try {
             etage1.charger("etages/etage1N.txt");
             etage2.charger("etages/etage2N.txt");
@@ -35,6 +36,9 @@ public class Labyrinthe extends ArrayList<ISalle> implements ILabyrinthe {
 
         } catch (IOException e) {
             e.printStackTrace();
+            this.clear();
+            this.addAll(etage1);
+            this.addAll(etage2);
         }
     }
 
