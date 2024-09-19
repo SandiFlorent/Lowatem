@@ -20,9 +20,14 @@ import personnages.IPersonnage;
 public class HerosSprite extends ASprite implements EventHandler<KeyEvent> {
 
     Labyrinthe labyrinthe;
+    private final Image IMAGE_L = new Image("file:icons/link/LinkRunShieldL1.gif");
+    private final Image IMAGE_R = new Image("file:icons/link/LinkRunR1.gif"); 
+    private final Image IMAGE_U = new Image("file:icons/link/LinkRunU1.gif");
+    private final Image IMAGE_D = new Image("file:icons/link/LinkRunShieldD1.gif");
 
     public HerosSprite(IPersonnage personnage, ILabyrinthe labyrinthe) {
-        super(personnage, new Image("file:icons/link/LinkRunShieldL1.gif"));
+        super(personnage);
+        setImage(IMAGE_D);
         personnage.setPosition(labyrinthe.getEntree());
         this.labyrinthe = (Labyrinthe) labyrinthe;
     }
@@ -45,23 +50,30 @@ public class HerosSprite extends ASprite implements EventHandler<KeyEvent> {
         switch (t.getCode()) {
             case M:
                 floorNum++;
+                setImage(IMAGE_D);
                 break;
             case D:
                 floorNum--;
+                setImage(IMAGE_D);
                 break;
             case UP:
                 y--;
+                setImage(IMAGE_U);
                 break;
             case DOWN:
                 y++;
+                setImage(IMAGE_D);
                 break;
             case LEFT:
                 x--;
+                setImage(IMAGE_L);
                 break;
             case RIGHT:
                 x++;
+                setImage(IMAGE_R);
                 break;
         }
+        characterCoordinateMovement = false;
         ((Heros) personnage).salleChoisie = getNewPosition(x, y, floorNum);
 
     }

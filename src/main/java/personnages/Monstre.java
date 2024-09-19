@@ -43,12 +43,7 @@ public class Monstre extends APersonnage {
         }
         // Creating an ArrayList from the sallesAccessibles grants the ability to choose a random room
         List<ISalle> list = new ArrayList<>(sallesAccessibles);
-
-        // This predicate will delete every room of type SORTIE.
-        list.removeIf(salle -> salle.getType() == ESalle.SORTIE);
-
-        // Now we can safely select a random room in the list
-        return (list.get(Random.nextInt(sallesAccessibles.size())));
+        return list.get(Random.nextInt(sallesAccessibles.size()));
     }
 }
 

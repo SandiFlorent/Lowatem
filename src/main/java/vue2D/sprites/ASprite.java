@@ -9,7 +9,6 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import labyrinthe.ISalle;
 import personnages.IPersonnage;
-import static vue2D.AVue.UNITE;
 
 /**
  *
@@ -19,13 +18,16 @@ public abstract class ASprite implements ISprite {
 
     public IPersonnage personnage;
     public int X;
-    public int Y;
-    public Image image;
+    private int Y;
+    private Image image;
+    
+    /**
+     * While the animation isn't done, the character isn't physically moving
+     */
+    boolean characterCoordinateMovement;
 
-
-    public ASprite(IPersonnage personnage, Image image) {
+    public ASprite(IPersonnage personnage) {
         this.personnage = personnage;
-        this.image = image;
     }
 
     @Override
@@ -35,14 +37,42 @@ public abstract class ASprite implements ISprite {
 
     @Override
     public void setCoordonnees(int xpix, int ypix) {
+        if (X == 0 && Y == 0) {
+            X = xpix;
+            Y = ypix;
+        }
+        if (X < xpix) {
+            X += 2;
+            characterCoordinateMovement = false;
+        }
+        if (Y < ypix) {
+            Y += 2;
+            characterCoordinateMovement = false;
+        }
+        if (Y > ypix) {
+            Y -= 2;
+            characterCoordinateMovement = false;
+        }
+        if (X > xpix) {
+            X -= 2;
+            characterCoordinateMovement = false;
+        }
+        if (X == xpix && Y == ypix) {
+            characterCoordinateMovement = true;
+        }
+    }
+
+    public void initCoordonnees(int xpix, int ypix) {
         X = xpix;
         Y = ypix;
     }
+
     @Override
     public ISalle faitSonChoix(Collection<ISalle> sallesAccessibles) {
-        ISalle dest = personnage.faitSonChoix(sallesAccessibles);
-        setCoordonnees((dest.getX()*UNITE), dest.getY()*UNITE);
-        return dest;
+        if (characterCoordinateMovement) {
+            return personnage.faitSonChoix(sallesAccessibles);
+        }
+        return personnage.getPosition();
     }
 
     @Override
@@ -52,11 +82,16 @@ public abstract class ASprite implements ISprite {
 
     @Override
     public void setPosition(ISalle s) {
-        this.X = s.getX()*UNITE;
-        this.Y = s.getX()*UNITE;
         personnage.setPosition(s);
-        setCoordonnees(X, Y);
     }
-    
+
+    /**
+     * This method will set the actual image of the sprite
+     *
+     * @param image the image to be used
+     */
+    public void setImage(Image image) {
+        this.image = image;
+    }
 
 }

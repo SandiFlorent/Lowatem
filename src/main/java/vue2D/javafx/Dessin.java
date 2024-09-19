@@ -105,12 +105,25 @@ public class Dessin extends Canvas {
                         unite);
                 break;
             default:
+                
                 tampon.setFill(c);
                 tampon.fillRect(s.getX() * unite, s.getY() * unite, unite,
                         unite);
             // The following code draws the room with a certain type of image
             //tampon.drawImage(salle, s.getX() * unite, s.getY() * unite, unite, unite);
             }
+    }
+    
+    /**
+     * This method alter the color according to the distance with the player
+     * @param c
+     * @return 
+     */
+    private Color alterColor(Color c, double factor){
+        double red = c.getRed() * factor;
+        double green = c.getGreen() * factor;
+        double blue = c.getBlue() * factor;
+        return c.color(red, green, blue);
     }
 
     /**

@@ -5,7 +5,6 @@
 package vue2D.sprites;
 
 import javafx.scene.image.Image;
-import labyrinthe.ILabyrinthe;
 import personnages.IPersonnage;
 
 /**
@@ -15,6 +14,7 @@ import personnages.IPersonnage;
 public class MonstreSprite extends ASprite {
 
     public MonstreSprite(IPersonnage personnage) {
-        super(personnage, new Image("file:icons/monstre1.gif"));
+        super(personnage);
+        setImage(new Image("file:icons/monstre1.gif"));
     }
 }

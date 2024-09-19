@@ -98,3 +98,11 @@
 ### Twelveth session
 
     - I added an exception whenever an invalid file is charged. It's charging the 2 default floor instead when that happens.
+
+### In-between sessions 
+
+    - I optimized my movements functions, it had unuseful code everywhere.
+
+    - Movement is now smooth
+
+    - I'm trying to implement lights now
