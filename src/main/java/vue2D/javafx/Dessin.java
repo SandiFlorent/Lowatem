@@ -1,5 +1,6 @@
 package vue2D.javafx;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -10,6 +11,7 @@ import labyrinthe.ISalle;
 import vue2D.AVue;
 import vue2D.sprites.ISprite;
 import labyrinthe.IEtage;
+import labyrinthe.LabyrintheGraphe;
 
 /**
  *
@@ -19,7 +21,6 @@ public class Dessin extends Canvas {
 
     private Collection<ISprite> sprites;
     private int unite;
-
     // donnees labyrinthe labyrinthe
     private ILabyrinthe labyrinthe;
     private ISalle entree;
@@ -34,8 +35,19 @@ public class Dessin extends Canvas {
     private Image escalierD;
     private Image salle;
     private Image entreeImage;
+    private Image dragon;
     private int tailleLinkH = 6;
     private int tailleLinkL = 2;
+    public ISprite Hero;
+    private int HeroX;
+    private int HeroY;
+    private Collection<ISalle> ShortestPath;
+
+    // These are used for computing the euclidian distance
+    private double DeltaX;
+    private double DeltaY;
+    private double Distance;
+    private double Opacity;
 
     public Dessin(ILabyrinthe labyrinthe, Collection<ISprite> sprites) {
         this.labyrinthe = labyrinthe;
@@ -51,6 +63,8 @@ public class Dessin extends Canvas {
         chargementImages();
         dessinFond();
         dessinSalles(this.labyrinthe.getEtageCourant());
+        HeroX = -2;
+        HeroY = -2;
     }
 
     public void chargementImages() {
@@ -69,6 +83,7 @@ public class Dessin extends Canvas {
 
     /**
      * Draws all the rooms of the labyrinthe's current floor
+     *
      * @param etage the current floor
      */
     public void dessinSalles(IEtage etage) {
@@ -80,7 +95,81 @@ public class Dessin extends Canvas {
     }
 
     /**
+     * This method will draw the lighting of every room in a floor It draws
+     * black rectangles with opacity changing according to the distance with the
+     * player
+     *
+     * @param etage the current floor
+     */
+    public void drawingLighting(IEtage etage) {
+        for (ISalle currentRoom : etage) {
+            drawingLightingForOneRoom(currentRoom);
+        }
+    }
+
+    private void drawingRooms(Color C, Collection<ISalle> list) {
+        tampon.setFill(C);
+        for (ISalle s : list) {
+            if (isRoomOnCurrentFloor(s)) {
+                tampon.fillRect(s.getX() * unite, s.getY() * unite, unite, unite);
+            }
+        }
+    }
+
+    /**
+     * This method draws the shortest path between the hero and the exit
+     */
+    public void drawingShortestPath() {
+        LabyrintheGraphe l = (LabyrintheGraphe) this.labyrinthe;
+        drawingRooms(new Color(0, 0, 0.5, 0.4), l.Path);
+    }
+
+    /**
+     * This method checks if a room is on the current floor
+     * @param s the room to be checked
+     * @return true if the room is on the current floor, false otherwise
+     */
+    private boolean isRoomOnCurrentFloor(ISalle s) {
+        return s.getEtage() == labyrinthe.getEtageCourant();
+    }
+
+    /**
+     * This method will draw the lighting of one room (also known as fog) It'll
+     * basically draw "darkness" on the furthest rooms or monster from the hero
+     */
+    private void drawingLightingForOneRoom(ISalle currentRoom) {
+
+//        // Calculate the distance between the hero and the current room using Euclidean distance
+//        DeltaX = this.Hero.getPosition().getX() - currentRoom.getX();
+//        DeltaY = this.Hero.getPosition().getY() - currentRoom.getY();
+//        Distance = Math.sqrt(DeltaX * DeltaX + DeltaY * DeltaY);
+//
+//        // Make the opacity between 0 and 1 for it will crash otherwise
+//        Opacity = Math.max(0, Math.min(1, (Distance * 0.14)));
+//
+//        // Set the color with opacity for drawing darkness
+//        Color color = new Color(0, 0, 0, Opacity);
+//        tampon.setFill(color);
+//        tampon.fillRect(currentRoom.getX() * unite, currentRoom.getY() * unite, unite, unite);
+        
+        
+        // Calculate the distance between the hero and the current room using some graphs methods
+        LabyrintheGraphe laby = (LabyrintheGraphe) this.labyrinthe;
+        int distance = laby.distanceGraphe(this.Hero.getPosition(), currentRoom);
+
+        
+        // Make the opacity between 0 and 1 for it will crash otherwise
+        Opacity = Math.max(0, Math.min(1, (distance * 0.14)));
+
+        // Set the color with opacity for drawing darkness
+        Color color = new Color(0, 0, 0, Opacity);
+        tampon.setFill(color);
+        tampon.fillRect(currentRoom.getX() * unite, currentRoom.getY() * unite, unite, unite);
+    }
+
+    /**
      * This method will draw ONE room
+     *
      * @param s the room to be drawed
      * @param c the desired color of the rectangle
      */
@@ -105,25 +194,13 @@ public class Dessin extends Canvas {
                         unite);
                 break;
             default:
-                
-                tampon.setFill(c);
-                tampon.fillRect(s.getX() * unite, s.getY() * unite, unite,
-                        unite);
-            // The following code draws the room with a certain type of image
-            //tampon.drawImage(salle, s.getX() * unite, s.getY() * unite, unite, unite);
-            }
-    }
-    
-    /**
-     * This method alter the color according to the distance with the player
-     * @param c
-     * @return 
-     */
-    private Color alterColor(Color c, double factor){
-        double red = c.getRed() * factor;
-        double green = c.getGreen() * factor;
-        double blue = c.getBlue() * factor;
-        return c.color(red, green, blue);
+
+                //The following code draws the room with a white rectangle
+                //tampon.setFill(c);
+                //tampon.fillRect(s.getX() * unite, s.getY() * unite, unite,unite);
+                // The following code draws the room with a certain type of image
+                tampon.drawImage(salle, s.getX() * unite, s.getY() * unite, unite, unite);
+        }
     }
 
     /**
@@ -139,16 +216,39 @@ public class Dessin extends Canvas {
     }
 
     public void dessinPlusCourtChemin(ISprite p) {
-        // ...
+        Color color = new Color(1, 1, 0, 0.4);// Yellow
+        // I recalculate the shortest path only and only if the hero has moved.
+        if (heroHasMoved()){
+            ShortestPath = this.labyrinthe.chemin(this.Hero.getPosition(), sortie);
+            updateHeroPosition();
+        }
+        drawingRooms(color, this.ShortestPath);
     }
 
     /**
      * This method determines wheter or not a sprite is on the current floor
+     *
      * @param spriteA the sprite to be verified
      * @return true if it's on the current floor, false otherwise
      */
     private boolean spriteOnTheCurrentFloor(ISprite spriteA) {
         return spriteA.getPosition().getEtage() == labyrinthe.getEtageCourant();
+    }
+    
+    /**
+     * This method determines wheter or not the hero has moved
+     * @return true if he has moved, false otherwise
+     */
+    private boolean heroHasMoved(){
+        return !(Hero.getPosition().getX() == HeroX && Hero.getPosition().getY() == HeroY);
+    }
+    
+    /**
+     * Updtate the coordinates that are used to see if the hero has moved
+     */
+    private void updateHeroPosition(){
+        HeroX = Hero.getPosition().getX();
+        HeroY = Hero.getPosition().getY();
     }
 
 }

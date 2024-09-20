@@ -17,4 +17,9 @@ public class MonstreSprite extends ASprite {
         super(personnage);
         setImage(new Image("file:icons/monstre1.gif"));
     }
+    
+    public MonstreSprite(IPersonnage personnage, Image image) {
+        super(personnage);
+        setImage(image);
+    }
 }

@@ -2,9 +2,11 @@ package application;
 
 import java.util.Collection;
 import java.util.Random;
+import javafx.scene.image.Image;
 import labyrinthe.ILabyrinthe;
 import labyrinthe.ISalle;
 import labyrinthe.Labyrinthe;
+import personnages.Dragon;
 import personnages.Heros;
 import personnages.Monstre;
 import vue2D.IVue;
@@ -23,7 +25,7 @@ public class Core {
 
     protected void initLabyrinthe() {
         // creation du labyrinthe
-        labyrinthe = new labyrinthe.Labyrinthe();
+        labyrinthe = new labyrinthe.LabyrintheGraphe();
     }
 
     protected void initSprites(IVue vue) {
@@ -44,6 +46,11 @@ public class Core {
             monstreSprite = new MonstreSprite(monstre);
             vue.add(monstreSprite);
         }
+
+        // Creating a dragon
+//        Dragon dragon = new Dragon((Labyrinthe) labyrinthe);
+//        ISprite dragonSprite = new MonstreSprite(dragon, new Image("file:icons/dragon.gif"));
+//        vue.add(dragonSprite);
     }
 
     protected void jeu(IVue vue) {
@@ -78,7 +85,7 @@ public class Core {
                 System.out.println("Plus que " + vue.size() + " personnages ...");
             }
 
-            temporisation(100);
+            temporisation(50);
         }
         System.out.println("Gagné!");
     }

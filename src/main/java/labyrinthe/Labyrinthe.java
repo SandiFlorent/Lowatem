@@ -16,6 +16,7 @@ public class Labyrinthe extends ArrayList<ISalle> implements ILabyrinthe {
     private IEtage etageCourant;
     private ISalle entree;
     private ISalle sortie;
+    public IPersonnage hero;
 
     public Labyrinthe() {
         //First we charge the floors

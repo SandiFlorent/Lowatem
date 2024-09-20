@@ -17,14 +17,15 @@ import personnages.IPersonnage;
 public abstract class ASprite implements ISprite {
 
     public IPersonnage personnage;
-    public int X;
+    private int X;
     private int Y;
     private Image image;
-    
+
     /**
      * While the animation isn't done, the character isn't physically moving
+     * true means the player can physically move, false means otherwise
      */
-    boolean characterCoordinateMovement;
+    protected boolean characterCoordinateMovement;
 
     public ASprite(IPersonnage personnage) {
         this.personnage = personnage;
@@ -72,6 +73,7 @@ public abstract class ASprite implements ISprite {
         if (characterCoordinateMovement) {
             return personnage.faitSonChoix(sallesAccessibles);
         }
+        characterCoordinateMovement = false;
         return personnage.getPosition();
     }
 

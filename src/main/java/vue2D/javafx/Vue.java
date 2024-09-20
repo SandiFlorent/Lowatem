@@ -4,6 +4,7 @@ import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import labyrinthe.ILabyrinthe;
+import labyrinthe.Labyrinthe;
 import vue2D.IVue;
 import vue2D.AVue;
 import vue2D.sprites.ISprite;
@@ -32,7 +33,11 @@ public class Vue extends AVue implements IVue {
         dessin.dessinFond();
         // dessin des salles
         dessin.dessinSalles(this.labyrinthe.getEtageCourant());
+        dessin.drawingShortestPath();
+        dessin.dessinPlusCourtChemin(dessin.Hero);
         dessin.dessinSprites();
+        dessin.drawingLighting(this.labyrinthe.getEtageCourant());
+        
     }
 
     @Override
@@ -43,6 +48,13 @@ public class Vue extends AVue implements IVue {
             System.out.println(" registering keylistener ");
             // association de l’ecouteur sur le clavier avec le composant graphique principal
             this.scene.setOnKeyPressed((EventHandler) sprite);
+
+            // Here, we define the hero in sprite in order to make the light
+            dessin.Hero = sprite;
+            
+            //And here we define the hero in order for the dragon to follow him
+            Labyrinthe l = (Labyrinthe)labyrinthe;
+            l.hero = sprite;
         }
         return true;
     }

@@ -57,7 +57,7 @@
 
 ### Ninth session
 
-    - I finished the 3rd objective by overriding the add method of the Etage class. To do so I simply had to first check if the coordinates were valid, then using the contains method to check if a room was already added to the floor. I had forgotten that the contains method uses equals method so I tried a lot of things and lost too much time before realising it. 
+    - I finished the 2nd objective by overriding the add method of the Etage class. To do so I simply had to first check if the coordinates were valid, then using the contains method to check if a room was already added to the floor. I had forgotten that the contains method uses equals method so I tried a lot of things and lost too much time before realising it. 
     
     - Added the code to determine all the adjacent rooms
     
@@ -91,18 +91,24 @@
 
     - I commented, cleaned and refactor the code to have something more readable.
 
+    - I hereby have finished the 4th objective
+
 ### Eleventh session
 
     - I made some research to make the player move pixel by pixel, didn't implemented it so I only made minor changes.
 
 ### Twelveth session
 
-    - I added an exception whenever an invalid file is charged. It's charging the 2 default floor instead when that happens.
+    - I added an exception whenever an invalid file is charged. It's charging the 2 default floor instead when that happens. The 5th objective is done
 
-### In-between sessions 
+### In-between sessions
 
     - I optimized my movements functions, it had unuseful code everywhere.
 
-    - Movement is now smooth
+    - Movement is now smooth, the hardest thing was to understand how to stop the movement. To do so I stopped the "physical" movement while the graphical one wasn't over. Though now I have issues when switching floors
 
-    - I'm trying to implement lights now
+    - I implemented light. All I had to do was to compute the distance between the hero and a room. It was tricky to find a way to link the hero and the Vue class. I used the add method of Vue since it has a if on eventHandler nad hero is the only sprite with enventHandlers.
+
+    - I also had to find a way to draw it on top, but all I had to do was to call the lighting function at the end. Objective 6 is over.
+
+    - I implemented the dijkstra algorithm. Thanks to the demo, it wasn't very hard. 
