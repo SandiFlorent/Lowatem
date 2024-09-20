@@ -6,7 +6,6 @@ package personnages;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Iterator;
 import labyrinthe.ISalle;
 import labyrinthe.Labyrinthe;
 

@@ -16,7 +16,7 @@ public abstract class APersonnage implements IPersonnage{
     /**
      * the player's current position
      */
-    public ISalle positionCourante;
+    protected ISalle positionCourante;
     
     @Override
     public ISalle faitSonChoix(Collection<ISalle> sallesAccessibles) {

@@ -122,3 +122,5 @@
     - After fixing a lot of nullPointerException I finally made it work with an algorithm called floydWarshall to find the shortestPath. It worked, better than dijkstra but took too much time to open the game
 
 <   - Finally, I tried BFS (keeping the same logic, but using another algorithm for the shortestPath) which made the game way much faster.
+
+    - Finished the last UML and merged the 3 uml into one pdf file
