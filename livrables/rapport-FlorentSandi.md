@@ -120,7 +120,17 @@
     - I enhanced the lighting method. To do so I had to precalculate the distances between each room. Only issue, how ? I created a map of a room and map of room and room in order to link a room to all of the other room and have the distance between very each room. 
 
     - After fixing a lot of nullPointerException I finally made it work with an algorithm called floydWarshall to find the shortestPath. It worked, better than dijkstra but took too much time to open the game
-    
+
     - Finally, I tried BFS (keeping the same logic, but using another algorithm for the shortestPath) which made the game way much faster.
 
     - Finished the last UML and merged the 3 uml into one pdf file
+
+    - Commiting and pushing my actual state of the project in case I'm late
+
+### Late modifications (30 minutes late) :
+
+    - Added the visited rooms. Now once a room is visited, it's stays visible.
+
+    - Implemented the walls, they can be seen around visited rooms.
+
+    I finished the project, unfortunately I couldn't finish it in time, but I did it anyway for it was fun and very entertaining. It taught me new things and made me remember A LOT of things. So I'm still giving my last update anyway, even though it's a little bit late

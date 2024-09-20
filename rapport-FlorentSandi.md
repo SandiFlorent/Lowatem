@@ -126,3 +126,11 @@
     - Finished the last UML and merged the 3 uml into one pdf file
 
     - Commiting and pushing my actual state of the project in case I'm late
+
+### Late modifications (30 minutes late) :
+
+    - Added the visited rooms. Now once a room is visited, it's stays visible.
+
+    - Implemented the walls, they can be seen around visited rooms.
+
+    I finished the project, unfortunately I couldn't finish it in time, but I did it anyway for it was fun and very entertaining. It taught me new things and made me remember A LOT of things. So I'm still giving my last update anyway, even though it's a little bit late

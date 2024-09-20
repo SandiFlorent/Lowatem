@@ -31,6 +31,7 @@ public class Vue extends AVue implements IVue {
     public void dessiner() {
         // recopie du fond (image); murs + salles
         dessin.dessinFond();
+        dessin.dessinMur();
         // dessin des salles
         dessin.dessinSalles(this.labyrinthe.getEtageCourant());
         dessin.drawingShortestPath();

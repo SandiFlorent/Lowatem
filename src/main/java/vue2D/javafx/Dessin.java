@@ -2,16 +2,20 @@ package vue2D.javafx;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
+import labyrinthe.ESalle;
+import labyrinthe.Etage;
 import labyrinthe.ILabyrinthe;
 import labyrinthe.ISalle;
 import vue2D.AVue;
 import vue2D.sprites.ISprite;
 import labyrinthe.IEtage;
 import labyrinthe.LabyrintheGraphe;
+import labyrinthe.Salle;
 
 /**
  *
@@ -42,12 +46,10 @@ public class Dessin extends Canvas {
     private int HeroX;
     private int HeroY;
     private Collection<ISalle> ShortestPath;
-
     // These are used for computing the euclidian distance
-    private double DeltaX;
-    private double DeltaY;
-    private double Distance;
+
     private double Opacity;
+    public HashSet<ISalle> VisitedRooms;
 
     public Dessin(ILabyrinthe labyrinthe, Collection<ISprite> sprites) {
         this.labyrinthe = labyrinthe;
@@ -65,6 +67,8 @@ public class Dessin extends Canvas {
         dessinSalles(this.labyrinthe.getEtageCourant());
         HeroX = -2;
         HeroY = -2;
+        VisitedRooms = new HashSet<>();
+        VisitedRooms.add(this.entree);
     }
 
     public void chargementImages() {
@@ -90,7 +94,6 @@ public class Dessin extends Canvas {
         for (ISalle s : etage) {
             Color c = Color.rgb(200, 200, 200);
             dessinSalle(s, c);
-
         }
     }
 
@@ -103,7 +106,9 @@ public class Dessin extends Canvas {
      */
     public void drawingLighting(IEtage etage) {
         for (ISalle currentRoom : etage) {
-            drawingLightingForOneRoom(currentRoom);
+            if (!VisitedRooms.contains(currentRoom)) {
+                drawingLightingForOneRoom(currentRoom);
+            }
         }
     }
 
@@ -141,9 +146,9 @@ public class Dessin extends Canvas {
     private void drawingLightingForOneRoom(ISalle currentRoom) {
 
         /**
-         * The following code is the original  way to draw the lighting
-         * // Calculate the distance between the hero and the current room
-         * using Euclidean distance DeltaX = this.Hero.getPosition().getX() -
+         * The following code is the original way to draw the lighting //
+         * Calculate the distance between the hero and the current room using
+         * Euclidean distance DeltaX = this.Hero.getPosition().getX() -
          * currentRoom.getX(); DeltaY = this.Hero.getPosition().getY() -
          * currentRoom.getY(); Distance = Math.sqrt(DeltaX * DeltaX + DeltaY *
          * DeltaY);
@@ -168,6 +173,20 @@ public class Dessin extends Canvas {
         Color color = new Color(0, 0, 0, Opacity);
         tampon.setFill(color);
         tampon.fillRect(currentRoom.getX() * unite, currentRoom.getY() * unite, unite, unite);
+    }
+
+    public void dessinMur() {
+        for (ISalle s : VisitedRooms) {
+            drawSomething(s.getX()+1, s.getY(), murImage);
+            drawSomething(s.getX()-1, s.getY(), murImage);
+            drawSomething(s.getX(), s.getY()+1, murImage);
+            drawSomething(s.getX(), s.getY()-1, murImage);
+        }
+    }
+
+    private void drawSomething(int xCoord, int yCoord, Image image) {
+        tampon.drawImage(image, xCoord * unite, yCoord * unite, unite,
+                unite);
     }
 
     /**
@@ -222,6 +241,7 @@ public class Dessin extends Canvas {
         Color color = new Color(1, 1, 0, 0.4);// Yellow
         // I recalculate the shortest path only and only if the hero has moved.
         if (heroHasMoved()) {
+            VisitedRooms.add(this.Hero.getPosition());
             ShortestPath = this.labyrinthe.chemin(this.Hero.getPosition(), sortie);
             updateHeroPosition();
         }
