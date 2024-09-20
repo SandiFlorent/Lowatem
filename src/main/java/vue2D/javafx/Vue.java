@@ -36,7 +36,12 @@ public class Vue extends AVue implements IVue {
         dessin.drawingShortestPath();
         dessin.dessinPlusCourtChemin(dessin.Hero);
         dessin.dessinSprites();
-        dessin.drawingLighting(this.labyrinthe.getEtageCourant());
+        
+        //Stopping the dynamic lighting when the player dies
+        if (this.contains(dessin.Hero)){
+            dessin.drawingLighting(this.labyrinthe.getEtageCourant());
+        }
+        
         
     }
 

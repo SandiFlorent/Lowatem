@@ -112,3 +112,13 @@
     - I also had to find a way to draw it on top, but all I had to do was to call the lighting function at the end. Objective 6 is over.
 
     - I implemented the dijkstra algorithm. Thanks to the demo, it wasn't very hard. 
+
+### Last day (20/09/2024)
+
+    - I tried to implement a better lighting. I did it with dijkstra, which is alredy heavy, but furthermore it's calling the method on each frame, which resulted in a very slow game. Nonetheless it's working
+
+    - I enhanced the lighting method. To do so I had to precalculate the distances between each room. Only issue, how ? I created a map of a room and map of room and room in order to link a room to all of the other room and have the distance between very each room. 
+
+    - After fixing a lot of nullPointerException I finally made it work with an algorithm called floydWarshall to find the shortestPath. It worked, better than dijkstra but took too much time to open the game
+
+<   - Finally, I tried BFS (keeping the same logic, but using another algorithm for the shortestPath) which made the game way much faster.

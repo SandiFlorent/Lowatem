@@ -48,9 +48,9 @@ public class Core {
         }
 
         // Creating a dragon
-//        Dragon dragon = new Dragon((Labyrinthe) labyrinthe);
-//        ISprite dragonSprite = new MonstreSprite(dragon, new Image("file:icons/dragon.gif"));
-//        vue.add(dragonSprite);
+        Dragon dragon = new Dragon((Labyrinthe) labyrinthe);
+       ISprite dragonSprite = new MonstreSprite(dragon, new Image("file:icons/dragon.gif"));
+        vue.add(dragonSprite);
     }
 
     protected void jeu(IVue vue) {

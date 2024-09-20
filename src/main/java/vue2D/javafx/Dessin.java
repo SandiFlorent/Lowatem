@@ -126,6 +126,7 @@ public class Dessin extends Canvas {
 
     /**
      * This method checks if a room is on the current floor
+     *
      * @param s the room to be checked
      * @return true if the room is on the current floor, false otherwise
      */
@@ -139,27 +140,29 @@ public class Dessin extends Canvas {
      */
     private void drawingLightingForOneRoom(ISalle currentRoom) {
 
-//        // Calculate the distance between the hero and the current room using Euclidean distance
-//        DeltaX = this.Hero.getPosition().getX() - currentRoom.getX();
-//        DeltaY = this.Hero.getPosition().getY() - currentRoom.getY();
-//        Distance = Math.sqrt(DeltaX * DeltaX + DeltaY * DeltaY);
-//
-//        // Make the opacity between 0 and 1 for it will crash otherwise
-//        Opacity = Math.max(0, Math.min(1, (Distance * 0.14)));
-//
-//        // Set the color with opacity for drawing darkness
-//        Color color = new Color(0, 0, 0, Opacity);
-//        tampon.setFill(color);
-//        tampon.fillRect(currentRoom.getX() * unite, currentRoom.getY() * unite, unite, unite);
-        
-        
+        /**
+         * The following code is the original  way to draw the lighting
+         * // Calculate the distance between the hero and the current room
+         * using Euclidean distance DeltaX = this.Hero.getPosition().getX() -
+         * currentRoom.getX(); DeltaY = this.Hero.getPosition().getY() -
+         * currentRoom.getY(); Distance = Math.sqrt(DeltaX * DeltaX + DeltaY *
+         * DeltaY);
+         *
+         * // Make the opacity between 0 and 1 for it will crash otherwise
+         * Opacity = Math.max(0, Math.min(1, (Distance * 0.14)));
+         *
+         * // Set the color with opacity for drawing darkness Color color = new
+         * Color(0, 0, 0, Opacity); tampon.setFill(color);
+         * tampon.fillRect(currentRoom.getX() * unite, currentRoom.getY() *
+         * unite, unite, unite);
+         *
+         */
         // Calculate the distance between the hero and the current room using some graphs methods
         LabyrintheGraphe laby = (LabyrintheGraphe) this.labyrinthe;
         int distance = laby.distanceGraphe(this.Hero.getPosition(), currentRoom);
 
-        
         // Make the opacity between 0 and 1 for it will crash otherwise
-        Opacity = Math.max(0, Math.min(1, (distance * 0.14)));
+        Opacity = Math.max(0, Math.min(1, (distance * 0.1)));
 
         // Set the color with opacity for drawing darkness
         Color color = new Color(0, 0, 0, Opacity);
@@ -218,7 +221,7 @@ public class Dessin extends Canvas {
     public void dessinPlusCourtChemin(ISprite p) {
         Color color = new Color(1, 1, 0, 0.4);// Yellow
         // I recalculate the shortest path only and only if the hero has moved.
-        if (heroHasMoved()){
+        if (heroHasMoved()) {
             ShortestPath = this.labyrinthe.chemin(this.Hero.getPosition(), sortie);
             updateHeroPosition();
         }
@@ -234,19 +237,20 @@ public class Dessin extends Canvas {
     private boolean spriteOnTheCurrentFloor(ISprite spriteA) {
         return spriteA.getPosition().getEtage() == labyrinthe.getEtageCourant();
     }
-    
+
     /**
      * This method determines wheter or not the hero has moved
+     *
      * @return true if he has moved, false otherwise
      */
-    private boolean heroHasMoved(){
+    private boolean heroHasMoved() {
         return !(Hero.getPosition().getX() == HeroX && Hero.getPosition().getY() == HeroY);
     }
-    
+
     /**
      * Updtate the coordinates that are used to see if the hero has moved
      */
-    private void updateHeroPosition(){
+    private void updateHeroPosition() {
         HeroX = Hero.getPosition().getX();
         HeroY = Hero.getPosition().getY();
     }
