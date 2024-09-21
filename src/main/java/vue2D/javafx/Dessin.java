@@ -177,10 +177,13 @@ public class Dessin extends Canvas {
 
     public void dessinMur() {
         for (ISalle s : VisitedRooms) {
-            drawSomething(s.getX()+1, s.getY(), murImage);
-            drawSomething(s.getX()-1, s.getY(), murImage);
-            drawSomething(s.getX(), s.getY()+1, murImage);
-            drawSomething(s.getX(), s.getY()-1, murImage);
+            if (s.getEtage() == labyrinthe.getEtageCourant()){
+                drawSomething(s.getX() + 1, s.getY(), murImage);
+                drawSomething(s.getX() - 1, s.getY(), murImage);
+                drawSomething(s.getX(), s.getY() + 1, murImage);
+                drawSomething(s.getX(), s.getY() - 1, murImage);
+            }
+            
         }
     }
 

@@ -134,3 +134,7 @@
     - Implemented the walls, they can be seen around visited rooms.
 
     I finished the project, unfortunately I couldn't finish it in time, but I did it anyway for it was fun and very entertaining. It taught me new things and made me remember A LOT of things. So I'm still giving my last update anyway, even though it's a little bit late
+
+### 21/09/2024 (15h16-15h19) :
+
+    I decided to take a look at the project and realized there was a bug on the walls, I just forgotten to draw them only if they're on the current floor. It took ONE minute to fix it, just that I didn't think of it.
